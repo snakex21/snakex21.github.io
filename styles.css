@@ -9,7 +9,7 @@ body {
 }
 
 .body1{
-    background-color: #793646;
+    background-color: #3a3b4d;
     background-size: cover;
     background-repeat: no-repeat;
     color: #ffc468;
@@ -188,7 +188,7 @@ main h1 {
 /* to są ustawienia do indywidualnego przycisku małego*/
 .maly_przycisk {
   color: rgb(10, 10, 10);
-  background-color:  rgb(0, 81, 255);
+  background-color:  rgb(71, 84, 110);
   width: 100%;
   border-radius: 1em;
   min-height: 3.7em;
@@ -247,27 +247,27 @@ right: 250px;
 
 /* do tło szczawia królewskiego*/
 #item-list1{
-    background-color: #264277;
+    background-color: rgb(71, 84, 110);
     
 }
 
 /* do tło do trolestu*/
 #item-list2{
-    background-color: #264277;
+    background-color: rgb(71, 84, 110);
 }
 
 /* do tło smoczego korzenia*/
 #item-list3{
-    background-color: #264277;
+    background-color: rgb(71, 84, 110);
 }
 
 /* do tło Słonecznego aloesu*/
 #item-list4{
-    background-color: #264277;
+    background-color: rgb(71, 84, 110);
 }
 
 /* do tło gobliniej jagody*/
 #item-list5{
-    background-color: #264277;
+    background-color: rgb(71, 84, 110);
     
 }
