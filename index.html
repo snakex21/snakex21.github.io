@@ -1,45 +1,96 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Filmowe</title>
+    <title>Strona Domowa :)</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="https://www.solojuve.com/spolecznosc/zdj%C4%99cia/306-bezimienny-jpg/pobierz">
+    
   </head>
-  <body >
+  <body onload="updateClock()">
     <header>
       <nav>
-        <a href="Home.html">Strona domowa</a>
-        <a href="spis.html">Gothic 2 New Balance spis</a>
+        <a href="filmy/filmy glowna.html">Strona do filmów</a>
+        <a href="gothic 2 new balance/gothic2.html">Spis Wszystkiego Gothic 2 New Balans</a>
+            <a href="gry/gry.html">Biblioteka gier</a>
       </nav>
-      <form>
-        <input type="text" placeholder="Search" />
-        <button>Search</button>
-      </form>
     </header>
     <main>
-      <section>
-        <h1>Featured Videos</h1>
-        <div class="featured-videos">
-            <div class="video-card">
-              <a href="film1.html">
-                <img src="ab67616d0000b273c5f8931a80c7f510517a7f77.jpg" alt="Video Title 1" />
-                <p>Video Title 1</p>
-              </a>
-            </div>
-            <div class="video-card">
-              <a href="https://video2.com">
-                <img src="video2-thumbnail.jpg" alt="Video Title 2" />
-                <p>Video Title 2</p>
-              </a>
-            </div>
-            <!-- More video cards -->
-          </div>
-        </div>
-      </section>
+      <h1>Witamy na głównej stronie</h1>
+      <p></p>
+      <div id="clock" onload="updateClock()"></div>
+      <div id="data"></div>
+      
     </main>
     <footer>
-      <p>Copyright ©2022 Filmowe</p>
+      <p>Copyright © 2022 My Website</p>
     </footer>
-    <script src="script.js"></script>
+      <script>
+//zegar
+function updateClock() {
+    var date = new Date();
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+    var clock = document.getElementById("clock");
+    clock.innerHTML = "";
+
+    var hourDiv = document.createElement("div");
+    hourDiv.classList.add("clock-element");
+    hourDiv.innerHTML = hour;
+    clock.appendChild(hourDiv);
+
+    var dot1 = document.createElement("span");
+    dot1.innerHTML = ":";
+    clock.appendChild(dot1);
+
+    var minuteDiv = document.createElement("div");
+    minuteDiv.classList.add("clock-element");
+    minuteDiv.innerHTML = minute;
+    clock.appendChild(minuteDiv);
+
+    var dot2 = document.createElement("span");
+    dot2.innerHTML = ":";
+    clock.appendChild(dot2);
+
+    var secondDiv = document.createElement("div");
+    secondDiv.classList.add("clock-element");
+    secondDiv.innerHTML = second;
+    clock.appendChild(secondDiv);
+   
+}
+setInterval(updateClock, 1000);
+
+// utworzenie nowego obiektu XMLHttpRequest
+var xhr = new XMLHttpRequest();
+
+// otwarcie połączenia z adresem URL
+xhr.open("GET", "https://api.abalin.net/", true);
+
+// wysłanie żądania
+xhr.send();
+
+// nasłuchiwanie na zmianę stanu połączenia
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        // pobranie odpowiedzi serwera jako tekstu
+        var responseText = xhr.responseText;
+
+        // parsowanie tekstu na obiekt JavaScript
+        var data = JSON.parse(responseText);
+
+        // wyświetlenie danych na stronie
+        document.getElementById("imieniny").innerHTML = "Dzisiejsze imieniny: " + data.data;
+    }
+}
+
+var today = new Date();
+    var days = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
+    var dayName = days[today.getDay()];
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = dayName + ' ' + dd + '-' + mm + '-' + yyyy;
+    document.getElementById("data").innerHTML = today;
+    </script>
   </body>
 </html>
