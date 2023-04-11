@@ -275,16 +275,24 @@ right: 250px;
  
  		/* Ustawienia dla filmów */
          .container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 20px;
 		}
 		.filmy{
-            display: flex;
+       
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+
         }
 
 
