@@ -1,20 +1,913 @@
 /* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color:#6b1a1a59
-    
-    
+/* 
+
+ Spis Treści:
+1. Kolory do napisów
+2. Kolory do tła
+3. Kolory nagłówka
+4. Czcionki Rodzaje
+5. style czcionek
+6. Rozmiar Czcionek
+*/
+
+
+
+/*---------------kolory do napisów cyfr itp.-----------------------*/
+
+.napis_kolor_zielony{
+      color: #24b824;
+        }
+.napis_kolor_niebieski{
+      color: #2653a7;
+        }
+.napis_kolor_ciemno_niebieski{
+        color: #090c30;
+            }
+.napis_kolor_czerwony{
+  color: #991818;
+}
+.napis_kolor_jasno_czerwony{
+  color: #f80000;
+}
+.napis_kolor_ciemno_czerwony{
+  color: #3b0606;
+}
+.napis_kolor_wyblakły_czerwony{
+  color: #3a2020;
+}
+.napis_kolor_pomaranczowy{
+  color: #a16c1c;
+}
+.napis_kolor_jasno_pomaranczowy{
+  color: #d3830c;
+}
+.napis_kolor_ciemno_pomaranczowy{
+  color: #4e330a;
+}
+.napis_kolor_bialy{
+  color: #ffffff;
+}
+.napis_kolor_szary{
+  color: gray;
+}
+.napis_kolor_czarny{
+  color: black;
+}
+.napis_kolor_fioletowy{
+  color: purple;
+}
+.napis_kolor_aqua{
+  color: aqua;
+}
+.napis_kolor_brazowyrosy{
+  color: rosybrown;
+}
+.napis_kolor_brazowy{
+  color: rgb(148, 106, 44);
+}
+.napis_kolor_zolty{
+  color: yellow;
+}
+.napis_kolor_ciemno_zielony{
+color: darkgreen;
+}
+/*------------kolory tła---------------------*/
+.tlo_kolor_ciemno_zielony{
+  background-color: #104610;
+    }
+.tlo_kolor_zielony{
+  background-color: #24b824;
+        }
+        
+.tlo_kolor_niebieski{
+  background-color: #2653a7;
+        }
+.tlo_kolor_ciemno_niebieski{
+  background-color: #090c30;
+     }
+.tlo_kolor_czerwony{
+  background-color: #991818;
+}
+.tlo_kolor_jasno_czerwony{
+  background-color: #f80000;
+}
+.tlo_kolor_ciemno_czerwony{
+  background-color: #3b0606;
+}
+.tlo_kolor_wyblakły_czerwony{
+  background-color: #3a2020;
+}
+.tlo_kolor_pomaranczowy{
+  background-color: #a16c1c;
+}
+.tlo_kolor_jasno_pomaranczowy{
+  background-color: #d3830c;
+}
+.tlo_kolor_ciemno_pomaranczowy{
+  background-color: #4e330a;
+}
+.tlo_kolor_bialy{
+  background-color: #ffffff;
+}
+.tlo_kolor_szary{
+  background-color: gray;
+}
+.tlo_kolor_czarny{
+  background-color: black;
+}
+.tlo_kolor_fioletowy{
+  background-color: purple;
+}
+.tlo_kolor_aqua{
+  background-color: aqua;
+}
+.tlo_kolor_brazowyrosy{
+  background-color: rosybrown;
+}
+.tlo_kolor_brazowy{
+  background-color: rgb(148, 106, 44);
+}
+.tlo_kolor_zolty{
+  background-color: yellow;
+}
+/*--------------kolory tabeli-------------------------*/
+.tabela_obramowanie_kolor_ciemno_zielony{
+  border: 2px solid #104610;
+    }
+.tabela_obramowanie_kolor_zielony{
+  border: 2px solid #24b824;
+        }
+
+.tabela_obramowanie_kolor_ciemno_niebieski{
+        color: #090c30;
+            }
+.tabela_obramowanie_kolor_czerwony{
+  border: 2px solid #c0392b;
+}
+.tabela_obramowanie_kolor_jasno_czerwony{
+  border: 2px solid #f80000;
+}
+.tabela_obramowanie_kolor_ciemno_czerwony{
+  border: 2px solid #3b0606;
+}
+.tabela_obramowanie_kolor_wyblakły_czerwony{
+  border: 2px solid #3a2020;
+}
+.tabela_obramowanie_kolor_pomaranczowy{
+  border: 2px solid #a16c1c;
+}
+.tabela_obramowanie_kolor_jasno_pomaranczowy{
+  border: 2px solid #d3830c;
+}
+.tabela_obramowanie_kolor_ciemno_pomaranczowy{
+  border: 2px solid #4e330a;
+}
+.tabela_obramowanie_kolor_bialy{
+  border: 2px solid #ffffff;
+}
+.tabela_obramowanie_kolor_szary{
+  border: 2px solid gray;
+}
+.tabela_obramowanie_kolor_czarny{
+  border: 2px solid black;
+}
+.tabela_obramowanie_kolor_fioletowy{
+  border: 2px solid purple;
+}
+.tabela_obramowanie_kolor_aqua{
+  border: 2px solid aqua;
+}
+.tabela_obramowanie_kolor_brazowyrosy{
+  border: 2px solid rosybrown;
+}
+.tabela_obramowanie_kolor_brazowy{
+  border: 2px solid rgb(148, 106, 44);
+}
+.tabela_obramowanie_kolor_zolty{
+  border: 2px solid yellow;
+}
+/*------------------------------------tabelka rozmiar------------------------------------*/
+/* Klasa dla tabelki o szerokości 100% */
+.tabela_100 {
+  width: 100%;
 }
 
-.body1{
-    background-color: #3a3b4d;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #ffc468;
+/* Klasa dla tabelki o szerokości 95% */
+.tabela_95 {
+  width: 95%;
 }
 
+/* Klasa dla tabelki o szerokości 90% */
+.tabela_90 {
+  width: 90%;
+}
+
+/* Klasa dla tabelki o szerokości 85% */
+.tabela_85 {
+  width: 85%;
+}
+
+/* Klasa dla tabelki o szerokości 80% */
+.tabela_80 {
+  width: 80%;
+}
+
+/* Klasa dla tabelki o szerokości 75% */
+.tabela_75 {
+  width: 75%;
+}
+
+/* Klasa dla tabelki o szerokości 70% */
+.tabela_70 {
+  width: 70%;
+}
+
+/* Klasa dla tabelki o szerokości 65% */
+.tabela_65 {
+  width: 65%;
+}
+
+/* Klasa dla tabelki o szerokości 60% */
+.tabela_60 {
+  width: 60%;
+}
+
+/* Klasa dla tabelki o szerokości 55% */
+.tabela_55 {
+  width: 55%;
+}
+
+/* Klasa dla tabelki o szerokości 50% */
+.tabela_50 {
+  width: 50%;
+}
+
+/* Klasa dla tabelki o szerokości 45% */
+.tabela_45 {
+  width: 45%;
+}
+
+/* Klasa dla tabelki o szerokości 40% */
+.tabela_40{
+  width: 40%;
+}
+
+/* Klasa dla tabelki o szerokości 35% */
+.tabela_35{
+  width: 35%;
+}
+
+/* Klasa dla tabelki o szerokości 30% */
+.tabela_30 {
+  width: 30%;
+}
+
+/* Klasa dla tabelki o szerokości 25% */
+.tabela_25 {
+  width: 25%;
+}
+
+/* Klasa dla tabelki o szerokości 20% */
+.tabela_20{
+  width: 20%;
+}
+
+/* Klasa dla tabelki o szerokości 15% */
+.tabela_15 {
+  width: 15%;
+}
+
+/* Klasa dla tabelki o szerokości 10% */
+.tabela_10 {
+  width: 10%;
+}
+
+/* Klasa dla tabelki o szerokości 5% */
+.tabela_5 {
+  width: 5%;
+}
+
+/* Klasa dla tabelki o szerokości 3% */
+.tabela_3 {
+  width: 3%;
+}
+
+/* Klasa dla tabelki o szerokości 2% */
+.tabela_2 {
+  width: 2%;
+}
+
+/* Klasa dla tabelki o szerokości 1% */
+.tabela_1 {
+  width: 1%;
+}
+
+/* Klasa dla tabelki o szerokości 0.5% */
+.tabela_05 {
+  width: 0.5%;
+}
+
+/* Klasa dla tabelki o szerokości 0.1% */
+.tabela_01 {
+  width: 0.1%;
+}
+/*-----------------------tabela położenie----------------------------*/
+.tabela_srodek{
+  margin: 0 auto;
+}
+
+/* Klasa dla tabeli wyrównanej do lewej strony */
+.tabela_lewa {
+  float: left;
+}
+
+/* Klasa dla tabeli wyrównanej do prawej strony */
+.tabela_prawa {
+  float: right;
+}
+
+/*-------------kolor nagłówka-------------*/
+.naglowek_kolor_ciemno_zielony{
+  color: #104610;
+    }
+.naglowek_kolor_zielony{
+      color: #24b824;
+        }
+.naglowek_kolor_niebieski{
+      color: #2653a7;
+        }
+.naglowek_kolor_ciemno_niebieski{
+        color: #090c30;
+            }
+.naglowek_kolor_czerwony{
+  color: #991818;
+}
+.naglowek_kolor_jasno_czerwony{
+  color: #f80000;
+}
+.naglowek_kolor_ciemno_czerwony{
+  color: #3b0606;
+}
+.naglowek_kolor_wyblakły_czerwony{
+  color: #3a2020;
+}
+.naglowek_kolor_pomaranczowy{
+  color: #a16c1c;
+}
+.naglowek_kolor_jasno_pomaranczowy{
+  color: #d3830c;
+}
+.naglowek_kolor_ciemno_pomaranczowy{
+  color: #4e330a;
+}
+.naglowek_kolor_bialy{
+  color: #ffffff;
+}
+.naglowek_kolor_szary{
+  color: gray;
+}
+.naglowek_kolor_czarny{
+  color: black;
+}
+.naglowek_kolor_fioletowy{
+  color: purple;
+}
+.naglowek_kolor_aqua{
+  color: aqua;
+}
+.naglowek_kolor_brazowyrosy{
+  color: rosybrown;
+}
+.naglowek_kolor_brazowy{
+  color: rgb(148, 106, 44);
+}
+.naglowek_kolor_zolty{
+  color: yellow;
+}
+/*--------------Czcionki Rodzaje---------------*/
+.czcionka_kształt_Arial{
+  font-family: Arial, sans-serif;
+}
+.czcionka_kształt_Calibri{
+  font-family: 'Gill Sans', 'Gill Sans MT','Calibri', 'Trebuchet MS', sans-serif;
+}
+.czcionka_kształt_Times_New_Roman{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/*------------style czcionek--------------*/
+/* Normal (regular) */
+.czcionka_style_normalna{
+  font-weight: normal;
+}
+
+.czcionka_style_pogrubiona{
+ /* Pogrubiona (bold) */
+font-weight: bold; 
+}
+
+.czcionka_style_polpogrubiona{
+  /* Półpogrubiona (semi-bold) */
+font-weight: 600;
+}
+
+.czcionka_style_srednia{
+  /* Średnia (medium) */
+font-weight: 500;
+}
+
+.czcionka_style_lekka{
+  /* Lekka (light) */
+font-weight: 300;
+}
+
+.czcionka_style_bardzo_lekka{
+  /* Bardzo lekka (thin) */
+  font-weight: 100;
+}
+
+.czcionka_style_pochyla{
+  /* Pochyła (italic) */
+font-style: italic;
+}
+
+.czcionka_style_pochylona_pogrubiona{
+  /* Pochylona pogrubiona (bold italic) */
+font-style: italic;
+font-weight: bold;
+
+}
+.czcionka_style_bardzo_cienka{
+/* Bardzo cienka (hairline) */
+font-weight: 100;
+letter-spacing: 2px; /* opcjonalne, aby poprawić czytelność */
+}
+/*----------------------------Rozmiar Czcionek----------------------------------*/
+
+.czcionka_rozmiar_10 {
+  font-size: 10px;
+}
+
+.czcionka_rozmiar_12 {
+  font-size: 12px;
+}
+
+.czcionka_rozmiar_14 {
+  font-size: 14px;
+}
+
+.czcionka_rozmiar_16 {
+  font-size: 16px;
+}
+
+.czcionka_rozmiar_18 {
+  font-size: 18px;
+}
+
+.czcionka_rozmiar_20 {
+  font-size: 20px;
+}
+
+.czcionka_rozmiar_24 {
+  font-size: 24px;
+}
+
+.czcionka_rozmiar_28 {
+  font-size: 28px;
+}
+
+.czcionka_rozmiar_36 {
+  font-size: 36px;
+}
+.czcionka_rozmiar_38 {
+  font-size: 38px;
+}
+.czcionka_rozmiar_40 {
+  font-size: 40px;
+}
+
+.czcionka_rozmiar_48 {
+  font-size: 48px;
+}
+
+.czcionka_rozmiar_50 {
+  font-size: 50px;
+}
+
+.czcionka_rozmiar_60 {
+  font-size: 60px;
+}
+
+.czcionka_rozmiar_72 {
+  font-size: 72px;
+}
+
+.czcionka_rozmiar_80 {
+  font-size: 80px;
+}
+
+.czcionka_rozmiar_90 {
+  font-size: 90px;
+}
+
+.czcionka_rozmiar_100 {
+  font-size: 100px;
+}
+
+.czcionka_rozmiar_120 {
+  font-size: 120px;
+}
+
+.czcionka_rozmiar_150 {
+  font-size: 150px;
+}
+/*------------------------położenie tekstu----------------------------------*/
+.wysrodkuj{
+  text-align: center;
+}
+.pozycjalewa{
+  text-align: left;
+}
+
+.pozycjaprawa{
+  text-align: right;
+}
+
+/*------------------ułożenie nawigacji------------------------------*/
+.nawigacja_gorazablokowana {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.stopka_zablokowananadole {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/*------------------------podświetlanie linków-------------------------*/
+.bez_podswietlania_linkow {
+  text-decoration: none;
+  color: inherit;
+}
+/*--------------------odstęp międy tekstem itp-----------------------*/
+.odstep_10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.odstep_20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.odstep_25 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.odstep_30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.odstep_35 {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.odstep_40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.odstep_45 {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.odstep_50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.odstep_55 {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+.odstep_60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.odstep_65 {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.odstep_70 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.odstep_75 {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.odstep_80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.odstep_85 {
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+
+.odstep_90 {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.odstep_95 {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+.odstep_100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.odstep_125 {
+  padding-top: 125px;
+  padding-bottom: 125px;
+}
+
+.odstep_150 {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.odstep_175 {
+  padding-top: 175px;
+  padding-bottom: 175px;
+}
+
+.odstep_200 {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+/*----------------ramka do tekstu obrazka itp---------------------------*/
+.ramka_czarna {
+  border: 2px solid black;
+}
+
+.ramka_szara {
+  border: 2px solid gray;
+}
+
+.ramka_biała {
+  border: 2px solid white;
+}
+
+.ramka_niebieska {
+  border: 2px solid blue;
+}
+
+.ramka_ciemnoniebieska {
+  border: 2px solid navy;
+}
+
+.ramka_jasnoniebieska {
+  border: 2px solid skyblue;
+}
+
+.ramka_turkusowa {
+  border: 2px solid turquoise;
+}
+
+.ramka_morska {
+  border: 2px solid seagreen;
+}
+
+.ramka_zielona {
+  border: 2px solid green;
+}
+
+.ramka_jasnozielona {
+  border: 2px solid limegreen;
+}
+
+.ramka_oliwkowa {
+  border: 2px solid olive;
+}
+
+.ramka_złota {
+  border: 2px solid gold;
+}
+
+.ramka_żółta {
+  border: 2px solid yellow;
+}
+
+.ramka_żółtobrązowa {
+  border: 2px solid khaki;
+}
+
+.ramka_pomarańczowa {
+  border: 2px solid orange;
+}
+
+.ramka_czerwona {
+  border: 2px solid red;
+}
+
+.ramka_różowa {
+  border: 2px solid pink;
+}
+
+.ramka_fuksjowa {
+  border: 2px solid fuchsia;
+}
+
+.ramka_purpurowa {
+  border: 2px solid purple;
+}
+
+.ramka_brzoskwiniowa {
+  border: 2px solid peachpuff;
+}
+
+.ramka_beżowa {
+  border: 2px solid beige;
+}
+
+.ramka_czekoladowa {
+  border: 2px solid chocolate;
+}
+
+.ramka_khaki {
+  border: 2px solid khaki;
+}
+
+.ramka_limonkowa {
+  border: 2px solid lime;
+}
+
+.ramka_bordowa {
+  border: 2px solid maroon;
+}
+
+.ramka_niebieskoszara {
+  border: 2px solid slategray;
+}
+
+.ramka_oliwkowobrunatna {
+  border: 2px solid olivedrab;
+}
+
+.ramka_srebrna {
+  border: 2px solid silver;
+}
+
+.ramka_ciemnoszara {
+  border: 2px solid darkgray;
+}
+
+.ramka_amarantowa {
+  border: 2px solid amaranth;
+}
+
+/*---------------ramki zaokrąglone-------------------------*/
+.ramka_zokraglona_czarna {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_szara {
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_biała {
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_niebieska {
+  border: 2px solid blue;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_ciemnoniebieska {
+  border: 2px solid navy;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_jasnoniebieska {
+  border: 2px solid skyblue;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_turkusowa {
+  border: 2px solid turquoise;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_morska {
+  border: 2px solid seagreen;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_zielona {
+  border: 2px solid green;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_jasnozielona {
+  border: 2px solid limegreen;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_oliwkowa {
+  border: 2px solid olive;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_złota {
+  border: 2px solid gold;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_żółta {
+  border: 2px solid yellow;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_żółtobrązowa {
+  border: 2px solid khaki;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_pomarańczowa {
+  border: 2px solid orange;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_czerwona {
+  border: 2px solid red;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_różowa {
+  border: 2px solid pink;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_fuksjowa {
+  border: 2px solid fuchsia;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_purpurowa {
+  border: 2px solid purple;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_brzoskwiniowa {
+  border: 2px solid peachpuff;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_beżowa {
+  border: 2px solid beige;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_czekoladowa {
+  border: 2px solid chocolate;
+  border-radius: 10px;
+}
+
+.ramka_zokraglona_khaki {
+  border: 2px solid khaki;
+  border-radius: 10px;
+}
+/*-------------------wyśrodkowanie list nienumerowanych (* (zdanie) ) list numerowanych (1. (zdanie) ) daje się albo do ul albo do ol nie do li----------------------*/
+.wysrodkuj_liste li {
+  
+  list-style-position: inside;
+}
+.wysrodkuj_liste li::before {
+  
+  list-style-position: inside;
+}
+
+/*-----------------------------------------*/
 header {
     background-color: #4CAF50;
     color: rgb(255, 255, 255);
@@ -187,15 +1080,15 @@ main h1 {
 }
 /* to są ustawienia do indywidualnego przycisku małego*/
 .maly_przycisk {
-  color: rgb(10, 10, 10);
-  background-color:  rgb(71, 84, 110);
+  
+
   width: 100%;
   border-radius: 1em;
   min-height: 3.7em;
   text-align: center;
   cursor: pointer;
   height: 200px;
-  font-size: 40px;
+ 
 right: 250px;
 }
 
@@ -408,3 +1301,5 @@ right: 250px;
           .box:hover .img-box p {
             opacity: 1;
           }
+
+ 
