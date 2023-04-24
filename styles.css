@@ -464,453 +464,455 @@ color: #B0C4DE;
         
 /*------------kolory tła---------------------*/
 .tlo_kolor_czarny {
-  color: #000000;
+  background-color: #000000;
   }
   .tlo_kolor_biały {
-  color: #FFFFFF;
+    background-color: #FFFFFF;
   }
   .tlo_kolor_szary {
-  color: #808080;
+    background-color: #808080;
   }
   .tlo_kolor_srebrny {
-  color: #C0C0C0;
+    background-color: #C0C0C0;
   }
   .tlo_kolor_ciemnoszary {
-  color: #A9A9A9;
+    background-color: #A9A9A9;
   }
   .tlo_kolor_ciemnosrebrny {
-  color: #696969;
+    background-color: #696969;
   }
   .tlo_kolor_ciemnoczerwony {
-  color: #8B0000;
+    background-color: #8B0000;
   }
   .tlo_kolor_ciemnyzielony {
-  color: #006400;
+    background-color: #006400;
   }
   .tlo_kolor_niebieski {
-  color: #0000FF;
+    background-color: #0000FF;
   }
   .tlo_kolor_ciemnoniebieski {
-  color: #00008B;
+    background-color: #00008B;
   }
   .tlo_kolor_jasnoniebieski {
-  color: #ADD8E6;
+    background-color: #ADD8E6;
   }
   .tlo_kolor_błękitny {
-  color: #00FFFF;
+    background-color: #00FFFF;
   }
   .tlo_kolor_ciemiękoralowy {
-  color: #FF7F50;
+    background-color: #FF7F50;
   }
   .tlo_kolor_ciemnokoralowy {
-  color: #FF4500;
+    background-color: #FF4500;
   }
   .tlo_kolor_jasnokoralowy {
-  color: #FFDAB9;
+    background-color: #FFDAB9;
   }
   .tlo_kolor_złoty {
-  color: #FFD700;
+    background-color: #FFD700;
   }
   .tlo_kolor_żółty {
-  color: #FFFF00;
+    background-color: #FFFF00;
   }
   .tlo_kolor_ciemnożółty {
-  color: #808000;
+    background-color: #808000;
   }
   .tlo_kolor_pomarańczowy {
-  color: #FFA500;
+    background-color: #FFA500;
   }
   .tlo_kolor_ciemnopomarańczowy {
-  color: #FF8C00;
+    background-color: #FF8C00;
   }
   .tlo_kolor_jasnopomarańczowy {
-  color: #FFE4B5;
+    background-color: #FFE4B5;
   }
   .tlo_kolor_purpurowy {
-  color: #800080;
+    background-color: #800080;
   }
   .tlo_kolor_ciemnopurpurowy {
-  color: #4B0082;
+    background-color: #4B0082;
   }
   .tlo_kolor_jasnopurpurowy {
-  color: #E6E6FA;
+    background-color: #E6E6FA;
   }
   .tlo_kolor_ciemnozielony {
-  color: #008000;
+    background-color: #008000;
   }
   .tlo_kolor_oliwkowy {
-  color: #808000;
+    background-color: #808000;
   }
   .tlo_kolor_jasnozielony {
-  color: #90EE90;
+    background-color: #90EE90;
   }
   .tlo_kolor_zielony {
-  color: #00FF00;
+    background-color: #00FF00;
   }
   .tlo_kolor_seledynowy {
-  color: #2E8B57;
+    background-color: #2E8B57;
   }
   .tlo_kolor_morski {
-  color: #3CB371;
+    background-color: #3CB371;
   }
   .tlo_kolor_morski2 {
-  color: #20B2AA;
+    background-color: #20B2AA;
   }
   .tlo_kolor_limonkowy {
-  color: #32CD32;
+    background-color: #32CD32;
   }
   .tlo_kolor_khaki {
-  color: #F0E68C;
+  background-color: #F0E68C;
   }
   .tlo_kolor_lazurowy {
-  color: #F08080;
+    background-color: #F08080;
   }
   .tlo_kolor_łososiowy {
-  color: #FFA07A
+    background-color: #FFA07A
   }
   .tlo_kolor_różowy {
-    color: #FFC0CB;
+    background-color: #FFC0CB;
     }
     .tlo_kolor_jasnoróżowy {
-    color: #FFB6C1;
+      background-color: #FFB6C1;
     }
     .tlo_kolor_fioletowy {
-    color: #800080;
+      background-color: #800080;
     }
     .tlo_kolor_bordowy {
-    color: #800000;
+      background-color: #800000;
     }
     .tlo_kolor_koralowy {
-    color: #FF7F50;
+      background-color: #FF7F50;
     }
     .tlo_kolor_lila {
-    color: #C8A2C8;
+      background-color: #C8A2C8;
     }
     .tlo_kolor_amarantowy {
-    color: #E52B50;
+      background-color: #E52B50;
     }
     .tlo_kolor_cyjan {
-    color: #00FFFF;
+      background-color: #00FFFF;
     }
     .tlo_kolor_indygo {
-    color: #4B0082;
+      background-color: #4B0082;
     }
     .tlo_kolor_pudrowy {
-    color: #FFDAE9;
+      background-color: #FFDAE9;
     }
     .tlo_kolor_łososiowy2 {
-    color: #FF8C69;
+      background-color: #FF8C69;
     }
     .tlo_kolor_oliwkowy2 {
-    color: #6B8E23;
+      background-color: #6B8E23;
     }
     .tlo_kolor_turkusowy {
-    color: #40E0D0;
+      background-color: #40E0D0;
     }
     .tlo_kolor_jasnybrązowy {
-    color: #CD853F;
+      background-color: #CD853F;
     }
     .tlo_kolor_jasnyzielony2 {
-    color: #32CD32;
+      background-color: #32CD32;
     }
     .tlo_kolor_jasnofioletowy {
-      color: #BA55D3;
+      background-color: #BA55D3;
       }
       .tlo_kolor_magenta {
-      color: #FF00FF;
+        background-color: #FF00FF;
       }
       .tlo_kolor_amarantowy2 {
-      color: #9F2B68;
+        background-color: #9F2B68;
       }
       .tlo_kolor_jasnolazurowy {
-      color: #E0FFFF;
+        background-color: #E0FFFF;
       }
       .tlo_kolor_jasnyżółty {
-      color: #FFFFE0;
+        background-color: #FFFFE0;
       }
       .tlo_kolor_jasnobeżowy {
-      color: #F5DEB3;
+        background-color: #F5DEB3;
       }
       .tlo_kolor_kremowy {
-      color: #FFFDD0;
+        background-color: #FFFDD0;
       }
       .tlo_kolor_słomkowy {
-      color: #ECE6AE;
+        background-color: #ECE6AE;
       }
       .tlo_kolor_miedziany {
-      color: #B87333;
+        background-color: #B87333;
       }
       .tlo_kolor_bursztynowy {
-      color: #FFBF00;
+        background-color: #FFBF00;
       }
       .tlo_kolor_jasnyseledynowy {
-      color: #AFEEEE;
+        background-color: #AFEEEE;
       }
       .tlo_kolor_oliwkowy3 {
-      color: #556B2F;
+        background-color: #556B2F;
       }
       .tlo_kolor_koralowy2 {
-      color: #FF6347;
+        background-color: #FF6347;
       }
       .tlo_kolor_jasnyfioletowy {
-      color: #9370DB;
+        background-color: #9370DB;
       }
       .tlo_kolor_bordowy2 {
-      color: #B22222;
+        background-color: #B22222;
       }
       .tlo_kolor_brunatny {
-      color: #A52A2A;
+        background-color: #A52A2A;
       }
       .tlo_kolor_kasztanowy {
-      color: #8B0000;
+        background-color: #8B0000;
       }
       .tlo_kolor_granatowy {
-      color: #000080;
+        background-color: #000080;
       }
       .tlo_kolor_jasnyturkusowy {
-      color: #00CED1;
+        background-color: #00CED1;
       }
       .tlo_kolor_łososiowy3 {
-      color: #FFA07A;
+        background-color: #FFA07A;
       }
       .tlo_kolor_jasnopomarańczowy2 {
-      color: #FFDAB9;
+        background-color: #FFDAB9;
       }
       .tlo_kolor_jasnolimonkowy {
-      color: #ADFF2F;
+        background-color: #ADFF2F;
       }
       .tlo_kolor_bezowy {
-      color: #F5F5DC;
+        background-color: #F5F5DC;
       }
       .tlo_kolor_ciemnybeżowy {
-      color: #8B6914;
+        background-color: #8B6914;
       }
       .tlo_kolor_ciemnykhaki {
-      color: #BDB76B;
+        background-color: #BDB76B;
       }
       .tlo_kolor_jasnyzielony3 {
-      color: #9ACD32;
+        background-color: #9ACD32;
       }
       .tlo_kolor_jasnolazurowy2 {
-      color: #00FFFF;
+        background-color: #00FFFF;
       }
       .tlo_kolor_ciemnozielony2 {
-      color: #006400;
+        background-color: #006400;
       }
       .tlo_kolor_oliwkowy4 {
-      color: #808000;
+        background-color: #808000;
       }
       .tlo_kolor_purpurowy2 {
-      color: #6A5ACD;
+        background-color: #6A5ACD;
       }
       .tlo_kolor_fioletowy2 {
-      color: #8A2BE2;
+        background-color: #8A2BE2;
       }
       .tlo_kolor_ciemnofioletowy2 {
-      color: #9400D3;
+        background-color: #9400D3;
       }
       .tlo_kolor_błękitny2 {
-      color: #ADD8E6;
+        background-color: #ADD8E6;
       }
       .tlo_kolor_jasnyróżowy {
-        color: #FFC0CB;
+        background-color: #FFC0CB;
         }
         .tlo_kolor_łososiowy4 {
-        color: #FA8072;
+          background-color: #FA8072;
         }
         .tlo_kolor_złoty {
-        color: #FFD700;
+          background-color: #FFD700;
         }
         .tlo_kolor_jasnozielony4 {
-        color: #90EE90;
+          background-color: #90EE90;
         }
         .tlo_kolor_srebrny {
-        color: #C0C0C0;
+          background-color: #C0C0C0;
         }
         .tlo_kolor_szary {
-        color: #808080;
+          background-color: #808080;
         }
         .tlo_kolor_ciemnoszary {
-        color: #A9A9A9;
+          background-color: #A9A9A9;
         }
         .tlo_kolor_czarny {
-        color: #000000;
+          background-color: #000000;
         }
         .tlo_kolor_seledynowy {
-        color: #20B2AA;
+          background-color: #20B2AA;
         }
         .tlo_kolor_bezowy2 {
-        color: #F0EAD6;
+          background-color: #F0EAD6;
         }
         .tlo_kolor_żółtobrązowy {
-        color: #D2B48C;
+          background-color: #D2B48C;
         }
         .tlo_kolor_słomkowy2 {
-        color: #F0E68C;
+          background-color: #F0E68C;
         }
         .tlo_kolor_oliwkowy5 {
-        color: #6B8E23;
+          background-color: #6B8E23;
         }
         .tlo_kolor_jasnyturkusowy2 {
-        color: #48D1CC;
+          background-color: #48D1CC;
         }
         .tlo_kolor_błękitny3 {
-        color: #87CEFA;
+          background-color: #87CEFA;
         }
         .tlo_kolor_jasnoniebieski {
-        color: #87CEEB;
+          background-color: #87CEEB;
         }
         .tlo_kolor_turkusowy {
-        color: #40E0D0;
+          background-color: #40E0D0;
         }
         .tlo_kolor_fioletowy3 {
-        color: #BA55D3;
+          background-color: #BA55D3;
         }
         .tlo_kolor_fioletowy4 {
-        color: #8B008B;
+          background-color: #8B008B;
         }
         .tlo_kolor_purpurowy3 {
-        color: #4B0082;
+          background-color: #4B0082;
         }
         .tlo_kolor_ciemnoczerwony {
-        color: #8B0000;
+          background-color: #8B0000;
         }
         .tlo_kolor_złotobrązowy {
-        color: #B8860B;
+          background-color: #B8860B;
         }
         .tlo_kolor_bezowy3 {
-        color: #F5F5F5;
+          background-color: #F5F5F5;
         }
         .tlo_kolor_ciemnoszary2 {
-        color: #696969;
+          background-color: #696969;
         }
         .tlo_kolor_jasnoszary {
-        color: #D3D3D3;
+          background-color: #D3D3D3;
         }
         .tlo_kolor_biały {
-        color: #FFFFFF;
+          background-color: #FFFFFF;
         }
         .tlo_kolor_seledynowy2 {
-        color: #40E0D0;
+          background-color: #40E0D0;
         }
         .tlo_kolor_jasnybeżowy {
-        color: #F5DEB3;
+          background-color: #F5DEB3;
         }
         .tlo_kolor_oliwkowy6 {
-        color: #808000;
+          background-color: #808000;
         }
         .tlo_kolor_jasnofioletowy2 {
-        color: #BA55D3;
+          background-color: #BA55D3;
         }
         .tlo_kolor_ciemnopomarańczowy {
-        color: #FF8C00;
+          background-color: #FF8C00;
         }
         .tlo_kolor_złoty2 {
-        color: #FFD700;
+          background-color: #FFD700;
         }
         .tlo_kolor_ciemnyzielony {
-        color: #006400;
+          background-color: #006400;
         }
         .tlo_kolor_purpurowoczerwony {
-        color: #8B008B;
+          background-color: #8B008B;
         }
         .tlo_kolor_jasnoczerwony{
-        color: #FFA07A;
+          background-color: #FFA07A;
 }
 .tlo_kolor_słomkowy3 {
-color: #E6D69F;
+  background-color: #E6D69F;
 }
 .tlo_kolor_pomarańczowy3 {
-color: #FFA500;
+  background-color: #FFA500;
 }
 .tlo_kolor_miodowy {
-color: #FFC87C;
+  background-color: #FFC87C;
 }
 .tlo_kolor_ciemnokoralowy {
-color: #FF7F50;
+  background-color: #FF7F50;
 }
 .tlo_kolor_limonkowy {
-color: #32CD32;
+  background-color: #32CD32;
 }
 .tlo_kolor_jasnyturkusowy3 {
-color: #00CED1;
+  background-color: #00CED1;
 }
 .tlo_kolor_jasnoniebieski2 {
-color: #ADD8E6;
+  background-color: #ADD8E6;
 }
 .tlo_kolor_błękitny4 {
-color: #87CEFA;
+  background-color: #87CEFA;
 }
 .tlo_kolor_łososiowy {
-color: #FFA07A;
+  background-color: #FFA07A;
 }
 .tlo_kolor_bezowy4 {
-color: #FAF0E6;
+  background-color: #FAF0E6;
 }
 .tlo_kolor_ciemnobrązowy {
-color: #8B4513;
+  background-color: #8B4513;
 }
 .tlo_kolor_jasnobrązowy {
-color: #CD853F;
+  background-color: #CD853F;
 }
 .tlo_kolor_szary2 {
-color: #C0C0C0;
+  background-color: #C0C0C0;
 }
 .tlo_kolor_ciemnoszary3 {
-color: #708090;
+  background-color: #708090;
 }
 .tlo_kolor_biały2 {
-color: #F5F5F5;
+  background-color: #F5F5F5;
 }
 .tlo_kolor_oliwkowy7 {
-color: #556B2F;
+  background-color: #556B2F;
 }
 .tlo_kolor_jasnofioletowy3 {
-color: #9370DB;
+  background-color: #9370DB;
 }
 .tlo_kolor_ciemnofioletowy {
-color: #9400D3;
+  background-color: #9400D3;
 }
 .tlo_kolor_różowy {
-color: #FF69B4;
+  background-color: #FF69B4;
 }
 .tlo_kolor_jasnybeżowy2 {
-color: #FFE4C4;
+  background-color: #FFE4C4;
 }
 .tlo_kolor_ciemnopomarańczowy2 {
-color: #FF8C00;
+  background-color: #FF8C00;
 }
 .tlo_kolor_złoty3 {
-color: #FFB90F;
+  background-color: #FFB90F;
 }
 .tlo_kolor_ciemnozielony2 {
-color: #228B22;
+  background-color: #228B22;
 }
 .tlo_kolor_purpurowoczerwony2 {
-color: #C71585;
+  background-color: #C71585;
 }
 .tlo_kolor_jasnoczerwony2 {
-color: #FF7F50;
+  background-color: #FF7F50;
 }
 .tlo_kolor_słomkowy4 {
-color: #FFFACD;
+  background-color: #FFFACD;
 }
 .tlo_kolor_pomarańczowy4 {
-color: #FFA500;
+  background-color: #FFA500;
 }
 .tlo_kolor_ciemnokoralowy2 {
-color: #FF4500;
+  background-color: #FF4500;
 }
 .tlo_kolor_limonkowy2 {
-color: #7CFC00;
+  background-color: #7CFC00;
 }
 .tlo_kolor_jasnyturkusowy4 {
-color: #00BFFF;
+  background-color: #00BFFF;
 }
 .tlo_kolor_jasnoniebieski3 {
-color: #B0C4DE;
+  background-color: #B0C4DE;
 }
-
+.tlo_kolor_brazowy{
+  background-color: #221a11;
+  }
 /*--------------kolory tabeli-------------------------*/
 .tabela_obramowanie_kolor_ciemno_zielony{
   border: 2px solid #104610;
