@@ -1,0 +1,132 @@
+
+body {
+	background: #23313d;
+	font-family: 'Montserrat', sans-serif;
+}
+ .container {
+	width: 1200px;
+	margin: 0 auto;
+}
+ header {
+	background: #000;
+	color: #fff;
+}
+ .logo {
+	float: left;
+	font-weight: 700;
+	font-size: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+    color: #000000;
+}
+ nav ul {
+	float: right;
+	list-style-type: none;
+}
+ nav ul li {
+	display: inline-block;
+}
+ nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+	display: block;
+}
+ nav a:hover {
+	background: #555;
+}
+ form {
+	display: inline-block;
+
+	position: relative;
+	top: 20px;
+}
+ form input {
+	display: inline-block;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 3px;
+	font-size: 16px;
+	width: 250px;
+}
+ form button {
+	background: #dbdbdb;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 3px;
+	margin-left: -5px;
+}
+ form button i {
+	color: #6b6b6b;
+}
+ .banner {
+	height: 600px;
+	background: url('https://filman.cc/public/static/images/big_slider/8.jpg') no-repeat center center / cover;
+}
+ .banner-content {
+	margin-top: 200px;
+	margin-left: 200px;
+}
+ .banner-content h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+ .banner-content p {
+	font-size: 24px;
+	margin-bottom: 30px;
+}
+ .button {
+	display: inline-block;
+	background: #8e8e8e;
+	border: none;
+	color: #fff;
+	padding: 15px 30px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	border-radius: 3px;
+	margin-right: 20px;
+	transition: background-color 1s ease-out;
+}
+ .button:hover {
+	background: #555;
+}
+ .movies {
+	margin-top: 80px;
+	margin-bottom: 40px;
+}
+ .movies h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+ .movie-box {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+}
+ .movie-image {
+	flex-basis: 30%;
+}
+ .movie-image img {
+	max-width: 100%;
+}
+ .movie-info {
+	padding-left: 40px;
+	flex-basis: 70%;
+}
+ .movie-info h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+ .movie-info p {
+	color: #666;
+	margin-bottom: 20px;
+}
+ footer {
+	background: #000;
+	color: #fff;
+	padding: 20px 0;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 40px;
+}
