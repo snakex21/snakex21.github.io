@@ -1225,6 +1225,56 @@ font-weight: bold;
 font-weight: 100;
 letter-spacing: 2px; /* opcjonalne, aby poprawić czytelność */
 }
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.czcionka_open_sans {
+  font-family: 'Open Sans', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.czcionka_roboto {
+  font-family: 'Roboto', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.czcionka_lato {
+  font-family: 'Lato', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates');
+
+.czcionka_montserrat_alternates {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+.czcionka_nunito {
+  font-family: 'Nunito', sans-serif;
+}
+
+  .czcionka_poppins {
+  font-family: 'Poppins', sans-serif;
+  }
+  
+  .czcionka_quicksand {
+  font-family: 'Quicksand', sans-serif;
+  }
+  
+  .czcionka_raleway {
+  font-family: 'Raleway', sans-serif;
+  }
+  
+  .czcionka_ubuntu {
+  font-family: 'Ubuntu', sans-serif;
+  }
+  
+  .czcionka_merriweather {
+  font-family: 'Merriweather', serif;
+  }
+  
+  .czcionka_playfair_display {
+  font-family: 'Playfair Display', serif;
+  }
 /*----------------------------Rozmiar Czcionek----------------------------------*/
 
 .czcionka_rozmiar_10 {
@@ -1335,113 +1385,193 @@ letter-spacing: 2px; /* opcjonalne, aby poprawić czytelność */
   color: inherit;
 }
 /*--------------------odstęp międy tekstem itp-----------------------*/
-.odstep_10 {
+.odstep2_10 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.odstep_20 {
+.odstep2_20 {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.odstep_25 {
+.odstep2_25 {
   padding-top: 25px;
   padding-bottom: 25px;
 }
 
-.odstep_30 {
+.odstep2_30 {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.odstep_35 {
+.odstep2_35 {
   padding-top: 35px;
   padding-bottom: 35px;
 }
 
-.odstep_40 {
+.odstep2_40 {
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-.odstep_45 {
+.odstep2_45 {
   padding-top: 45px;
   padding-bottom: 45px;
 }
 
-.odstep_50 {
+.odstep2_50 {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.odstep_55 {
+.odstep2_55 {
   padding-top: 55px;
   padding-bottom: 55px;
 }
 
-.odstep_60 {
+.odstep2_60 {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.odstep_65 {
+.odstep2_65 {
   padding-top: 65px;
   padding-bottom: 65px;
 }
 
-.odstep_70 {
+.odstep2_70 {
   padding-top: 70px;
   padding-bottom: 70px;
 }
 
-.odstep_75 {
+.odstep2_75 {
   padding-top: 75px;
   padding-bottom: 75px;
 }
 
-.odstep_80 {
+.odstep2_80 {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
-.odstep_85 {
+.odstep2_85 {
   padding-top: 85px;
   padding-bottom: 85px;
 }
 
-.odstep_90 {
+.odstep2_90 {
   padding-top: 90px;
   padding-bottom: 90px;
 }
 
-.odstep_95 {
+.odstep2_95 {
   padding-top: 95px;
   padding-bottom: 95px;
 }
 
-.odstep_100 {
+.odstep2_100 {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-.odstep_125 {
+.odstep2_125 {
   padding-top: 125px;
   padding-bottom: 125px;
 }
 
-.odstep_150 {
+.odstep2_150 {
   padding-top: 150px;
   padding-bottom: 150px;
 }
 
-.odstep_175 {
+.odstep2_175 {
   padding-top: 175px;
   padding-bottom: 175px;
 }
 
-.odstep_200 {
+.odstep2_200 {
   padding-top: 200px;
   padding-bottom: 200px;
+}
+/*----------------------------odstęp margin------------------------------*/
+.odstep_10 {
+  margin: 10px;
+}
+
+.odstep_20 {
+  margin: 20px;
+}
+
+.odstep_30 {
+  margin: 30px;
+}
+
+.odstep_40 {
+  margin: 40px;
+}
+
+.odstep_50 {
+  margin: 50px;
+}
+
+.odstep_60 {
+  margin: 60px;
+}
+
+.odstep_70 {
+  margin: 70px;
+}
+
+.odstep_80 {
+  margin: 80px;
+}
+
+.odstep_90 {
+  margin: 90px;
+}
+
+.odstep_100 {
+  margin: 100px;
+}
+
+.odstep_110 {
+  margin: 110px;
+}
+
+.odstep_120 {
+  margin: 120px;
+}
+
+.odstep_130 {
+  margin: 130px;
+}
+
+.odstep_140 {
+  margin: 140px;
+}
+
+.odstep_150 {
+  margin: 150px;
+}
+
+.odstep_160 {
+  margin: 160px;
+}
+
+.odstep_170 {
+  margin: 170px;
+}
+
+.odstep_180 {
+  margin: 180px;
+}
+
+.odstep_190 {
+  margin: 190px;
+}
+
+.odstep_200 {
+  margin: 200px;
 }
 
 /*----------------ramka do tekstu obrazka itp---------------------------*/
@@ -1690,13 +1820,28 @@ letter-spacing: 2px; /* opcjonalne, aby poprawić czytelność */
   list-style-position: inside;
 }
 
+.wysrodkuj_liste_nienumerowana {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wysrodkuj_liste_nienumerowana li {
+  list-style-position: inside;
+}
+/*-------------------------------------------------------Wyśrodkuj listę numerowaną/nienumerowaną-------------------------------------------*/
+
+
 /*-----------------------------------------*/
 /* styles.css */
+
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color:#6b1a1a59
+  
   
   
 }
@@ -1706,6 +1851,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffc468;
+  width: 100%;
+  height: 100%;
 }
 
 header {
@@ -2101,3 +2248,7 @@ transition: all 0.2s ease-in-out;
         .box:hover .img-box p {
           opacity: 1;
         }
+
+.stoprocentekranu{
+  width: 100%;
+}
