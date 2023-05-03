@@ -1384,6 +1384,11 @@ letter-spacing: 2px; /* opcjonalne, aby poprawić czytelność */
   text-decoration: none;
   color: inherit;
 }
+
+/*--------------------------- usunięcie podkreślenia -------------------------------*/
+.podkreślenie_link_usun {
+  text-decoration: none;
+}
 /*--------------------odstęp międy tekstem itp-----------------------*/
 .odstep2_10 {
   padding-top: 10px;
@@ -2126,7 +2131,7 @@ right: 250px;
   .filmy{
      
 flex-wrap: wrap;
-justify-content: space-between;
+justify-content: space-around;
 margin-top: 2rem;
 display: flex;
 flex-wrap: nowrap;
@@ -2252,3 +2257,4 @@ transition: all 0.2s ease-in-out;
 .stoprocentekranu{
   width: 100%;
 }
+
