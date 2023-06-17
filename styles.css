@@ -1277,7 +1277,47 @@ letter-spacing: 2px; /* opcjonalne, aby poprawić czytelność */
   }
 /*----------------------------Rozmiar Czcionek----------------------------------*/
 
+.czcionka_rozmiar_1 {
+  font-size: 1px;
+}
+
+.czcionka_rozmiar_2 {
+  font-size: 2px;
+}
+
+.czcionka_rozmiar_3 {
+  font-size: 3px;
+}
+
+.czcionka_rozmiar_4 {
+  font-size: 4px;
+}
+
+.czcionka_rozmiar_5 {
+  font-size: 5px;
+}
+
+.czcionka_rozmiar_6 {
+  font-size: 6px;
+}
+
+.czcionka_rozmiar_7 {
+  font-size: 7px;
+}
+
+.czcionka_rozmiar_8 {
+  font-size: 8px;
+}
+
+.czcionka_rozmiar_9 {
+  font-size: 9px;
+}
+
 .czcionka_rozmiar_10 {
+  font-size: 10px;
+}
+
+.czcionka_rozmiar_11 {
   font-size: 10px;
 }
 
@@ -1285,42 +1325,152 @@ letter-spacing: 2px; /* opcjonalne, aby poprawić czytelność */
   font-size: 12px;
 }
 
+.czcionka_rozmiar_13 {
+  font-size: 13px;
+}
+
 .czcionka_rozmiar_14 {
   font-size: 14px;
+}
+
+.czcionka_rozmiar_15 {
+  font-size: 15px;
 }
 
 .czcionka_rozmiar_16 {
   font-size: 16px;
 }
 
+.czcionka_rozmiar_17 {
+  font-size: 17px;
+}
+
 .czcionka_rozmiar_18 {
   font-size: 18px;
+}
+
+.czcionka_rozmiar_19 {
+  font-size: 19px;
 }
 
 .czcionka_rozmiar_20 {
   font-size: 20px;
 }
+.czcionka_rozmiar_21 {
+  font-size: 21px;
+}
+
+.czcionka_rozmiar_22 {
+  font-size: 22px;
+}
+
+.czcionka_rozmiar_23 {
+  font-size: 23px;
+}
+
 
 .czcionka_rozmiar_24 {
   font-size: 24px;
 }
 
+.czcionka_rozmiar_25 {
+  font-size: 25px;
+}
+
+.czcionka_rozmiar_26 {
+  font-size: 26px;
+}
+
+.czcionka_rozmiar_27 {
+  font-size: 27px;
+}
+
+
 .czcionka_rozmiar_28 {
   font-size: 28px;
+}
+
+.czcionka_rozmiar_29 {
+  font-size: 29px;
+}
+
+.czcionka_rozmiar_30 {
+  font-size: 30px;
+}
+
+.czcionka_rozmiar_31 {
+  font-size: 31px;
+}
+
+.czcionka_rozmiar_32 {
+  font-size: 32px;
+}
+
+.czcionka_rozmiar_33 {
+  font-size: 33px;
+}
+
+.czcionka_rozmiar_34 {
+  font-size: 34px;
+}
+
+.czcionka_rozmiar_35 {
+  font-size: 35px;
 }
 
 .czcionka_rozmiar_36 {
   font-size: 36px;
 }
+
+.czcionka_rozmiar_37 {
+  font-size: 37px;
+}
 .czcionka_rozmiar_38 {
   font-size: 38px;
 }
+
+.czcionka_rozmiar_39 {
+  font-size: 39px;
+}
+
 .czcionka_rozmiar_40 {
   font-size: 40px;
 }
 
+.czcionka_rozmiar_41 {
+  font-size: 41px;
+}
+
+.czcionka_rozmiar_42 {
+  font-size: 42px;
+}
+
+.czcionka_rozmiar_43 {
+  font-size: 43px;
+}
+
+.czcionka_rozmiar_44 {
+  font-size: 44px;
+}
+
+.czcionka_rozmiar_45 {
+  font-size: 45px;
+}
+
+.czcionka_rozmiar_46 {
+  font-size: 46px;
+}
+
+.czcionka_rozmiar_47 {
+  font-size: 47px;
+}
+
 .czcionka_rozmiar_48 {
   font-size: 48px;
+}
+
+.czcionka_rozmiar_49 {
+  font-size: 49px;
 }
 
 .czcionka_rozmiar_50 {
@@ -1859,7 +2009,7 @@ body {
   width: 100%;
   height: 100%;
 }
-
+/* nagłówek nr1.*/
 header {
   background-color: #4CAF50;
   color: rgb(255, 255, 255);
@@ -2014,7 +2164,134 @@ cursor: pointer;
   
 }
 
+/* ----------------------------szybkie kolumny-----------------------------*/
+
+.kolumna1 {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.animated-grid {
+  height: 85vh;
+  margin-bottom: 200px;
+
+  display: grid;
+  gap: 1rem;
+
+  /* kolumna styl drugi */
+  grid-template-areas:
+    'a  b  c  d'
+    'l  🌟 🌟 e'
+    'k  🌟 🌟 f'
+    'j  i  h  g';
+
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: 240px auto auto 240px;
+
+  --stagger-delay: 100ms;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+    filter: hue-rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+}
+
+.karta {
+  background-color: rgb(36, 243, 147);
+  animation: cardEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+
+.karta:nth-child(1) {
+  grid-area: a;
+  animation-delay: calc(1 * var(--stagger-delay));
+}
+.karta:nth-child(2) {
+  grid-area: b;
+  animation-delay: calc(2 * var(--stagger-delay));
+}
+.karta:nth-child(3) {
+  grid-area: c;
+  animation-delay: calc(3 * var(--stagger-delay));
+}
+.karta:nth-child(4) {
+  grid-area: d;
+  animation-delay: calc(4 * var(--stagger-delay));
+}
+.karta:nth-child(5) {
+  grid-area: e;
+  animation-delay: calc(5 * var(--stagger-delay));
+}
+.karta:nth-child(6) {
+  grid-area: f;
+  animation-delay: calc(6 * var(--stagger-delay));
+}
+.karta:nth-child(7) {
+  grid-area: g;
+  animation-delay: calc(7 * var(--stagger-delay));
+}
+.karta:nth-child(8) {
+  grid-area: h;
+  animation-delay: calc(8 * var(--stagger-delay));
+}
+.karta:nth-child(9) {
+  grid-area: i;
+  animation-delay: calc(9 * var(--stagger-delay));
+}
+.karta:nth-child(10) {
+  grid-area: j;
+  animation-delay: calc(10 * var(--stagger-delay));
+}
+.karta:nth-child(11) {
+  grid-area: k;
+  animation-delay: calc(11 * var(--stagger-delay));
+}
+.karta:nth-child(12) {
+  grid-area: l;
+  animation-delay: calc(12 * var(--stagger-delay));
+}
+.karta:last-child {
+  grid-area: 🌟;
+  animation-delay: calc(13 * var(--stagger-delay));
+}
+
+/*
+użycie
+<section class="animated-grid">
+  <div class="karta">a</div>
+  <div class="karta">b</div>
+  <div class="karta">c</div>
+  <div class="karta">d</div>
+  <div class="karta">e</div>
+  <div class="karta">f</div>
+  <div class="karta">g</div>
+  <div class="karta">h</div>
+  <div class="karta">i</div>
+  <div class="karta">j</div>
+  <div class="karta">k</div>
+  <div class="karta">l</div>
+  <div class="karta">main</div>
+</section>
+*/
+
+
+
+
+
+
+
+
 /* --------------------------------------------------------------------------------*/
+
 /* to jest do ułóżenia listy małych przycisków*/
 .lista_malych_przyciskow {
 display: flex;
