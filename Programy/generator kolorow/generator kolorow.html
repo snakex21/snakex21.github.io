@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Generator kolorów</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="icon" type="image/x-icon" href="https://www.solojuve.com/spolecznosc/zdj%C4%99cia/306-bezimienny-jpg/pobierz">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+
+  <header>
+    <nav class="nav2">
+        <ul>
+          <li><a href="../../index.html">Strona główna</a></li>
+          <li class="dropdown">
+            <a href="../programy.html">Programy</a>
+           
+              <li><a href="../generator kolorow/generator kolorow.html">Generator Kolorów</a></li>
+              <li><a href="../generator czcionek/generator czcionek.html">Generator Czcionek</a></li>
+              <li><a href="../generator emoji/generator emoji.html">Generator Emoji</a></li>
+            
+          </li>
+          <li><a href="../../gothic 2 new balance/gothic2.html ">Gothic 2 New Balance</a></li>
+          <li><a href="../../gry/gry.html">Gry</a></li>
+          <li><a href="../../filmy/filmy glowna.html">Strona do filmów</a></li>
+        </ul>
+      </nav>
+  </header>
+
+<div class="color-picker-panel">
+  <div class="panel-row">
+    <div class="swatches default-swatches"></div>
+
+  </div>
+  <div class="panel-row">
+    <div class="spectrum-map">
+      <button id="spectrum-cursor" class="color-cursor"></button>
+      <canvas id="spectrum-canvas"></canvas>
+    </div>
+    <div class="hue-map">
+      <button id="hue-cursor" class="color-cursor"></button>
+      <canvas id="hue-canvas"></canvas>
+    </div>
+  </div>
+  <div class="panel-row">
+    <div id="rgb-fields" class="field-group value-fields rgb-fields active">
+      <div class="field-group">
+        <label for="" class="field-label">R:</label>
+        <input type="number" max="255" min="0" id="red" class="field-input rgb-input"/>
+      </div>
+      <div class="field-group">
+        <label for="" class="field-label">G:</label>
+        <input type="number" max="255" min="0" id="green" class="field-input rgb-input"/>
+      </div>
+      <div class="field-group">
+        <label for="" class="field-label">B:</label>
+        <input type="number" max="255" min="0" id="blue" class="field-input rgb-input"/>
+      </div>
+    </div>
+    <div id="hex-field" class="field-group value-fields hex-field">
+      <label for="" class="field-label">#:</label>
+      <input type="text" id="hex" class="field-input"/>
+    </div>
+    <button id="mode-toggle" class="button mode-toggle">Tryb</button>
+  </div>
+  <div class="panel-row">
+    <h2 class="panel-header">Kolory zapisane</h2>
+    <div id="user-swatches" class="swatches custom-swatches">
+    </div>
+    <button id="add-swatch" class="button add-swatch">
+      <span id="color-indicator" class="color-indicator"></span><span>        Zapisane kolory(znikną po odświeżeniu strony)</span>
+    </button>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.3.0/tinycolor.min.js'></script>
+<script src='https://codepen.io/dariocorsi/pen/aKEBxW/de198bdaf7bb0bf03ac880d82fdfa5d5.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
