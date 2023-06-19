@@ -1508,6 +1508,11 @@ letter-spacing: 2px; /* opcjonalne, aby poprawić czytelność */
 .wysrodkuj{
   text-align: center;
 }
+
+.center{
+  text-align: center;
+}
+
 .pozycjalewa{
   text-align: left;
 }
@@ -1965,6 +1970,7 @@ letter-spacing: 2px; /* opcjonalne, aby poprawić czytelność */
   border: 2px solid khaki;
   border-radius: 10px;
 }
+
 /*-------------------wyśrodkowanie list nienumerowanych (* (zdanie) ) list numerowanych (1. (zdanie) ) daje się albo do ul albo do ol nie do li----------------------*/
 .wysrodkuj_liste li {
   
@@ -1984,185 +1990,9 @@ letter-spacing: 2px; /* opcjonalne, aby poprawić czytelność */
 .wysrodkuj_liste_nienumerowana li {
   list-style-position: inside;
 }
-/*-------------------------------------------------------Wyśrodkuj listę numerowaną/nienumerowaną-------------------------------------------*/
 
 
-/*-----------------------------------------*/
-/* styles.css */
-
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color:#6b1a1a59
-  
-  
-  
-}
-
-.body1{
-  background-color: #3a3b4d;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #ffc468;
-  width: 100%;
-  height: 100%;
-}
-/* nagłówek nr1.*/
-header {
-  background-color: #4CAF50;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header nav a {
-  color: rgb(10, 24, 107);
-  text-decoration: none;
-  margin: 0 1em;
-}
-
-header form {
-  display: flex;
-  align-items: center;
-}
-
-header form input {
-  background-color: #333333;
-  border: none;
-  color: white;
-  padding: 8px 16px;
-  margin-right: 8px;
-}
-
-header form button {
-  background-color: #ff0000;
-  color: white;
-  padding: 8px 16px;
-  border: none;
-}
-
-main {
-  text-align: center;
-  padding: 2em;
-}
-
-main h1 {
-  margin-bottom: 16px;
-}
-
-.video-card {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.video-card img {
-  width: 120px;
-  height: 90px;
-  margin-right: 16px;
-}
-
-.featured-videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  grid-gap: 10px;
-}
-
-.video-page {
-  display: flex;
-}
-
-.video-player {
-  
-  flex: 2;
-}
-
-.related-videos {
-  flex: 1;
-  margin-right: 30px;
-}
-
-.video-player iframe {
-  width: 80%;
-  height: 600px;
-  margin-top: 10%;
-  margin-left: 10%;
-  margin-right: 50%;
-}
-
-.video-title {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 20px;
-  text-align: left;
-  margin-top: 10px;
-}
-
-footer {
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-nav{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: rgb(7, 85, 131);
-  text-decoration: none;
-  margin: 0 1em;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 3px;
-}
-
-th, td {
-  border: 1px solid black;
-  padding: 8px;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-
-td {
-  text-align: center;
-}
-
-
-
-      
-
-/* to jest do strony tytułowej (sam prostokąt do linku cv) */
-.maly_przycisk1 {
-text-align: center;
-justify-content: center;
-font-size: 40px;
-color: rgb(7, 7, 7);
-background-color: rgb(0, 81, 255);
-margin-top: 1em;
-padding: 0.8em;
-margin: auto;
-height: auto;
-width: 100%;
-cursor: pointer;     
-  
-}
+/* ------------------------------------------------------------------------------------------kolumny szablony -------------------------------------------------------------------- */
 
 /* ----------------------------szybkie kolumny-----------------------------*/
 
@@ -2283,57 +2113,446 @@ użycie
 </section>
 */
 
+/*----------------------- kolumny wersja 2 (prosta)--------------------------*/
 
 
+/* to jest do strony tytułowej (sam prostokąt do linku cv) */
 
-
-
-
-
-/* --------------------------------------------------------------------------------*/
-
-/* to jest do ułóżenia listy małych przycisków*/
-.lista_malych_przyciskow {
-display: flex;
-flex-direction: row;
-padding: 10px;
-margin: auto;
-    width: 100%;
-}
-/* to są ustawienia do indywidualnego przycisku małego*/
-.maly_przycisk_main {
-margin-top: 1em;
-text-decoration: none;
-
-width: 100%;
-}
-/* to są ustawienia do indywidualnego przycisku małego*/
-.maly_przycisk {
-color: rgb(10, 10, 10);
-background-color:  rgb(71, 84, 110);
-width: 100%;
-border-radius: 1em;
-min-height: 3.7em;
-text-align: center;
-cursor: pointer;
-height: 200px;
-font-size: 40px;
-right: 250px;
-}
-
-.center{
+  
+  
+  /* to jest do ułóżenia listy małych przycisków*/
+  .lista_malych_przyciskow {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: auto;
+      width: 100%;
+  }
+  /* to są ustawienia do indywidualnego przycisku małego*/
+  .maly_przycisk_main {
+  margin-top: 1em;
+  text-decoration: none;
+  
+  width: 100%;
+  }
+  /* to są ustawienia do indywidualnego przycisku małego*/
+  .maly_przycisk {
+  color: rgb(10, 10, 10);
+  background-color:  rgb(71, 84, 110);
+  width: 100%;
+  border-radius: 1em;
+  min-height: 3.7em;
   text-align: center;
+  cursor: pointer;
+  height: 200px;
+  font-size: 40px;
+  right: 250px;
+  }
+
+
+/* użycie
+<div class="lista_malych_przyciskow" >
+<a class="maly_przycisk_main" href=""  rel="nofollow">
+  <button class="maly_przycisk"></button>
+</a>
+<a class="maly_przycisk_main" href=""  rel="nofollow">
+  <button class="maly_przycisk"></button>
+</a>
+
+<a class="maly_przycisk_main" href=""  rel="nofollow">
+  <button class="maly_przycisk"></button>
+</a>
+<a class="maly_przycisk_main" href=""  rel="nofollow">
+  <button class="maly_przycisk"></button>
+</a>
+</div>
+
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* kolumna nr3 najlepsza chyba wersja*/
+
+.container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
 }
 
-.fullscreen {
-  position: fixed;
-  top: 0;
-  left: 0;
+.box {
+  flex-wrap: wrap;
+justify-content: space-between;
+width: 300px;
+height: 400px;
+margin-bottom: 20px;
+padding: 10px;
+border: 1px solid #ccc;
+box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+text-align: center;
+transition: all 0.3s ease-in-out;
+  height: auto;
+  flex-basis: calc(33.33% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.box:hover {
+transform: scale(1.05);
+box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}
+
+.img-box {
+width: 100%;
+height: 300px;
+background-size: cover;
+background-position: center;
+margin-bottom: 10px;
+  position: relative;
+height: 100%;
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: all 0.2s ease-in-out;
+}
+
+.box p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
+}
+
+
+.box p:hover {
+  color: #dc143c;
+  transform: scale(1.1);
+}
+
+
+.box .img-box {
+position: relative;
+height: 300px;
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: all 0.2s ease-in-out;
+}
+.box .img-box:hover {
+transform: scale(1.1);
+}
+.box .img-box p {
+position: absolute;
+bottom: 0;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.8);
+color: white;
+font-size: 1.5rem;
+font-weight: bold;
+text-align: center;
+padding: 10px;
+margin: 0;
+opacity: 0;
+transition: all 0.2s ease-in-out;
+}
+.box:hover .img-box p {
+opacity: 1;
+}      
+
+.img-box:hover {
+  transform: scale(1.1);
+}
+
+.img-box p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.box:hover .img-box p {
+  opacity: 1;
+}
+
+
+/* zastosowanie
+<section>
+        
+<div class="container">
+  <div class="box">
+    <a href="spis wszystkiego/spis.html" rel="nofollow">
+      <div class="img-box" style="background-image: url('https://media.tenor.com/Lq_HnnCJtMEAAAAd/gothic-gothic-2.gif');">
+        <p>Spis Wszystkiego</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="box">
+    <a href="solucja/solucja.html" rel="nofollow">
+      <div class="img-box" style="background-image: url('https://thumbs.gfycat.com/ConcernedPeskyBlackandtancoonhound-size_restricted.gif');">
+        <p>Solucja</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="box">
+    <a href="faq/faq.html" rel="nofollow">
+      <div class="img-box" style="background-image: url('https://i.gifer.com/8ynV.gif');">
+        <p>FAQ</p>
+      </div>
+    </a>
+  </div>
+
+  
+
+</div>
+</section>
+*/
+
+
+/* --------------------------------------------------nagłówek nr1.----------------------------------*/
+.header1 {
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(7, 85, 131);
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+.header1 nav a {
+  color: rgb(10, 24, 107);
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+.header1 form {
+  display: flex;
+  align-items: center;
+}
+
+.header1 form input {
+  background-color: #333333;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  margin-right: 8px;
+}
+
+.header1 form button {
+  background-color: #ff0000;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+}
+
+
+/* przykładowe użycie
+      <nav>
+        <a href="filmy/filmy glowna.html">Strona do filmów</a>
+        <a href="gothic 2 new balance/gothic2.html">Spis Wszystkiego Gothic 2 New Balans</a>
+            <a href="gry/gry.html">Biblioteka gier</a>
+            <a href="generator kolorow/generator kolorow.html">Generator Kolorów</a>
+            <a href="generator emoji/generator emoji.html">Generator Emoji</a>
+            <a href="generator czcionek/generator czcionek.html">Generator Czcionek</a>
+            <a href="zmiany.html">Zmiany na stronie</a>
+         
+      </nav>
+      */
+
+/* --------------------------------------------------nagłówek nr2.----------------------------------*/
+
+ /* tu jest pasek nawigacyjny z rozsówaną opcją */
+ .nav2 {
+  background-color: #333;
+}
+ .nav2 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+ .nav2 li {
+  margin-right: 20px;
+}
+ .nav2 a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+ .nav2 a:hover {
+  background-color: #555;
+}
+ .nav2 .dropdown ul {
+  display: none;
+  position: absolute;
+  background-color: #555;
+}
+ .nav2 .dropdown:hover ul {
+  display: block;
+}
+ .nav2 .dropdown ul li {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #444;
+}
+ .nav2 .dropdown ul li:last-child {
+  border-bottom: none;
+}
+ .nav2 .dropdown ul li a {
+  padding: 10px;
+}
+
+/*opcjonalne dodaj do tego jak chcesz mieć pole wyszukiwania*/
+
+
+
+.header2 form input {
+  background-color: #333333;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  margin-right: 8px;
+}
+
+.header2 form button {
+  background-color: #ff0000;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+}
+
+
+
+    /* -------------------przykładowe użycie 
+    <header>
+      <nav class="nav2">
+          <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li class="dropdown">
+              <a href="programy">Programy</a>
+              <ul>
+                <li><a href="Programy/generator kolorow/generator kolorow.html">Generator Kolorów</a></li>
+                <li><a href="Programy/generator czcionek/generator czcionek.html">Generator Czcionek</a></li>
+                <li><a href="Programy/generator emoji/generator emoji.html">Generator Emoji</a></li>
+              </ul>
+            </li>
+            <li><a href="gothic 2 new balance/gothic2.html">Gothic 2 New Balance</a></li>
+            <li><a href="gry/gry.html">Gry</a></li>
+            <li><a href="filmy/filmy glowna.html">Filmy</a></li>
+          </ul>
+        </nav>
+    </header>
+    ------------------------------------------------------*/
+
+
+
+
+/*-------------------------------------------------------------------------------------------POD TYM SĄ POZA SZABLONEM USTAWIENIA------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* ---------------------- STRONA GŁÓWNA -----------------------------------------------------
+                                                 ▼
+                                                ▼▼
+                                               ▼▼▼▼   
+                                              ▼▼▼▼▼▼                                              
+                                            ▼▼▼▼▼▼▼▼▼                                             
+                                          ▼▼▼▼▼▼▼▼▼▼▼▼▼                                           
+                                        ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼                                         
+                                      ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼                                       
+                                    ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼                                     
+                                  ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼                                   
+                                ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼                                 
+                              ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼                               
+                            ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼                             
+                          ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼                           
+                        ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼                         
+                      ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼                       
+                    ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼                     
+                  ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼                   
+                ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼                 
+              ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+
+/* tło globalne tło i jaka czionka na główną stronę */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:#6b1a1a59
+  
+  
+  
+}
+/*tło nr 2.*/
+.body1{
+  background-color: #3a3b4d;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffc468;
   width: 100%;
   height: 100%;
-  z-index: 1;
 }
 
+
+
+
+
+
+/*------------------to jest do głównej strony napisu main-----------------------*/
+main {
+  text-align: center;
+  padding: 2em;
+}
+
+main h1 {
+  margin-bottom: 16px;
+}
+
+
+/* to jest do stopki */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/* ---------------------------- do zegarka na stronie głównej---------------------------------------- */
 .clock-element {
   display: inline-block;
   padding: 10px;
@@ -2360,42 +2579,60 @@ right: 250px;
   font-size: 50px; /* lub inna wielkość fontu */
 }
 
-#my-video {
-  width: 85%;
-  height: 85%;
-  margin-top: 100px;
-  margin-left: 70px;
+/* -------------------------------------------------------------------- */
+
+
+
+
+
+
+
+/*-----------------ustawienia do gothica 2 tabelka------------------------*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 3px;
 }
 
-/* do tło szczawia królewskiego*/
-#item-list1{
-  background-color: rgb(71, 84, 110);
-  
+th, td {
+  border: 1px solid black;
+  padding: 8px;
 }
 
-/* do tło do trolestu*/
+th {
+  background-color: #f2f2f2;
+}
+
+td {
+  text-align: center;
+}
+
+/* --------------------------------- do gothic 2 tabelki powiększenie ----------------------------- */
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* do tło do tabelek z gothica 2 new balance spisu*/
 #item-list2{
   background-color: rgb(71, 84, 110);
 }
 
-/* do tło smoczego korzenia*/
-#item-list3{
-  background-color: rgb(71, 84, 110);
-}
-
-/* do tło Słonecznego aloesu*/
-#item-list4{
-  background-color: rgb(71, 84, 110);
-}
-
-/* do tło gobliniej jagody*/
-#item-list5{
-  background-color: rgb(71, 84, 110);
-  
-}
+/*----------------------------------------------------------------------------------------------------------------------------------*/     
 
 
-   /* Ustawienia dla filmów */
+
+
+
+
+
+
+/*------------------------------------------------ Ustawienia dla filmów -----------------------------------------------------------------------*/
        .container {
           flex-wrap: wrap;
           justify-content: space-between;
@@ -2535,3 +2772,14 @@ transition: all 0.2s ease-in-out;
   width: 100%;
 }
 
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+   
