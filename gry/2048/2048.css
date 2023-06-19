@@ -221,41 +221,6 @@ body {
   color: #ffc468;
 }
 
-header {
-  background-color: #4CAF50;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header nav a {
-  color: rgb(10, 24, 107);
-  text-decoration: none;
-  margin: 0 1em;
-}
-
-header form {
-  display: flex;
-  align-items: center;
-}
-
-header form input {
-  background-color: #333333;
-  border: none;
-  color: white;
-  padding: 8px 16px;
-  margin-right: 8px;
-}
-
-header form button {
-  background-color: #ff0000;
-  color: white;
-  padding: 8px 16px;
-  border: none;
-}
 
 main {
   text-align: center;
@@ -327,14 +292,6 @@ footer {
   width: 100%;
 }
 
-nav{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: rgb(7, 85, 131);
-  text-decoration: none;
-  margin: 0 1em;
-}
 
 table {
   width: 100%;
@@ -353,4 +310,49 @@ th {
 
 td {
   text-align: center;
+}
+
+
+/* --------------------------------------------------nagłówek nr2.----------------------------------*/
+
+ /* tu jest pasek nawigacyjny z rozsówaną opcją */
+ .nav2 {
+  background-color: #333;
+}
+ .nav2 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+ .nav2 li {
+  margin-right: 20px;
+}
+ .nav2 a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+ .nav2 a:hover {
+  background-color: #555;
+}
+ .nav2 .dropdown ul {
+  display: none;
+  position: absolute;
+  background-color: #555;
+}
+ .nav2 .dropdown:hover ul {
+  display: block;
+}
+ .nav2 .dropdown ul li {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #444;
+}
+ .nav2 .dropdown ul li:last-child {
+  border-bottom: none;
+}
+ .nav2 .dropdown ul li a {
+  padding: 10px;
 }
