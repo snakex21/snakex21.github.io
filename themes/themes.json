@@ -1,0 +1,130 @@
+{
+ "default": "win95",
+ "iconSets": {
+  "win1":     { "name": "Windows 1.0 / 2.0", "large": 32 },
+  "win3":     { "name": "Windows 3.1", "large": 32, "pixelated": true },
+  "win9x":    { "name": "Windows 95 / 98 / 2000", "large": 32, "pixelated": true },
+  "winxp":    { "name": "Windows XP", "large": 32 },
+  "winvista": { "name": "Windows Vista", "large": 48 },
+  "win7":     { "name": "Windows 7", "large": 48 },
+  "win8":     { "name": "Windows 8", "large": 48 },
+  "win81":    { "name": "Windows 8.1", "large": 48 },
+  "win11":    { "name": "Windows 11", "large": 48 }
+ },
+ "themes": [
+  {
+   "id": "win1",
+   "name": "Windows 1.0",
+   "year": 1985,
+   "file": "win1.css",
+   "icons": "win1",
+   "description": "Okna obok siebie bez nakładania, grube czarne ramki, kilka kolorów i launcher z listą programów u góry.",
+   "layout": { "taskbar": "none", "launcher": "executive", "tiling": true },
+   "preview": { "desk": "#0000aa", "bar": "#ffffff", "title": "#000000", "win": "#ffffff", "radius": "0" }
+  },
+  {
+   "id": "win2",
+   "name": "Windows 2.0",
+   "year": 1987,
+   "file": "win2.css",
+   "icons": "win1",
+   "description": "Nakładające się okna w 16 kolorach, pasek menu u góry zamiast Start i proste ikony na dole.",
+   "layout": { "taskbar": "none", "launcher": "menubar" },
+   "preview": { "desk": "#00aaaa", "bar": "#ffffff", "title": "#0000aa", "win": "#ffffff", "radius": "0" }
+  },
+  {
+   "id": "win31",
+   "name": "Windows 3.1",
+   "year": 1992,
+   "file": "win31.css",
+   "icons": "win3",
+   "description": "Menedżer programów z grupami ikon, bez paska zadań – zminimalizowane okna leżą na pulpicie.",
+   "layout": { "taskbar": "none", "programManager": true },
+   "preview": { "desk": "#a8a8a8", "bar": "#c0c0c0", "title": "#000080", "win": "#c0c0c0", "radius": "0" }
+  },
+  {
+   "id": "win95",
+   "name": "Windows 95",
+   "year": 1995,
+   "file": "win95.css",
+   "icons": "win9x",
+   "description": "Szare, wypukłe przyciski, granatowe paski tytułu i turkusowy pulpit.",
+   "wallpaper": "#008080",
+   "preview": { "desk": "#008080", "bar": "#c0c0c0", "title": "#000080", "win": "#c0c0c0", "radius": "0", "accent": "#d8d8d8" }
+  },
+  {
+   "id": "win2000",
+   "name": "Windows 2000",
+   "year": 2000,
+   "file": "win2000.css",
+   "icons": "win9x",
+   "description": "Wypukłe kontrolki jak w 95, paski tytułu z gradientem, beżowoszary pasek i łupkowoniebieski pulpit.",
+   "preview": { "desk": "#3a6ea5", "bar": "#d4d0c8", "title": "linear-gradient(90deg, #0a246a, #a6caf0)", "win": "#d4d0c8", "radius": "0", "accent": "#e8e6e1" }
+  },
+  {
+   "id": "winxp",
+   "name": "Windows XP",
+   "year": 2001,
+   "file": "winxp.css",
+   "icons": "winxp",
+   "description": "Zaokrąglone niebieskie paski tytułu, zielony Start i tapeta z pagórkami.",
+   "wallpaper": "#3f86d8",
+   "preview": { "desk": "linear-gradient(#3f86d8 55%, #4f9e2e 56%)", "bar": "linear-gradient(#3d82e6, #1f4fc0)", "title": "linear-gradient(#2f6fe0, #0a3fb8)", "win": "#ece9d8", "radius": "6px 6px 0 0", "accent": "#3c9e2a" }
+  },
+  {
+   "id": "winvista",
+   "name": "Windows Vista",
+   "year": 2007,
+   "file": "winvista.css",
+   "icons": "winvista",
+   "description": "Ciemne szkło Aero, okrągła kula Start, błyszczące ramki z rozmyciem i tapeta jak zorza.",
+   "layout": { "startButton": "orb" },
+   "preview": { "desk": "radial-gradient(90% 30% at 35% 60%, #7fe0a8, transparent 70%), linear-gradient(170deg, #031426, #0b3a4e 60%, #02101c)", "bar": "linear-gradient(rgba(60,66,74,.9), #000)", "title": "rgba(90,115,140,.85)", "win": "#5c7590", "radius": "5px 5px 2px 2px", "accent": "radial-gradient(circle at 50% 30%, #9fd8ff, #12233a 60%, #000)" }
+  },
+  {
+   "id": "win7",
+   "name": "Windows 7",
+   "year": 2009,
+   "file": "win7.css",
+   "icons": "win7",
+   "description": "Jaśniejsze, niebieskie szkło, superpasek z dużymi ikonami, kula Start i jasne menu Start.",
+   "layout": { "startButton": "orb" },
+   "preview": { "desk": "linear-gradient(118deg, transparent 40%, rgba(255,255,255,.3) 46%, transparent 52%), radial-gradient(circle at 50% 45%, #6fc4f2, #1667b8 55%, #08284e)", "bar": "rgba(120,160,210,.8)", "title": "rgba(170,205,240,.95)", "win": "#a8c8ec", "radius": "5px", "accent": "radial-gradient(circle at 50% 30%, #bfe8ff, #2f7fd8 55%, #062452)" }
+  },
+  {
+   "id": "win8",
+   "name": "Windows 8",
+   "year": 2012,
+   "file": "win8.css",
+   "icons": "win8",
+   "description": "Pełnoekranowy ekran Start z kolorowymi kafelkami, płaskie okna z kolorową ramką, Start w aktywnym rogu.",
+   "layout": { "start": "screen", "startButton": "corner" },
+   "preview": { "desk": "#2b1452", "bar": "#1b2a3a", "title": "#2672ec", "win": "#2672ec", "radius": "0" }
+  },
+  {
+   "id": "win81",
+   "name": "Windows 8.1",
+   "year": 2013,
+   "file": "win81.css",
+   "icons": "win81",
+   "description": "Ekran Start z czterema rozmiarami kafelków i widokiem „Wszystkie aplikacje”, przycisk Start na pasku.",
+   "layout": { "start": "screen", "allApps": true },
+   "preview": { "desk": "#1d3b5a", "bar": "#16303f", "title": "#00a3a3", "win": "#00a3a3", "radius": "0" }
+  },
+  {
+   "id": "win11",
+   "name": "Windows 11",
+   "year": 2021,
+   "file": "win11.css",
+   "icons": "win11",
+   "description": "Wyśrodkowany pasek zadań, zaokrąglone rogi i półprzezroczyste tła.",
+   "wallpaper": "#2f6fd0",
+   "variants": [
+    { "id": "auto", "name": "Systemowy" },
+    { "id": "light", "name": "Jasny" },
+    { "id": "dark", "name": "Ciemny" }
+   ],
+   "preview": { "desk": "radial-gradient(circle at 70% 40%, #8fb8ff, #2f6fd0 55%, #1b2f6b)", "bar": "rgba(240,244,250,.85)", "title": "rgba(250,250,252,.95)", "win": "#f6f7f9", "radius": "8px", "accent": "#0e7ad8" }
+  }
+ ]
+}

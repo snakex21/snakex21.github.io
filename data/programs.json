@@ -1,0 +1,189 @@
+{
+ "owner": "snakex21",
+ "items": [
+  {
+   "repo": "kadr",
+   "name": "Kadr",
+   "kind": "Grafika",
+   "platforms": [
+    "Windows XP–11"
+   ],
+   "language": "Zig",
+   "description": "Tiny portable photo viewer & editor for Windows XP to 11 - one Kadr.exe under 1 MB, no installer. Zoom, slideshow, crop, drawing, adjustments, print preview, export, many formats, 30 languages.",
+   "icon": "icons/programs/kadr/{s}.png"
+  },
+  {
+   "repo": "CoreDeck",
+   "name": "CoreDeck",
+   "kind": "System",
+   "platforms": [
+    "Windows"
+   ],
+   "language": "JavaScript",
+   "description": "Portable Windows toolkit for organizing apps, drivers, installers, system tweaks, setup profiles and local documentation.",
+   "icon": "icons/programs/CoreDeck/{s}.png"
+  },
+  {
+   "repo": "AudiobookForge",
+   "name": "AudiobookForge",
+   "kind": "Multimedia",
+   "platforms": [
+    "Windows"
+   ],
+   "language": "Python",
+   "description": "PDF to audiobook desktop app with LLM Vision OCR and Piper/Edge TTS.",
+   "icon": "icons/programs/AudiobookForge/{s}.png"
+  },
+  {
+   "repo": "webdownloader",
+   "name": "WebDownloader",
+   "kind": "Internet",
+   "platforms": [
+    "Windows"
+   ],
+   "language": "Go",
+   "description": "WebPage Downloader Desktop App.",
+   "icon": "icons/programs/webdownloader/{s}.png"
+  },
+  {
+   "repo": "Game-Launcher",
+   "name": "Game Launcher",
+   "kind": "Gry",
+   "platforms": [
+    "Windows"
+   ],
+   "language": "Python",
+   "description": "Alternative Steam Launcher.",
+   "icon": "icons/programs/Game-Launcher/icon.svg"
+  },
+  {
+   "repo": "NestCafe",
+   "name": "NestCafe",
+   "kind": "AI",
+   "platforms": [
+    "Windows"
+   ],
+   "language": "JavaScript",
+   "description": "Open-source AI desktop agent — automate tasks on your computer with local models or cloud APIs. 20+ providers, browser automation, file management, email, calendar, and more.",
+   "icon": "icons/programs/NestCafe/{s}.png"
+  },
+  {
+   "repo": "BenchForge",
+   "name": "BenchForge",
+   "kind": "AI",
+   "platforms": [
+    "Windows"
+   ],
+   "language": "TypeScript",
+   "description": "Desktop app for benchmarking AI models with custom benchmarks, sandboxed code evaluation, tool/MCP agent tests, result analytics, and artifact exports.",
+   "icon": "icons/programs/BenchForge/{s}.png"
+  },
+  {
+   "repo": "Zapper",
+   "name": "Zapper",
+   "kind": "Elektronika",
+   "platforms": [
+    "Windows"
+   ],
+   "language": "Go",
+   "description": "Zapper planner, log and Arduino Nano controller.",
+   "icon": "icons/programs/Zapper/{s}.png"
+  },
+  {
+   "repo": "czarna-mapa",
+   "name": "Mapa Katastralna Czarna",
+   "kind": "Historia",
+   "platforms": [
+    "Windows"
+   ],
+   "language": "Go",
+   "description": "Wersja portable desktop: lokalna aplikacja Windows do przeglądania historycznej mapy katastralnej, protokołów i genealogii gminy Czarna z XIX wieku. Go + WebView2 + SQLite.",
+   "icon": "icons/programs/czarna-mapa/{s}.png"
+  },
+  {
+   "repo": "SuperCli",
+   "name": "SuperCli",
+   "kind": "AI",
+   "platforms": [
+    "Windows",
+    "Linux",
+    "macOS",
+    "Android"
+   ],
+   "language": "Go",
+   "description": "A portable AI coding agent written in Go, with a terminal interface (TUI), a desktop/web interface (GUI), and batch mode sharing one engine.",
+   "icon": "icons/programs/SuperCli/{s}.png"
+  },
+  {
+   "repo": "devspace-go",
+   "name": "Dev Space Go",
+   "kind": "AI",
+   "platforms": [
+    "Windows",
+    "Linux",
+    "macOS"
+   ],
+   "language": "Go",
+   "description": "Self-hosted MCP server that gives AI assistants secure access to your local projects: read, edit, search and run code on your own machine.",
+   "icon": "icons/programs/devspace-go/icon.svg"
+  },
+  {
+   "repo": "universal-service-os",
+   "name": "Universal Service OS",
+   "kind": "System",
+   "platforms": [
+    "Windows",
+    "Linux",
+    "USB"
+   ],
+   "language": "Python",
+   "prerelease": true,
+   "description": "Universal multi-OS USB installer and boot tool: Windows XP–11, Server, Linux; BIOS, UEFI with/without CSM.",
+   "icon": "icons/programs/universal-service-os/icon.svg"
+  },
+  {
+   "repo": "Thunderbird-AI-Bridge",
+   "name": "Thunderbird AI Bridge",
+   "kind": "Dodatek",
+   "platforms": [
+    "Thunderbird"
+   ],
+   "language": "JavaScript",
+   "description": "Local AI bridge for Thunderbird — search and read mail, manage folders and messages, transfer attachments, and connect any AI agent through a simple localhost protocol.",
+   "icon": "icons/programs/Thunderbird-AI-Bridge/icon.svg"
+  },
+  {
+   "repo": "gunmayhem-go",
+   "name": "Gun Mayhem Go",
+   "kind": "Gry",
+   "platforms": [
+    "Windows"
+   ],
+   "language": "Go",
+   "description": "Source-faithful Gun Mayhem reimplementation in Go/Ebitengine.",
+   "icon": "icons/programs/gunmayhem-go/{s}.png"
+  },
+  {
+   "repo": "AdvancedSorter",
+   "name": "AdvancedSorter",
+   "kind": "Mod Minecraft",
+   "platforms": [
+    "Minecraft 1.12.2"
+   ],
+   "language": "Java",
+   "description": "Advanced logistics mod for Minecraft 1.12.2 - Teleport pipes, sorting, and pump presets.",
+   "icon": "icons/programs/AdvancedSorter/{s}.png"
+  },
+  {
+   "repo": "Surpad-Lite",
+   "name": "Surpad Lite",
+   "kind": "Android",
+   "platforms": [
+    "Android"
+   ],
+   "language": "Dart",
+   "description": "Aplikacja, która korzysta z GPS i pokazuje ciekawe informacje z telefonu.",
+   "icon": "icons/programs/Surpad-Lite/{s}.png"
+  }
+ ]
+}

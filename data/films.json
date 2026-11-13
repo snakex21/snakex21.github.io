@@ -1,0 +1,1237 @@
+{
+ "about": "Katalog filmów ze starej strony (assets/js/movies-data.js): tylko metadane. Bez linków do odtwarzaczy i bez plakatów; plakaty pobiera okno z Wikipedii (pole wiki).",
+ "films": [
+  {
+   "id": "top-gun-1986",
+   "title": "Top Gun",
+   "originalTitle": "Top Gun",
+   "year": 1986,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Romans",
+    "Sensacyjny"
+   ],
+   "collection": "top-gun",
+   "wiki": {
+    "pl": "Top Gun (film)",
+    "en": "Top Gun"
+   },
+   "part": 1
+  },
+  {
+   "id": "top-gun-maverick-2022",
+   "title": "Top Gun: Maverick",
+   "originalTitle": "Top Gun: Maverick",
+   "year": 2022,
+   "type": "film",
+   "genres": [
+    "Akcja"
+   ],
+   "collection": "top-gun",
+   "wiki": {
+    "pl": "Top Gun: Maverick",
+    "en": "Top Gun: Maverick"
+   },
+   "part": 2
+  },
+  {
+   "id": "28-dni-pozniej-2002",
+   "title": "28 dni później",
+   "originalTitle": "28 Days Later",
+   "year": 2002,
+   "type": "film",
+   "genres": [
+    "Horror"
+   ],
+   "collection": "28-dni-tygodni-pozniej",
+   "wiki": {
+    "pl": "28 dni później",
+    "en": "28 Days Later"
+   },
+   "part": 1
+  },
+  {
+   "id": "28-tygodni-pozniej-2007",
+   "title": "28 tygodni później",
+   "originalTitle": "28 Weeks Later",
+   "year": 2007,
+   "type": "film",
+   "genres": [
+    "Horror"
+   ],
+   "collection": "28-dni-tygodni-pozniej",
+   "wiki": {
+    "pl": "28 tygodni później",
+    "en": "28 Weeks Later"
+   },
+   "part": 2
+  },
+  {
+   "id": "2012-2009",
+   "title": "2012",
+   "originalTitle": "2012",
+   "year": 2009,
+   "type": "film",
+   "genres": [
+    "Sci-Fi",
+    "Katastroficzny"
+   ],
+   "collection": "2012",
+   "wiki": {
+    "pl": "2012 (film)",
+    "en": "2012 (film)"
+   },
+   "part": 1
+  },
+  {
+   "id": "bekarty-wojny-2009",
+   "title": "Bękarty wojny",
+   "originalTitle": "Inglourious Basterds",
+   "year": 2009,
+   "type": "film",
+   "genres": [
+    "Wojenny"
+   ],
+   "collection": "bekarty-wojny",
+   "wiki": {
+    "pl": "Bękarty wojny",
+    "en": "Inglourious Basterds"
+   },
+   "part": 1
+  },
+  {
+   "id": "czlowiek-z-blizna-1983",
+   "title": "Człowiek z blizną",
+   "originalTitle": "Scarface",
+   "year": 1983,
+   "type": "film",
+   "genres": [
+    "Dramat",
+    "Gangsterski"
+   ],
+   "collection": "czlowiek-z-blizna",
+   "wiki": {
+    "pl": "Człowiek z blizną (film 1983)",
+    "en": "Scarface (1983 film)"
+   },
+   "part": 1
+  },
+  {
+   "id": "doomsday-2008",
+   "title": "Doomsday",
+   "originalTitle": "Doomsday",
+   "year": 2008,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Sci-Fi"
+   ],
+   "collection": "doomsday",
+   "wiki": {
+    "pl": "Doomsday (film)",
+    "en": "Doomsday (2008 film)"
+   },
+   "part": 1
+  },
+  {
+   "id": "godziny-szczytu-1998",
+   "title": "Godziny szczytu",
+   "originalTitle": "Rush Hour",
+   "year": 1998,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Komedia",
+    "Kryminalny"
+   ],
+   "collection": "godziny-szczytu",
+   "wiki": {
+    "pl": "Godziny szczytu",
+    "en": "Rush Hour (1998 film)"
+   },
+   "part": 1
+  },
+  {
+   "id": "godziny-szczytu-2-2001",
+   "title": "Godziny szczytu 2",
+   "originalTitle": "Rush Hour 2",
+   "year": 2001,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Komedia",
+    "Kryminalny"
+   ],
+   "collection": "godziny-szczytu",
+   "wiki": {
+    "pl": "Godziny szczytu 2",
+    "en": "Rush Hour 2"
+   },
+   "part": 2
+  },
+  {
+   "id": "godziny-szczytu-3-2007",
+   "title": "Godziny szczytu 3",
+   "originalTitle": "Rush Hour 3",
+   "year": 2007,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Komedia",
+    "Kryminalny"
+   ],
+   "collection": "godziny-szczytu",
+   "wiki": {
+    "pl": "Godziny szczytu 3",
+    "en": "Rush Hour 3"
+   },
+   "part": 3
+  },
+  {
+   "id": "xxx-2002",
+   "title": "xXx",
+   "originalTitle": "xXx",
+   "year": 2002,
+   "type": "film",
+   "genres": [
+    "Akcja"
+   ],
+   "collection": "xxx-trylogia",
+   "wiki": {
+    "pl": "XXx",
+    "en": "XXX (2002 film)"
+   },
+   "part": 1
+  },
+  {
+   "id": "xxx-2-nastepny-poziom-2005",
+   "title": "xXx 2: Następny poziom",
+   "originalTitle": "xXx: State of the Union",
+   "year": 2005,
+   "type": "film",
+   "genres": [
+    "Akcja"
+   ],
+   "collection": "xxx-trylogia",
+   "wiki": {
+    "pl": "XXx 2: Następny poziom",
+    "en": "XXX: State of the Union"
+   },
+   "part": 2
+  },
+  {
+   "id": "xxx-reaktywacja-2017",
+   "title": "xXx: Reaktywacja",
+   "originalTitle": "xXx: Return of Xander Cage",
+   "year": 2017,
+   "type": "film",
+   "genres": [
+    "Akcja"
+   ],
+   "collection": "xxx-trylogia",
+   "wiki": {
+    "pl": "XXx: Reaktywacja",
+    "en": "XXX: Return of Xander Cage"
+   },
+   "part": 3
+  },
+  {
+   "id": "zielona-mila-1999",
+   "title": "Zielona mila",
+   "originalTitle": "The Green Mile",
+   "year": 1999,
+   "type": "film",
+   "genres": [
+    "Dramat"
+   ],
+   "collection": "zielona-mila",
+   "wiki": {
+    "pl": "Zielona mila (film)",
+    "en": "The Green Mile (film)"
+   },
+   "part": 1
+  },
+  {
+   "id": "szeregowiec-ryan-1998",
+   "title": "Szeregowiec Ryan",
+   "originalTitle": "Saving Private Ryan",
+   "year": 1998,
+   "type": "film",
+   "genres": [
+    "Wojenny"
+   ],
+   "collection": "szeregowiec-ryan",
+   "wiki": {
+    "pl": "Szeregowiec Ryan",
+    "en": "Saving Private Ryan"
+   },
+   "part": 1
+  },
+  {
+   "id": "zabojcza-bron-1987",
+   "title": "Zabójcza broń",
+   "originalTitle": "Lethal Weapon",
+   "year": 1987,
+   "type": "film",
+   "genres": [
+    "Komedia",
+    "Kryminalny"
+   ],
+   "collection": "zabojcza-bron",
+   "wiki": {
+    "pl": "Zabójcza broń",
+    "en": "Lethal Weapon"
+   },
+   "part": 1
+  },
+  {
+   "id": "zabojcza-bron-2-1989",
+   "title": "Zabójcza broń 2",
+   "originalTitle": "Lethal Weapon 2",
+   "year": 1989,
+   "type": "film",
+   "genres": [
+    "Komedia",
+    "Kryminalny"
+   ],
+   "collection": "zabojcza-bron",
+   "wiki": {
+    "pl": "Zabójcza broń 2",
+    "en": "Lethal Weapon 2"
+   },
+   "part": 2
+  },
+  {
+   "id": "zabojcza-bron-3-1992",
+   "title": "Zabójcza broń 3",
+   "originalTitle": "Lethal Weapon 3",
+   "year": 1992,
+   "type": "film",
+   "genres": [
+    "Komedia",
+    "Kryminalny"
+   ],
+   "collection": "zabojcza-bron",
+   "wiki": {
+    "pl": "Zabójcza broń 3",
+    "en": "Lethal Weapon 3"
+   },
+   "part": 3
+  },
+  {
+   "id": "zabojcza-bron-4-1998",
+   "title": "Zabójcza broń 4",
+   "originalTitle": "Lethal Weapon 4",
+   "year": 1998,
+   "type": "film",
+   "genres": [
+    "Komedia",
+    "Kryminalny"
+   ],
+   "collection": "zabojcza-bron",
+   "wiki": {
+    "pl": "Zabójcza broń 4",
+    "en": "Lethal Weapon 4"
+   },
+   "part": 4
+  },
+  {
+   "id": "uncharted-2022",
+   "title": "Uncharted",
+   "originalTitle": "Uncharted",
+   "year": 2022,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Przygodowy"
+   ],
+   "collection": "uncharted",
+   "wiki": {
+    "pl": "Uncharted (film)",
+    "en": "Uncharted (film)"
+   },
+   "part": 1
+  },
+  {
+   "id": "tower-heist-zemsta-cieciow-2011",
+   "title": "Tower Heist: Zemsta cieciów",
+   "originalTitle": "Tower Heist",
+   "year": 2011,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Komedia",
+    "Kryminalny"
+   ],
+   "collection": "tower-heist",
+   "wiki": {
+    "pl": "Tower Heist: Zemsta cieciów",
+    "en": "Tower Heist"
+   },
+   "part": 1
+  },
+  {
+   "id": "taxi-1998",
+   "title": "Taxi",
+   "originalTitle": "Taxi",
+   "year": 1998,
+   "type": "film",
+   "genres": [
+    "Komedia",
+    "Kryminalny"
+   ],
+   "collection": "taxi",
+   "wiki": {
+    "pl": "Taxi (film 1998)",
+    "en": "Taxi (1998 film)"
+   },
+   "part": 1
+  },
+  {
+   "id": "taxi-2-2000",
+   "title": "Taxi 2",
+   "originalTitle": "Taxi 2",
+   "year": 2000,
+   "type": "film",
+   "genres": [
+    "Komedia",
+    "Kryminalny"
+   ],
+   "collection": "taxi",
+   "wiki": {
+    "pl": "Taxi 2",
+    "en": "Taxi 2"
+   },
+   "part": 2
+  },
+  {
+   "id": "taxi-3-2003",
+   "title": "Taxi 3",
+   "originalTitle": "Taxi 3",
+   "year": 2003,
+   "type": "film",
+   "genres": [
+    "Komedia",
+    "Kryminalny"
+   ],
+   "collection": "taxi",
+   "wiki": {
+    "pl": "Taxi 3",
+    "en": "Taxi 3"
+   },
+   "part": 3
+  },
+  {
+   "id": "taxi-4-2007",
+   "title": "Taxi 4",
+   "originalTitle": "Taxi 4",
+   "year": 2007,
+   "type": "film",
+   "genres": [
+    "Komedia",
+    "Kryminalny"
+   ],
+   "collection": "taxi",
+   "wiki": {
+    "pl": "Taxi 4",
+    "en": "Taxi 4"
+   },
+   "part": 4
+  },
+  {
+   "id": "taxi-5-2018",
+   "title": "Taxi 5",
+   "originalTitle": "Taxi 5",
+   "year": 2018,
+   "type": "film",
+   "genres": [
+    "Komedia",
+    "Kryminalny"
+   ],
+   "collection": "taxi",
+   "wiki": {
+    "pl": "Taxi 5",
+    "en": "Taxi 5"
+   },
+   "part": 5
+  },
+  {
+   "id": "szybcy-i-wsciekli-2001",
+   "title": "Szybcy i wściekli",
+   "originalTitle": "The Fast and the Furious",
+   "year": 2001,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "szybcy-i-wsciekli",
+   "wiki": {
+    "en": "The Fast and the Furious (2001 film)"
+   },
+   "part": 1
+  },
+  {
+   "id": "za-szybcy-za-wsciekli-2003",
+   "title": "Za szybcy, za wściekli",
+   "originalTitle": "2 Fast 2 Furious",
+   "year": 2003,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "szybcy-i-wsciekli",
+   "wiki": {
+    "pl": "Za szybcy, za wściekli",
+    "en": "2 Fast 2 Furious"
+   },
+   "part": 2
+  },
+  {
+   "id": "szybko-i-wsciekle-2009",
+   "title": "Szybko i wściekle",
+   "originalTitle": "Fast & Furious",
+   "year": 2009,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "szybcy-i-wsciekli",
+   "wiki": {
+    "en": "Fast & Furious (2009 film)"
+   },
+   "part": 3
+  },
+  {
+   "id": "szybcy-i-wsciekli-5-2011",
+   "title": "Szybcy i wściekli 5",
+   "originalTitle": "Fast Five",
+   "year": 2011,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "szybcy-i-wsciekli",
+   "wiki": {
+    "pl": "Szybcy i wściekli 5",
+    "en": "Fast Five"
+   },
+   "part": 4
+  },
+  {
+   "id": "szybcy-i-wsciekli-6-2013",
+   "title": "Szybcy i wściekli 6",
+   "originalTitle": "Fast & Furious 6",
+   "year": 2013,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "szybcy-i-wsciekli",
+   "wiki": {
+    "pl": "Szybcy i wściekli 6",
+    "en": "Fast & Furious 6"
+   },
+   "part": 5
+  },
+  {
+   "id": "szybcy-i-wsciekli-tokio-drift-2006",
+   "title": "Szybcy i wściekli: Tokio Drift",
+   "originalTitle": "The Fast and the Furious: Tokyo Drift",
+   "year": 2006,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "szybcy-i-wsciekli",
+   "wiki": {
+    "pl": "Szybcy i wściekli: Tokio Drift",
+    "en": "The Fast and the Furious: Tokyo Drift"
+   },
+   "part": 6
+  },
+  {
+   "id": "szybcy-i-wsciekli-7-2015",
+   "title": "Szybcy i wściekli 7",
+   "originalTitle": "Furious 7",
+   "year": 2015,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "szybcy-i-wsciekli",
+   "wiki": {
+    "en": "Furious 7"
+   },
+   "part": 7
+  },
+  {
+   "id": "szybcy-i-wsciekli-8-2017",
+   "title": "Szybcy i wściekli 8",
+   "originalTitle": "The Fate of the Furious",
+   "year": 2017,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "szybcy-i-wsciekli",
+   "wiki": {
+    "pl": "Szybcy i wściekli 8",
+    "en": "The Fate of the Furious"
+   },
+   "part": 8
+  },
+  {
+   "id": "szybcy-i-wsciekli-hobbs-i-shaw-2019",
+   "title": "Szybcy i wściekli: Hobbs i Shaw",
+   "originalTitle": "Fast & Furious Presents: Hobbs & Shaw",
+   "year": 2019,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "szybcy-i-wsciekli",
+   "wiki": {
+    "pl": "Szybcy i wściekli: Hobbs i Shaw",
+    "en": "Hobbs & Shaw"
+   },
+   "part": 9
+  },
+  {
+   "id": "szybcy-i-wsciekli-9-2021",
+   "title": "Szybcy i wściekli 9",
+   "originalTitle": "F9",
+   "year": 2021,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "szybcy-i-wsciekli",
+   "wiki": {
+    "pl": "Szybcy i wściekli 9",
+    "en": "F9 (film)"
+   },
+   "part": 10
+  },
+  {
+   "id": "ojciec-chrzestny-1972",
+   "title": "Ojciec chrzestny",
+   "originalTitle": "The Godfather",
+   "year": 1972,
+   "type": "film",
+   "genres": [
+    "Dramat",
+    "Gangsterski"
+   ],
+   "collection": "ojciec-chrzestny",
+   "wiki": {
+    "pl": "Ojciec chrzestny (film)",
+    "en": "The Godfather"
+   },
+   "part": 1
+  },
+  {
+   "id": "ojciec-chrzestny-ii-1974",
+   "title": "Ojciec chrzestny II",
+   "originalTitle": "The Godfather Part II",
+   "year": 1974,
+   "type": "film",
+   "genres": [
+    "Dramat",
+    "Gangsterski"
+   ],
+   "collection": "ojciec-chrzestny",
+   "wiki": {
+    "pl": "Ojciec chrzestny II",
+    "en": "The Godfather Part II"
+   },
+   "part": 2
+  },
+  {
+   "id": "ojciec-chrzestny-iii-1990",
+   "title": "Ojciec chrzestny III",
+   "originalTitle": "The Godfather Part III",
+   "year": 1990,
+   "type": "film",
+   "genres": [
+    "Dramat",
+    "Gangsterski"
+   ],
+   "collection": "ojciec-chrzestny",
+   "wiki": {
+    "pl": "Ojciec chrzestny III",
+    "en": "The Godfather Part III"
+   },
+   "part": 3
+  },
+  {
+   "id": "reacher",
+   "title": "Reacher",
+   "originalTitle": "Reacher",
+   "year": 2022,
+   "type": "serial",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "reacher",
+   "season": 1,
+   "episodes": [
+    "Welcome to Margrave",
+    "First Dance",
+    "Spoonful",
+    "In a Tree",
+    "No Apologies",
+    "Papier",
+    "Reacher Said Nothing",
+    "Pie"
+   ],
+   "wiki": {
+    "en": "Reacher (TV series)"
+   },
+   "part": 0
+  },
+  {
+   "id": "niezniszczalni-2010",
+   "title": "Niezniszczalni",
+   "originalTitle": "The Expendables",
+   "year": 2010,
+   "type": "film",
+   "genres": [
+    "Akcja"
+   ],
+   "collection": "niezniszczalni",
+   "wiki": {
+    "pl": "Niezniszczalni",
+    "en": "The Expendables (2010 film)"
+   },
+   "part": 1
+  },
+  {
+   "id": "niezniszczalni-2-2012",
+   "title": "Niezniszczalni 2",
+   "originalTitle": "The Expendables 2",
+   "year": 2012,
+   "type": "film",
+   "genres": [
+    "Akcja"
+   ],
+   "collection": "niezniszczalni",
+   "wiki": {
+    "pl": "Niezniszczalni 2",
+    "en": "The Expendables 2"
+   },
+   "part": 2
+  },
+  {
+   "id": "niezniszczalni-3-2014",
+   "title": "Niezniszczalni 3",
+   "originalTitle": "The Expendables 3",
+   "year": 2014,
+   "type": "film",
+   "genres": [
+    "Akcja"
+   ],
+   "collection": "niezniszczalni",
+   "wiki": {
+    "pl": "Niezniszczalni 3",
+    "en": "The Expendables 3"
+   },
+   "part": 3
+  },
+  {
+   "id": "na-zachodzie-bez-zmian-2022",
+   "title": "Na Zachodzie bez zmian",
+   "originalTitle": "Im Westen nichts Neues",
+   "year": 2022,
+   "type": "film",
+   "genres": [
+    "Dramat",
+    "Wojenny"
+   ],
+   "collection": "na-zachodzie-bez-zmian",
+   "wiki": {
+    "pl": "Na Zachodzie bez zmian (film 2022)",
+    "en": "All Quiet on the Western Front (2022 film)"
+   },
+   "part": 1
+  },
+  {
+   "id": "john-wick-2014",
+   "title": "John Wick",
+   "originalTitle": "John Wick",
+   "year": 2014,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "john-wick",
+   "wiki": {
+    "pl": "John Wick (film)",
+    "en": "John Wick (film)"
+   },
+   "part": 1
+  },
+  {
+   "id": "john-wick-2-2017",
+   "title": "John Wick 2",
+   "originalTitle": "John Wick: Chapter 2",
+   "year": 2017,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "john-wick",
+   "wiki": {
+    "pl": "John Wick 2",
+    "en": "John Wick: Chapter 2"
+   },
+   "part": 2
+  },
+  {
+   "id": "john-wick-3-2019",
+   "title": "John Wick 3",
+   "originalTitle": "John Wick: Chapter 3 – Parabellum",
+   "year": 2019,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "john-wick",
+   "wiki": {
+    "pl": "John Wick 3",
+    "en": "John Wick: Chapter 3 – Parabellum"
+   },
+   "part": 3
+  },
+  {
+   "id": "john-wick-4-2023",
+   "title": "John Wick 4",
+   "originalTitle": "John Wick: Chapter 4",
+   "year": 2023,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Kryminalny",
+    "Thriller"
+   ],
+   "collection": "john-wick",
+   "wiki": {
+    "pl": "John Wick 4",
+    "en": "John Wick: Chapter 4"
+   },
+   "part": 4
+  },
+  {
+   "id": "jas-fasola-nadciaga-totalny-kataklizm-1997",
+   "title": "Jaś Fasola: Nadciąga totalny kataklizm",
+   "originalTitle": "Bean",
+   "year": 1997,
+   "type": "film",
+   "genres": [
+    "Komedia"
+   ],
+   "collection": "jas-fasola",
+   "wiki": {
+    "pl": "Jaś Fasola: Nadciąga totalny kataklizm",
+    "en": "Bean (film)"
+   },
+   "part": 1
+  },
+  {
+   "id": "wakacje-jasia-fasoli-2007",
+   "title": "Wakacje Jasia Fasoli",
+   "originalTitle": "Mr. Bean's Holiday",
+   "year": 2007,
+   "type": "film",
+   "genres": [
+    "Familijny",
+    "Komedia"
+   ],
+   "collection": "jas-fasola",
+   "wiki": {
+    "pl": "Wakacje Jasia Fasoli",
+    "en": "Mr. Bean's Holiday"
+   },
+   "part": 2
+  },
+  {
+   "id": "hot-shots-1991",
+   "title": "Hot Shots!",
+   "originalTitle": "Hot Shots!",
+   "year": 1991,
+   "type": "film",
+   "genres": [
+    "Akcja",
+    "Komedia"
+   ],
+   "collection": "hot-shots",
+   "wiki": {
+    "pl": "Hot Shots!",
+    "en": "Hot Shots!"
+   },
+   "part": 1
+  },
+  {
+   "id": "hot-shots-2-1993",
+   "title": "Hot Shots! 2",
+   "originalTitle": "Hot Shots! Part Deux",
+   "year": 1993,
+   "type": "film",
+   "genres": [
+    "Akcja"
+   ],
+   "collection": "hot-shots",
+   "wiki": {
+    "pl": "Hot Shots! 2",
+    "en": "Hot Shots! Part Deux"
+   },
+   "part": 2
+  },
+  {
+   "id": "druzyna-a-2010",
+   "title": "Drużyna A",
+   "originalTitle": "The A-Team",
+   "year": 2010,
+   "type": "film",
+   "genres": [
+    "Komedia",
+    "Akcja"
+   ],
+   "collection": "druzyna-a",
+   "wiki": {
+    "pl": "Drużyna A (film)",
+    "en": "The A-Team (film)"
+   },
+   "part": 1
+  }
+ ],
+ "collections": [
+  {
+   "id": "top-gun",
+   "name": "Top Gun",
+   "order": 1,
+   "mood": "Lotnicza akcja",
+   "description": "Legendarny duet pilotów łączący nostalgię z nowoczesną dawką adrenaliny.",
+   "highlight": "Rozpocznij od Top Gun: Maverick i poczuj klimat kokpitu.",
+   "tags": [
+    "akcja",
+    "lotnictwo",
+    "klasyk"
+   ]
+  },
+  {
+   "id": "szybcy-i-wsciekli",
+   "name": "Szybcy i Wściekli",
+   "order": 2,
+   "mood": "Szybkie tempo",
+   "description": "Rodzina, pościgi i nitro – ta seria podkręci każdy wieczór.",
+   "highlight": "Zacznij od pierwszej części i szykuj przekąski na całą noc.",
+   "tags": [
+    "akcja",
+    "samochody",
+    "rodzina"
+   ]
+  },
+  {
+   "id": "john-wick",
+   "name": "John Wick",
+   "order": 3,
+   "mood": "Neo-noir",
+   "description": "Elegancka, brutalna historia zemsty z mistrzowską choreografią walk.",
+   "highlight": "Przygotuj się na balet walki – John Wick nie bierze jeńców.",
+   "tags": [
+    "akcja",
+    "neo-noir",
+    "thriller"
+   ]
+  },
+  {
+   "id": "taxi",
+   "name": "Taxi",
+   "order": 4,
+   "mood": "Komediowy sprint",
+   "description": "Francuska jazda bez trzymanki. Komediowy klasyk o szalonym taksówkarzu.",
+   "highlight": "Każdy kurs to nowa dawka śmiechu i pościgów.",
+   "tags": [
+    "komedia",
+    "akcja",
+    "retro"
+   ]
+  },
+  {
+   "id": "godziny-szczytu",
+   "name": "Godziny szczytu",
+   "order": 5,
+   "mood": "Buddy cop",
+   "description": "Buddy cop z humorem i akrobatyką Jackie Chana.",
+   "highlight": "Lee i Carter gwarantują niekończące się one-linery.",
+   "tags": [
+    "komedia",
+    "buddy cop",
+    "akcja"
+   ]
+  },
+  {
+   "id": "zabojcza-bron",
+   "name": "Zabójcza broń",
+   "order": 6,
+   "mood": "Klasyczne kino akcji",
+   "description": "Ikoniczny duet policjantów walczący z przestępczością Los Angeles.",
+   "highlight": "Riggs i Murtaugh udowadniają, że akcja nie zna wieku.",
+   "tags": [
+    "klasyk",
+    "buddy cop",
+    "akcja"
+   ]
+  },
+  {
+   "id": "jas-fasola",
+   "name": "Jaś Fasola",
+   "order": 7,
+   "mood": "Rodzinny seans",
+   "description": "Slapstickowy humor idealny na rodzinny seans.",
+   "highlight": "Mr. Bean zapewni salwy śmiechu niezależnie od wieku.",
+   "tags": [
+    "komedia",
+    "rodzina",
+    "nostalgia"
+   ]
+  },
+  {
+   "id": "zielona-mila",
+   "name": "Zielona Mila",
+   "order": 8,
+   "mood": "Wzruszający dramat",
+   "description": "Poruszająca opowieść z nutą magii i refleksji.",
+   "highlight": "Zarezerwuj czas na spokojny, emocjonalny seans.",
+   "tags": [
+    "dramat",
+    "klasyk",
+    "emocje"
+   ]
+  },
+  {
+   "id": "ojciec-chrzestny",
+   "name": "Ojciec chrzestny",
+   "order": 9,
+   "mood": "Kultowy klasyk",
+   "description": "Gangsterska saga rodziny Corleone w najlepszym wydaniu.",
+   "highlight": "Witaj w rodzinie – to kino obowiązkowe.",
+   "tags": [
+    "dramat",
+    "gangsterski",
+    "klasyk"
+   ]
+  },
+  {
+   "id": "bekarty-wojny",
+   "name": "Bękarty wojny",
+   "order": 10,
+   "mood": "Tarantiński styl",
+   "description": "Tarantino w alternatywnej historii II wojny światowej.",
+   "highlight": "Błyskotliwe dialogi i zaskakujące zwroty gwarantowane.",
+   "tags": [
+    "wojenny",
+    "tarantino",
+    "czarny humor"
+   ]
+  },
+  {
+   "id": "reacher",
+   "name": "Reacher",
+   "order": 11,
+   "mood": "Śledczy klimat",
+   "description": "Serialowe śledztwa oparte na prozie Lee Childa.",
+   "highlight": "Każdy odcinek to nowe miasto i nowa zagadka.",
+   "tags": [
+    "serial",
+    "kryminał",
+    "akcja"
+   ]
+  },
+  {
+   "id": "tower-heist",
+   "name": "Tower Heist",
+   "order": 12,
+   "mood": "Kryminalny humor",
+   "description": "Komediowy napad na penthouse pewnego finansisty.",
+   "highlight": "Plan doskonały wymaga perfekcyjnej ekipy – masz ją tutaj.",
+   "tags": [
+    "komedia",
+    "akcja",
+    "napad"
+   ]
+  },
+  {
+   "id": "hot-shots",
+   "name": "Hot Shots",
+   "order": 13,
+   "mood": "Totalny odlot",
+   "description": "Parodia kina akcji puszczająca oko do Top Gun i Rambo.",
+   "highlight": "Charlie Sheen w kokpicie to przepis na dobrą zabawę.",
+   "tags": [
+    "parodia",
+    "komedia",
+    "akcja"
+   ]
+  },
+  {
+   "id": "28-dni-tygodni-pozniej",
+   "name": "28 dni / tygodni później",
+   "order": 14,
+   "mood": "Postapokaliptyczne napięcie",
+   "description": "Brytyjska saga o epidemii, która pokazuje chaos i walkę o przetrwanie.",
+   "highlight": "Rozpocznij od pierwszej części i zobacz, jak świat pogrąża się w chaosie.",
+   "tags": [
+    "horror",
+    "postapo",
+    "brytyjski"
+   ]
+  },
+  {
+   "id": "2012",
+   "name": "2012",
+   "order": 15,
+   "mood": "Katastroficzny rozmach",
+   "description": "Katastroficzne widowisko, które stawia ludzkość przed końcem świata.",
+   "highlight": "Efekty specjalne na wielkim ekranie robią wrażenie.",
+   "tags": [
+    "katastroficzny",
+    "sci-fi",
+    "efekty"
+   ]
+  },
+  {
+   "id": "doomsday",
+   "name": "Doomsday",
+   "order": 16,
+   "mood": "Postapokaliptyczna akcja",
+   "description": "Mroczne połączenie science fiction, akcji i survivalu w odizolowanej strefie.",
+   "highlight": "Łączy klimat Mad Maxa z średniowiecznymi intrygami.",
+   "tags": [
+    "postapo",
+    "akcja",
+    "survival"
+   ]
+  },
+  {
+   "id": "uncharted",
+   "name": "Uncharted",
+   "order": 17,
+   "mood": "Przygodowa akcja",
+   "description": "Filmowa adaptacja przygodowej serii gier pełna skoków po dachach i zagadek.",
+   "highlight": "Skacz po dachach razem z Nathanem Drakiem.",
+   "tags": [
+    "przygodowy",
+    "akcja",
+    "gra"
+   ]
+  },
+  {
+   "id": "niezniszczalni",
+   "name": "Niezniszczalni",
+   "order": 18,
+   "mood": "Adrenalina 80/90",
+   "description": "Gwiazdy kina akcji łączą siły, by dostarczyć nieprzerwany festiwal wybuchów.",
+   "highlight": "Zbierz legendarną ekipę i przygotuj się na grad pocisków.",
+   "tags": [
+    "akcja",
+    "ekipa",
+    "nostalgia"
+   ]
+  },
+  {
+   "id": "na-zachodzie-bez-zmian",
+   "name": "Na Zachodzie bez zmian",
+   "order": 19,
+   "mood": "Wojenny dramat",
+   "description": "Wojenne widowisko pokazujące brutalny realizm frontu I wojny światowej.",
+   "highlight": "Przeżyj front oczami młodych rekrutów i zobacz, jak wojna ich zmienia.",
+   "tags": [
+    "dramat",
+    "wojenny",
+    "historyczny"
+   ]
+  },
+  {
+   "id": "szeregowiec-ryan",
+   "name": "Szeregowiec Ryan",
+   "order": 20,
+   "mood": "Historyczna epika",
+   "description": "Spielbergowska opowieść o braterstwie i poświęceniu podczas II wojny światowej.",
+   "highlight": "Przeżyj lądowanie w Normandii w jednej z najmocniejszych scen wojennych.",
+   "tags": [
+    "wojenny",
+    "dramat",
+    "spielberg"
+   ]
+  },
+  {
+   "id": "xxx-trylogia",
+   "name": "xXx – Trylogia",
+   "order": 21,
+   "mood": "Agent z adrenaliną",
+   "description": "Ekstremalny agent Xander Cage przenosi sporty ekstremalne na poziom misji specjalnych.",
+   "highlight": "Zobacz, jak Xander Cage zamienia każdy trick w tajną operację.",
+   "tags": [
+    "akcja",
+    "agent",
+    "thriller"
+   ]
+  },
+  {
+   "id": "czlowiek-z-blizna",
+   "name": "Człowiek z blizną",
+   "order": 22,
+   "mood": "Gangsterska saga",
+   "description": "Kultowa historia Tony'ego Montany, który podbija Miami w rytmie kokainowego imperium.",
+   "highlight": "Powiedz światu „przywitaj się z moim małym przyjacielem” i zanurz się w klasyce.",
+   "tags": [
+    "gangsterski",
+    "klasyk",
+    "dramat"
+   ]
+  },
+  {
+   "id": "druzyna-a",
+   "name": "Drużyna A",
+   "order": 23,
+   "mood": "Lekka komedia akcji",
+   "description": "Oddział najemników niesłusznie oskarżony o zbrodnię wraca, by oczyścić swoje nazwiska.",
+   "highlight": "Zobacz, jak Hannibal i spółka realizują plan z uśmiechem na twarzy.",
+   "tags": [
+    "akcja",
+    "ekipa",
+    "komedia"
+   ]
+  }
+ ]
+}

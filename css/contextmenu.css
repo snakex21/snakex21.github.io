@@ -1,0 +1,179 @@
+/* Menu kontekstowe (js/contextmenu.js). Wspólny szkielet + wygląd według rodziny motywów:
+   1.0 / 2.0 / 3.1 klasyczne, 95 / 2000 wypukłe ramki 3D, XP niebieskie zaznaczenie z lewym pasem,
+   Vista / 7 szklane z kolumną ikon, 8 / 8.1 płaskie, 11 zaokrąglone z akrylem (jasny / ciemny). */
+
+.cm {
+  position: fixed; z-index: 10000;
+  min-width: 180px; max-width: min(340px, calc(100vw - 4px));
+  overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain;
+  padding: 2px;
+  font: var(--font-size, 13px)/1.3 var(--font-ui, system-ui, sans-serif);
+  color: var(--menu-fg, #111);
+  background: var(--menu-bg, #f2f2f2);
+  border: 1px solid var(--line, rgba(0, 0, 0, .2));
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, .3);
+  user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
+  outline: none;
+  opacity: 0;
+  transition: opacity .12s ease-out, transform .12s ease-out;
+}
+.cm.cm-in { opacity: 1; }
+.cm-item {
+  display: grid; grid-template-columns: 0 minmax(0, 1fr) auto 14px; align-items: center; column-gap: 6px;
+  min-height: 22px; padding: 1px 4px 1px 10px;
+  cursor: default; white-space: nowrap; outline: none;
+}
+.cm-has-gutter > .cm-item { grid-template-columns: 18px minmax(0, 1fr) auto 14px; padding-left: 4px; }
+.cm-gut { display: grid; place-items: center; width: 100%; height: 16px; overflow: hidden; }
+.cm-gut .icon { width: 16px; height: 16px; }
+.cm-label { overflow: hidden; text-overflow: ellipsis; }
+.cm-key { padding-left: 18px; opacity: .85; }
+.cm-key:empty { padding: 0; }
+.cm-default .cm-label { font-weight: 700; }
+/* Zaznaczenie pokazuje podświetlenie wiersza – bez dodatkowej ramki fokusu z motywu */
+.cm :is(.cm-item, .cm-item:focus, .cm-item:focus-visible), .cm:focus, .cm:focus-visible { outline: none !important; }
+.cm-item.cm-active, .cm-item.cm-open { background: var(--hilite, #2457c9); color: var(--hilite-fg, #fff); }
+.cm-disabled { color: var(--muted, #888); opacity: .6; }
+.cm-item.cm-disabled.cm-active { background: var(--hilite-soft, rgba(0, 0, 0, .06)); color: var(--muted, #888); }
+.cm-sep { height: 1px; margin: 3px 2px; background: var(--line, rgba(0, 0, 0, .2)); }
+
+/* Znacznik ✓ i ● (rysowane w CSS, kolor tekstu) */
+.cm-mark-check { width: 5px; height: 9px; margin-top: -3px; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(40deg); }
+.cm-mark-radio { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+/* Strzałka podmenu */
+.cm-parent .cm-arrow { justify-self: end; width: 0; height: 0; border: 4px solid transparent; border-left: 4px solid currentColor; border-right: 0; }
+
+/* Dotyk: większe pola */
+@media (pointer: coarse) {
+  .cm-item { min-height: 36px; }
+  .cm { min-width: 210px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cm { transition: none; transform: none !important; }
+}
+
+/* Okno w trakcie przesuwania / zmiany rozmiaru klawiaturą (menu systemowe) */
+.win.wm-kbd { outline: 2px dashed var(--accent, #2457c9); outline-offset: -1px; }
+.win.wm-kbd-move { cursor: move; }
+.win.wm-kbd-size { cursor: nwse-resize; }
+/* Okno właściwości */
+.props { display: flex; flex-direction: column; height: 100%; padding: 12px; gap: 10px; }
+.props-head { display: flex; align-items: center; gap: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.props-head .icon, .props-head .tile { width: 32px; height: 32px; flex: none; }
+.props-name { font-weight: 700; font-size: 1.1em; overflow-wrap: anywhere; }
+.props-facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 14px; margin: 0; }
+.props-facts dt { color: var(--muted); }
+.props-facts dd { margin: 0; overflow-wrap: anywhere; user-select: text; }
+.props-foot { margin-top: auto; display: flex; justify-content: flex-end; gap: 6px; }
+/* Rozmiary ikon pulpitu (menu pulpitu: Widok) */
+.desk-icons[data-size="medium"] { --icon-cell-w: 74px; --icon-cell-h: 66px; }
+.desk-icons[data-size="medium"] .desk-icon .icon-lg { width: 24px; height: 24px; }
+.desk-icons[data-size="small"] { --icon-cell-w: 150px; --icon-cell-h: 24px; gap: 2px 6px; }
+.desk-icons[data-size="small"] .desk-icon { flex-direction: row; justify-content: flex-start; gap: 4px; padding: 1px 3px; text-align: left; }
+.desk-icons[data-size="small"] .desk-icon .icon-lg { width: 16px; height: 16px; }
+.desk-icons[data-size="small"] .desk-icon-label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.desk-icons.cm-refresh { visibility: hidden; }
+/* Długie przytrzymanie na dotyku: bez systemowego dymka iOS na ikonach */
+.desk-icon, .task-btn, .min-icon, .file, .sm-item, .ss-tile, .lh-item, .mp-row, .pm-icon { -webkit-touch-callout: none; }
+.win-icon { cursor: default; }
+
+/* ---------- Windows 1.0 / 2.0 / 3.1: białe menu, czarna ramka, bez cieni i animacji ---------- */
+:root:is([data-theme="win1"], [data-theme="win2"], [data-theme="win31"]) .cm {
+  padding: 0; background: #fff; color: #000; border: 1px solid #000;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, .55); transition: none; opacity: 1;
+}
+:root:is([data-theme="win1"], [data-theme="win2"], [data-theme="win31"]) .cm-item { min-height: 18px; padding-right: 6px; }
+:root[data-theme="win1"] .cm { box-shadow: none; }
+:root[data-theme="win1"] .cm-item.cm-active, :root[data-theme="win2"] .cm-item.cm-active { background: #000; color: #fff; }
+:root[data-theme="win31"] .cm-item.cm-active, :root[data-theme="win31"] .cm-item.cm-open { background: var(--c-navy, #000080); color: #fff; }
+:root:is([data-theme="win1"], [data-theme="win2"], [data-theme="win31"]) .cm-disabled { color: #808080; opacity: 1; }
+:root:is([data-theme="win1"], [data-theme="win2"], [data-theme="win31"]) .cm-sep { margin: 2px 0; background: #000; }
+:root:is([data-theme="win1"], [data-theme="win2"], [data-theme="win31"]) .cm-gut .icon { filter: grayscale(.2); }
+
+/* ---------- Windows 95 / 2000: szare, wypukła ramka 3D, granatowe zaznaczenie, wytłoczony tekst nieaktywny ---------- */
+:root:is([data-theme="win95"], [data-theme="win2000"]) .cm {
+  padding: 3px; border: 0; background: var(--c-face, #c0c0c0); color: #000;
+  box-shadow: var(--raised), 1px 1px 0 rgba(0, 0, 0, .0);
+}
+:root[data-theme="win95"] .cm { transition: none; opacity: 1; }
+:root[data-theme="win2000"] .cm { box-shadow: var(--raised), 2px 2px 3px rgba(0, 0, 0, .35); transition: opacity .15s; }
+:root:is([data-theme="win95"], [data-theme="win2000"]) .cm-item { min-height: 20px; }
+:root:is([data-theme="win95"], [data-theme="win2000"]) .cm-item.cm-active,
+:root:is([data-theme="win95"], [data-theme="win2000"]) .cm-item.cm-open { background: var(--c-navy, #000080); color: #fff; }
+:root:is([data-theme="win95"], [data-theme="win2000"]) .cm-disabled { color: var(--c-shadow, #808080); text-shadow: 1px 1px 0 var(--c-hi, #fff); opacity: 1; }
+:root:is([data-theme="win95"], [data-theme="win2000"]) .cm-item.cm-disabled.cm-active { background: var(--c-navy, #000080); color: var(--c-shadow, #808080); text-shadow: none; }
+:root:is([data-theme="win95"], [data-theme="win2000"]) .cm-sep { height: 0; margin: 3px 1px; background: none; border-top: 1px solid var(--c-shadow, #808080); border-bottom: 1px solid var(--c-hi, #fff); }
+
+/* ---------- Windows XP: białe menu, lewy pas na ikony, niebieskie zaznaczenie ---------- */
+:root[data-theme="winxp"] .cm {
+  padding: 2px; background: linear-gradient(90deg, #f6f5ef 0 26px, #fff 26px); color: #000;
+  border: 1px solid #aca899; box-shadow: 3px 3px 4px rgba(0, 0, 0, .3);
+}
+:root[data-theme="winxp"] .cm-item { grid-template-columns: 20px minmax(0, 1fr) auto 14px; padding: 2px 4px 2px 2px; column-gap: 8px; min-height: 22px; }
+:root[data-theme="winxp"] .cm-item.cm-active, :root[data-theme="winxp"] .cm-item.cm-open { background: var(--xp-select, #316ac5); color: #fff; }
+:root[data-theme="winxp"] .cm-disabled { color: #aca899; opacity: 1; }
+:root[data-theme="winxp"] .cm-item.cm-disabled.cm-active { background: #e8e6dc; color: #aca899; }
+:root[data-theme="winxp"] .cm-sep { margin: 3px 2px 3px 30px; background: #aca899; }
+
+/* ---------- Windows Vista / 7: szkło, kolumna ikon z pionową linią, zaokrąglone podświetlenie ---------- */
+:root:is([data-theme="winvista"], [data-theme="win7"]) .cm {
+  padding: 2px; color: #000;
+  background: linear-gradient(90deg, transparent 0 28px, #e2e3e3 28px 29px, #fff 29px 30px, transparent 30px), rgba(240, 240, 240, .96);
+  border: 1px solid #979797; border-radius: 0; box-shadow: 2px 2px 5px rgba(0, 0, 0, .35);
+  backdrop-filter: blur(6px);
+}
+:root:is([data-theme="winvista"], [data-theme="win7"]) .cm-item {
+  grid-template-columns: 22px minmax(0, 1fr) auto 14px; column-gap: 12px;
+  min-height: 22px; padding: 1px 6px 1px 2px; border: 1px solid transparent; border-radius: 3px;
+}
+:root:is([data-theme="winvista"], [data-theme="win7"]) .cm-item.cm-active,
+:root:is([data-theme="winvista"], [data-theme="win7"]) .cm-item.cm-open {
+  color: #000; border-color: #aecff7;
+  background: linear-gradient(rgba(242, 248, 255, .9), rgba(220, 235, 252, .9));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .7);
+}
+:root:is([data-theme="winvista"], [data-theme="win7"]) .cm-disabled { color: #6d6d6d; opacity: 1; }
+:root:is([data-theme="winvista"], [data-theme="win7"]) .cm-item.cm-disabled.cm-active { border-color: #d6d6d6; background: rgba(230, 230, 230, .6); color: #6d6d6d; }
+:root:is([data-theme="winvista"], [data-theme="win7"]) .cm-sep { height: 0; margin: 3px 2px 3px 32px; background: none; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #fff; }
+:root[data-theme="winvista"] .cm { background: linear-gradient(90deg, transparent 0 28px, #e2e3e3 28px 29px, #fff 29px 30px, transparent 30px), rgba(245, 246, 247, .95); }
+
+/* ---------- Windows 8 / 8.1: płaskie, bez cieni, jasnoniebieskie zaznaczenie ---------- */
+:root:is([data-theme="win8"], [data-theme="win81"]) .cm {
+  padding: 2px; background: #fff; color: #000; border: 1px solid #ccc;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
+}
+:root:is([data-theme="win8"], [data-theme="win81"]) .cm-item { min-height: 24px; padding-right: 8px; column-gap: 10px; }
+:root:is([data-theme="win8"], [data-theme="win81"]) .cm-has-gutter > .cm-item { grid-template-columns: 22px minmax(0, 1fr) auto 14px; }
+:root:is([data-theme="win8"], [data-theme="win81"]) .cm-item.cm-active,
+:root:is([data-theme="win8"], [data-theme="win81"]) .cm-item.cm-open { background: #e5f3fb; color: #000; box-shadow: inset 0 0 0 1px #70c0e7; }
+:root:is([data-theme="win8"], [data-theme="win81"]) .cm-disabled { color: #8d8d8d; opacity: 1; }
+:root:is([data-theme="win8"], [data-theme="win81"]) .cm-sep { margin: 3px 4px; background: #d7d7d7; }
+
+/* ---------- Windows 11: zaokrąglone, akryl, wysuwanie ---------- */
+:root[data-theme="win11"] .cm {
+  min-width: 200px; padding: 4px;
+  background: var(--menu-bg); color: var(--menu-fg);
+  border: 1px solid var(--line); border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .14), 0 0 2px rgba(0, 0, 0, .12);
+  backdrop-filter: blur(30px) saturate(1.25); -webkit-backdrop-filter: blur(30px) saturate(1.25);
+  transform: translateY(-6px);
+  transition: opacity .15s ease-out, transform .18s cubic-bezier(.1, .9, .2, 1);
+}
+:root[data-theme="win11"] .cm.cm-flip-y { transform: translateY(6px); }
+:root[data-theme="win11"] .cm.cm-in { transform: none; }
+:root[data-theme="win11"] .cm-item { min-height: 30px; padding: 0 8px 0 12px; column-gap: 12px; border-radius: 4px; }
+:root[data-theme="win11"] .cm-has-gutter > .cm-item { grid-template-columns: 16px minmax(0, 1fr) auto 14px; padding-left: 10px; }
+:root[data-theme="win11"] .cm-item.cm-active, :root[data-theme="win11"] .cm-item.cm-open { background: var(--hover, rgba(0, 0, 0, .06)); color: inherit; }
+:root[data-theme="win11"] .cm-key { opacity: .6; font-size: .92em; }
+:root[data-theme="win11"] .cm-disabled { opacity: .45; }
+:root[data-theme="win11"] .cm-item.cm-disabled.cm-active { background: transparent; color: inherit; }
+:root[data-theme="win11"] .cm-sep { margin: 4px -4px; background: var(--line); }
+:root[data-theme="win11"] .cm-parent .cm-arrow { width: 6px; height: 6px; border: solid currentColor; border-width: 1.5px 1.5px 0 0; transform: rotate(45deg); margin-right: 4px; opacity: .8; }
+:root[data-theme="win11"] .cm-mark-radio { width: 7px; height: 7px; background: var(--accent); }
+:root[data-theme="win11"] .cm-mark-check { border-color: var(--accent); }
+:root[data-theme="win11"][data-variant="dark"] .cm { box-shadow: 0 8px 16px rgba(0, 0, 0, .4), 0 0 2px rgba(0, 0, 0, .5); }
+:root[data-theme="win11"]:not([data-variant="dark"]) .cm-item.cm-active { background: rgba(0, 0, 0, .05); }
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="win11"][data-variant="auto"] .cm-item.cm-active { background: rgba(255, 255, 255, .07); }
+  :root[data-theme="win11"][data-variant="auto"] .cm { box-shadow: 0 8px 16px rgba(0, 0, 0, .4), 0 0 2px rgba(0, 0, 0, .5); }
+}

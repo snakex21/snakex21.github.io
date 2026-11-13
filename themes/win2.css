@@ -1,0 +1,170 @@
+/* =====================================================================
+   Motyw "Windows 2.0" – nakładające się okna w palecie 16 kolorów,
+   cienkie czarne ramki, granatowy pasek tytułu z wyśrodkowanym napisem,
+   pasek menu u góry ekranu zamiast Start (kategorie jako rozwijane menu),
+   proste ikony programów w rzędzie na dole pulpitu, obok ikon
+   zminimalizowanych okien. Cechy: layout { taskbar: "none", launcher: "menubar" }.
+   ===================================================================== */
+
+:root {
+  --font-ui: Verdana, "DejaVu Sans", Tahoma, Arial, sans-serif;
+  --font-size: 12px;
+
+  --k: #000000;
+  --w: #ffffff;
+  --navy: #0000aa;
+  --cyan: #00aaaa;
+  --lgray: #aaaaaa;
+  --yellow: #ffff55;
+
+  --wallpaper:
+    linear-gradient(90deg, rgba(0, 0, 0, .12) 1px, transparent 1px) 0 0 / 3px 3px,
+    var(--wall-color, #00aaaa);
+  --desk-fg: #000;
+  --desk-shadow: none;
+
+  --taskbar-h: 0px;
+  --launcher-bg: var(--w);
+  --launcher-fg: var(--k);
+
+  --win-bg: var(--w);
+  --win-fg: var(--k);
+  --win-border: 2px solid var(--k);
+  --win-radius: 0;
+  --win-shadow: 4px 4px 0 rgba(0, 0, 0, .55);
+  --title-h: 22px;
+  --title-bg: var(--navy);
+  --title-fg: var(--w);
+  --title-bg-inactive: var(--w);
+  --title-fg-inactive: var(--k);
+
+  --line: var(--k);
+  --muted: #444;
+  --field-bg: var(--w);
+  --field-fg: var(--k);
+  --field-border: 1px solid var(--k);
+  --btn-bg: var(--w);
+  --btn-fg: var(--k);
+  --btn-border: 2px solid var(--k);
+  --btn-radius: 6px;
+  --accent: var(--navy);
+  --accent-fg: var(--w);
+  --hilite: var(--k);
+  --hilite-fg: var(--w);
+  --hilite-soft: rgba(0, 0, 170, .07);
+  --focus-ring: var(--navy);
+  --link: var(--navy);
+
+  --menu-bg: var(--w);
+  --menu-fg: var(--k);
+
+  --gadget-bg: var(--w);
+  --gadget-fg: var(--k);
+  --gadget-border: 2px solid var(--k);
+  --gadget-shadow: 4px 4px 0 rgba(0, 0, 0, .55);
+
+  --tile-radius: 0;
+  --tile-s: 100%;
+  --tile-l: 34%;
+
+  --ic-line: #000;
+  --ic-lw: 1.3;
+  --ic-gloss: 0;
+  --ic-r: 0px;
+  --ic-blue: #0000aa;
+  --ic-folder: #ffff55;
+  --ic-folder-back: #aa5500;
+  --ic-green: #00aa00;
+  --ic-red: #aa0000;
+  --ic-music: #aa00aa;
+
+  --start-mark-edge: #000;
+  --start-mark: #ffff55;
+  --start-mark2: #00aa00;
+
+  --clock-face: #fff;
+  --clock-rim: #000;
+  --clock-hand: #000;
+  --clock-second: #aa0000;
+}
+
+body { -webkit-font-smoothing: none; }
+:focus-visible { outline: 1px dotted #000; outline-offset: -3px; }
+
+/* ---------- Pasek menu u góry ---------- */
+.launcher { border-bottom: 2px solid var(--k); }
+.ln-row { min-height: 24px; }
+.mb-top { padding: 3px 12px; font-weight: 700; }
+.mb-menu.open > .mb-top, .mb-top:hover { background: var(--k); color: var(--w); }
+.ln-clock { font-weight: 700; }
+.mb-drop { border: 2px solid var(--k); box-shadow: 3px 3px 0 rgba(0, 0, 0, .55); padding: 0; }
+.mb-item { padding: 3px 16px 3px 8px; }
+.mb-sep { height: 0; border-top: 1px dashed var(--k); background: none; }
+
+/* ---------- Ikony programów: rząd na dole pulpitu ---------- */
+.desk-icons {
+  top: auto; bottom: 6px; left: 6px; right: 40%;
+  grid-auto-flow: column; grid-template-rows: var(--icon-cell-h);
+  grid-auto-columns: var(--icon-cell-w);
+  --icon-cell-w: 74px; --icon-cell-h: 64px;
+  overflow-x: auto; overflow-y: hidden; scrollbar-width: none;
+}
+.desk-icon .icon-lg { width: 28px; height: 28px; }
+.desk-icon-label { background: var(--w); color: var(--k); font-size: 11px; padding: 0 2px; }
+.desk-icon.selected .desk-icon-label { background: var(--k); color: var(--w); }
+.icon-area { left: 62% !important; justify-content: flex-end; }
+.min-icon { width: 74px; color: var(--k); }
+.min-icon .icon-lg { width: 28px; height: 28px; }
+.min-icon-img { background: var(--w); border: 2px solid var(--k); padding: 3px; }
+.min-icon-label { background: var(--w); font-size: 11px; }
+.min-icon:hover .min-icon-label, .min-icon:focus-visible .min-icon-label { background: var(--k); color: var(--w); }
+.min-icon:focus-visible { outline: none; }
+
+/* ---------- Okna ---------- */
+.win-titlebar { padding: 0; gap: 0; border-bottom: 2px solid var(--k); }
+.win-icon { display: none; }
+.win-title { text-align: center; font-weight: 700; }
+.win-controls { gap: 0; align-self: stretch; }
+.win-btn { width: 22px; height: 100%; border: 0; border-left: 2px solid var(--k); background: var(--w); color: var(--k); }
+.win-btn .glyph { width: 10px; height: 10px; stroke-width: 2.4; stroke-linecap: square; }
+.win-btn:active { background: var(--k); color: var(--w); }
+/* zamknięcie jak pole menu systemowego po lewej */
+.win-controls { display: contents; }
+.win-close { order: -1; border-left: 0; border-right: 2px solid var(--k); }
+.win-body { background: var(--w); }
+
+/* ---------- Kontrolki ---------- */
+.btn { font-weight: 700; }
+.btn:active:not(:disabled) { background: var(--k); color: var(--w); }
+.btn-primary { border-width: 3px; }
+.toolbar { border-bottom: 1px solid var(--k); background: var(--w); }
+.statusbar { border-top: 1px solid var(--k); }
+.folder-scroll, .web-wrap, .notes-side { margin: 4px; }
+.group { border: 1px solid var(--k); border-radius: 0; }
+.seg-item { border: 1px solid var(--k); }
+.theme-card:has(input:checked) { border-color: var(--navy); }
+.tile { border: 1px solid var(--k); text-shadow: none; }
+.file.selected .file-label, .notes-item.selected { background: var(--k); color: var(--w); }
+
+* { scrollbar-color: var(--lgray) var(--w); }
+::-webkit-scrollbar { width: 14px; height: 14px; }
+::-webkit-scrollbar-track { background: var(--w); border-left: 1px solid var(--k); }
+::-webkit-scrollbar-thumb { background: var(--lgray); border: 1px solid var(--k); }
+
+/* ---------- Gadżety ---------- */
+.gadget { padding: 0 0 8px; }
+.gadget > *:not(.gadget-title) { margin-left: 8px; margin-right: 8px; }
+.gadget-clock, .gadget-weather { padding: 8px 8px 0; }
+.gadget-clock > *, .gadget-weather > * { margin: 0; }
+.gadget-title { margin: 0 0 6px; padding: 2px 6px; text-align: center; color: var(--w); background: var(--navy); border-bottom: 2px solid var(--k); }
+
+.startmenu { --sm-flyout: 0; border: 2px solid var(--k); }
+
+@media (max-width: 640px) {
+  .desk-icons {
+    top: 12px; left: 12px; right: 12px; bottom: 80px; overflow: auto;
+    grid-auto-flow: row; grid-template-rows: none; grid-auto-columns: auto; grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(76px, 1fr));
+  }
+  .icon-area { left: 8px !important; justify-content: flex-start; }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+ <title>Game Launcher</title>
+ <defs>
+  <linearGradient id="p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b6cff"/><stop offset="1" stop-color="#2a2f9e"/></linearGradient>
+  <linearGradient id="r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c9d3e0"/></linearGradient>
+ </defs>
+ <path d="M44 4c8 0 14 6 14 14l-9 9-14-14z" fill="url(#r)" stroke="#55606e" stroke-width="1.6" stroke-linejoin="round"/>
+ <circle cx="47.5" cy="14.5" r="3.2" fill="#3fa9f5" stroke="#55606e" stroke-width="1.2"/>
+ <path d="M37 15l-7 2-4 5 7 1zM47 25l-2 7-5 4-1-7z" fill="#e8463a"/>
+ <path d="M35 27l-7 7" stroke="#ff9f1c" stroke-width="4" stroke-linecap="round"/>
+ <path d="M31 25l-5 5" stroke="#ffd23f" stroke-width="2.5" stroke-linecap="round"/>
+ <path d="M10 34h44c3.5 0 6 3 6.5 6.5l2 12c.6 4-2.6 7-6 6.2-2.3-.5-3.8-2.4-5.5-4.3L46 49H18l-5 5.4c-1.7 1.9-3.2 3.8-5.5 4.3-3.4.8-6.6-2.2-6-6.2l2-12C4 37 6.5 34 10 34z" fill="url(#p)" stroke="#1b1f6e" stroke-width="2" stroke-linejoin="round"/>
+ <path d="M13 41v8M9 45h8" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+ <circle cx="47" cy="42" r="2.6" fill="#ffd23f"/><circle cx="53" cy="45" r="2.6" fill="#e8463a"/><circle cx="41" cy="45" r="2.6" fill="#3fdc7a"/><circle cx="47" cy="48" r="2.6" fill="#3fa9f5"/>
+</svg>

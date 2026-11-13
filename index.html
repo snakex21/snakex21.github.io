@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pl" data-theme="win95" data-variant="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>snakex21 · Pulpit</title>
+<meta name="description" content="Osobisty pulpit snakex21: moje programy do pobrania, gry i narzędzia w przeglądarce.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/base.css?v=20">
+<link rel="stylesheet" href="css/filmy.css?v=20">
+<link rel="stylesheet" href="css/contextmenu.css?v=20">
+<link rel="stylesheet" href="themes/win95.css?v=20" id="theme-css">
+<!-- Wersja plików (?v=…) omija stare kopie w pamięci podręcznej przeglądarki po aktualizacji strony.
+     Mapa importów dokleja ją do każdego modułu JS; przy zmianach podbij numer tutaj (VERSION niżej i w mapie). -->
+<script type="importmap">
+{
+ "imports": {
+  "./js/apps/catalog.js": "./js/apps/catalog.js?v=20",
+  "./js/apps/control.js": "./js/apps/control.js?v=20",
+  "./js/apps/filmy.js": "./js/apps/filmy.js?v=20",
+  "./js/apps/gadgets.js": "./js/apps/gadgets.js?v=20",
+  "./js/apps/linkhub.js": "./js/apps/linkhub.js?v=20",
+  "./js/apps/music.js": "./js/apps/music.js?v=20",
+  "./js/apps/notepad.js": "./js/apps/notepad.js?v=20",
+  "./js/apps/progman.js": "./js/apps/progman.js?v=20",
+  "./js/apps/programs.js": "./js/apps/programs.js?v=20",
+  "./js/apps/registry.js": "./js/apps/registry.js?v=20",
+  "./js/apps/webview.js": "./js/apps/webview.js?v=20",
+  "./js/contextmenu.js": "./js/contextmenu.js?v=20",
+  "./js/desktop.js": "./js/desktop.js?v=20",
+  "./js/launcher.js": "./js/launcher.js?v=20",
+  "./js/main.js": "./js/main.js?v=20",
+  "./js/menubar.js": "./js/menubar.js?v=20",
+  "./js/menus.js": "./js/menus.js?v=20",
+  "./js/startmenu.js": "./js/startmenu.js?v=20",
+  "./js/store.js": "./js/store.js?v=20",
+  "./js/taskbar.js": "./js/taskbar.js?v=20",
+  "./js/themes.js": "./js/themes.js?v=20",
+  "./js/util.js": "./js/util.js?v=20",
+  "./js/wm.js": "./js/wm.js?v=20"
+ }
+}
+</script>
+<script>
+  /* Motyw ustawiany przed pierwszym malowaniem, żeby nie mrugał domyślny. */
+  (function () {
+    try {
+      var r = document.documentElement;
+      var t = JSON.parse(localStorage.getItem('pulpit:theme') || 'null');
+      var v = JSON.parse(localStorage.getItem('pulpit:variant') || 'null');
+      var c = JSON.parse(localStorage.getItem('pulpit:wallColor') || 'null');
+      if (typeof t === 'string' && /^[a-z0-9-]+$/.test(t)) {
+        r.setAttribute('data-theme', t);
+        document.getElementById('theme-css').setAttribute('href', 'themes/' + t + '.css?v=20');
+      }
+      if (typeof v === 'string' && /^[a-z]+$/.test(v)) r.setAttribute('data-variant', v);
+      if (typeof c === 'string' && /^#[0-9a-f]{6}$/i.test(c)) r.style.setProperty('--wall-color', c);
+      /* Cechy układu motywu (pasek, launcher, ekran Start…) zapamiętane przez js/themes.js */
+      var l = JSON.parse(localStorage.getItem('pulpit:layout') || 'null');
+      var map = { taskbar: 'taskbar', launcher: 'launcher', programManager: 'progman', tiling: 'tiling', start: 'start', startButton: 'startBtn', allApps: 'allApps' };
+      if (l && typeof l === 'object') for (var k in map) {
+        if (/^[a-z]+$/.test(String(l[k]))) r.dataset[map[k]] = String(l[k]);
+      }
+      /* Zestaw ikon motywu (logo systemu) zapamiętany przez js/themes.js */
+      var ic = JSON.parse(localStorage.getItem('pulpit:icons') || 'null');
+      if (ic && typeof ic.id === 'string' && /^[a-z0-9-]+$/.test(ic.id)) {
+        /* Adres bezwzględny: względny url() w zmiennej CSS liczyłby się od arkusza, który jej używa (css/). */
+        [16, 32, 48].forEach(function (px) {
+          var href = new URL('icons/' + ic.id + '/logo-' + px + '.png?v=20', document.baseURI).href;
+          r.style.setProperty('--os-logo-' + px, 'url("' + href + '")');
+        });
+        r.style.setProperty('--os-logo-lg', 'var(--os-logo-' + (ic.large === 48 ? 48 : 32) + ')');
+        r.setAttribute('data-icons', ic.id);
+        if (ic.pixelated === true) r.setAttribute('data-icons-pixelated', 'true');
+      }
+      /* Elementy tylko dla niektórych motywów mają atrybut hidden (ukryte nawet bez CSS); odkrywamy je od razu. */
+      document.addEventListener('DOMContentLoaded', function () {
+        var d = r.dataset;
+        if (d.launcher === 'executive' || d.launcher === 'menubar') document.getElementById('launcher').hidden = false;
+        if (d.taskbar === 'none') document.getElementById('icon-area').hidden = false;
+      });
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<noscript>
+  <div class="too-old">Ten pulpit potrzebuje JavaScriptu. Włącz go albo otwórz
+    <a href="https://snakex21.github.io/snakex21/">poprzednią wersję strony</a>.</div>
+</noscript>
+<script nomodule>
+  document.body.innerHTML = '<div class="too-old">Ta przeglądarka jest zbyt stara, żeby uruchomić pulpit. ' +
+    'Użyj aktualnej wersji Firefoksa, Chrome, Edge albo Safari.</div>';
+</script>
+
+<div id="desktop" class="desktop">
+  <nav id="launcher" class="launcher" aria-label="Programy" hidden></nav>
+  <main id="workarea" class="workarea" aria-label="Pulpit">
+    <h1 class="sr-only">snakex21 · Pulpit</h1>
+    <div id="desk-icons" class="desk-icons" role="group" aria-label="Ikony pulpitu" aria-describedby="desk-hint"></div>
+    <p id="desk-hint" class="sr-only">Strzałki zmieniają zaznaczenie, Enter otwiera.</p>
+    <aside id="gadgets" class="gadgets" aria-label="Gadżety"></aside>
+    <div id="icon-area" class="icon-area" role="toolbar" aria-label="Zminimalizowane okna" hidden></div>
+    <div id="windows" class="windows"></div>
+  </main>
+
+  <nav id="taskbar" class="taskbar" aria-label="Pasek zadań">
+    <button id="start-btn" class="start-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="startmenu">
+      <span class="start-mark os-logo" aria-hidden="true"><svg class="os-logo-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-start"></use></svg></span>
+      <span class="start-label">Start</span>
+    </button>
+    <div id="tasklist" class="tasklist" role="toolbar" aria-label="Otwarte okna"></div>
+    <div class="tray">
+      <button id="tray-clock" class="tray-clock" type="button" title="Gadżety"><time id="clock-time">--:--</time><span id="clock-date" class="tray-date"></span></button>
+      <button id="show-desktop" class="show-desktop" type="button" title="Pokaż pulpit" aria-label="Pokaż pulpit"></button>
+    </div>
+  </nav>
+
+  <div id="startmenu" class="startmenu" hidden></div>
+</div>
+
+<div id="sprite" class="sprite-host" aria-hidden="true"></div>
+<div id="live" class="sr-only" aria-live="polite"></div>
+
+<script type="module" src="./js/main.js?v=20"></script>
+</body>
+</html>

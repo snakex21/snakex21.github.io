@@ -1,0 +1,215 @@
+{
+ "base": "https://snakex21.github.io/snakex21/",
+ "items": [
+  {
+   "slug": "generator-kolorow",
+   "title": "Generator kolorów",
+   "description": "Losuj palety, kopiuj kody HEX i RGB",
+   "path": "Programy/generator kolorow/generator kolorow.html"
+  },
+  {
+   "slug": "generator-czcionek",
+   "title": "Generator czcionek",
+   "description": "Zamieniaj tekst na różne style typograficzne",
+   "path": "Programy/generator czcionek/generator czcionek.html"
+  },
+  {
+   "slug": "generator-emoji",
+   "title": "Generator emoji",
+   "description": "Przeglądaj i kopiuj emoji",
+   "path": "Programy/generator emoji/generator emoji.html"
+  },
+  {
+   "slug": "generator-hasel",
+   "title": "Generator haseł",
+   "description": "Twórz silne i bezpieczne hasła",
+   "path": "Programy/generator hasel/generator hasel.html"
+  },
+  {
+   "slug": "lista-zadan",
+   "title": "Lista Zadań",
+   "description": "Szybki notatnik z zapisem",
+   "path": "Programy/lista zadan/lista zadan.html"
+  },
+  {
+   "slug": "licznik-slow",
+   "title": "Licznik Słów",
+   "description": "Licz znaki, słowa i czas czytania",
+   "path": "Programy/licznik slow/licznik slow.html"
+  },
+  {
+   "slug": "konwerter",
+   "title": "Konwerter Jednostek",
+   "description": "Długość, waga, dane, temperatura i waluty",
+   "path": "Programy/konwerter/konwerter.html"
+  },
+  {
+   "slug": "generator-qr",
+   "title": "Generator QR",
+   "description": "Twórz kody QR dla linków i tekstu",
+   "path": "Programy/generator qr/generator qr.html"
+  },
+  {
+   "slug": "nagrywarka",
+   "title": "Nagrywarka Ekranu",
+   "description": "Nagrywaj pulpit bez instalacji",
+   "path": "Programy/nagrywarka/nagrywarka.html"
+  },
+  {
+   "slug": "kompresor",
+   "title": "Kompresor Obrazów",
+   "description": "Zmniejszaj wagę zdjęć i zmieniaj format",
+   "path": "Programy/kompresor/kompresor.html"
+  },
+  {
+   "slug": "dyktafon",
+   "title": "Dyktafon",
+   "description": "Nagrywanie głosu z wizualizacją",
+   "path": "Programy/dyktafon/dyktafon.html"
+  },
+  {
+   "slug": "json",
+   "title": "Formatter JSON",
+   "description": "Formatuj, koloruj i sprawdzaj kod",
+   "path": "Programy/json/json.html"
+  },
+  {
+   "slug": "formatter",
+   "title": "Formatter Kodu",
+   "description": "HTML, CSS, JS, Python, SQL",
+   "path": "Programy/formatter/formatter.html"
+  },
+  {
+   "slug": "szkicownik",
+   "title": "Szkicownik",
+   "description": "Rysuj, notuj i wklejaj zdjęcia",
+   "path": "Programy/szkicownik/szkicownik.html"
+  },
+  {
+   "slug": "czas",
+   "title": "Centrum Czasu",
+   "description": "Stoper, Minutnik, Pomodoro i 60+ stref czasowych",
+   "path": "Programy/czas/czas.html"
+  },
+  {
+   "slug": "szyfrator",
+   "title": "Szyfrator Plików",
+   "description": "Zabezpiecz pliki hasłem (AES-256)",
+   "path": "Programy/szyfrator/szyfrator.html"
+  },
+  {
+   "slug": "tester-klawiatury",
+   "title": "Tester Klawiatury",
+   "description": "Test klawiszy, myszki i ghostingu",
+   "path": "Programy/tester/tester.html"
+  },
+  {
+   "slug": "fiszki",
+   "title": "Fiszki",
+   "description": "Twórz i przeglądaj zestawy do nauki",
+   "path": "Programy/fiszki/fiszki.html"
+  },
+  {
+   "slug": "tester-ekranu",
+   "title": "Tester Ekranu",
+   "description": "Sprawdź martwe piksele i kolory",
+   "path": "Programy/tester ekranu/tester ekranu.html"
+  },
+  {
+   "slug": "kalkulator",
+   "title": "Kalkulator Uniwersalny",
+   "description": "Naukowy, Geometria i Finanse",
+   "path": "Programy/kalkulator/kalkulator.html"
+  },
+  {
+   "slug": "cornell",
+   "title": "Notatnik Cornell",
+   "description": "System notowania z podziałem na notatki, wskazówki i podsumowanie",
+   "path": "Programy/cornell/cornell.html"
+  },
+  {
+   "slug": "mindmap",
+   "title": "Mapa Myśli",
+   "description": "Twórz mind maps z eksportem do obrazu",
+   "path": "Programy/mindmap/mindmap.html"
+  },
+  {
+   "slug": "wykresy",
+   "title": "Generator Wykresów",
+   "description": "Słupkowe, liniowe, kołowe i więcej",
+   "path": "Programy/wykresy/wykresy.html"
+  },
+  {
+   "slug": "edytor",
+   "title": "Edytor Zdjęć",
+   "description": "Filtry, kadrowanie, jasność, kontrast",
+   "path": "Programy/edytor/edytor.html"
+  },
+  {
+   "slug": "gif",
+   "title": "Edytor GIF",
+   "description": "Twórz animacje z obrazów lub wideo",
+   "path": "Programy/gif/gif.html"
+  },
+  {
+   "slug": "kanban",
+   "title": "Tablica Kanban",
+   "description": "Zarządzaj zadaniami z przeciągnij i upuść",
+   "path": "Programy/kanban/kanban.html"
+  },
+  {
+   "slug": "diff",
+   "title": "Porównywarka Tekstu",
+   "description": "Znajdź różnice między dwoma tekstami",
+   "path": "Programy/diff/diff.html"
+  },
+  {
+   "slug": "gradient",
+   "title": "Generator Gradientów CSS",
+   "description": "Twórz piękne gradienty i kopiuj kod CSS",
+   "path": "Programy/gradient/gradient.html"
+  },
+  {
+   "slug": "scoreboard",
+   "title": "Tablica Wyników",
+   "description": "Śledź wyniki gier i meczów z timerem",
+   "path": "Programy/scoreboard/scoreboard.html"
+  },
+  {
+   "slug": "lorem",
+   "title": "Generator Lorem Ipsum",
+   "description": "Generuj tekst zastępczy do projektów",
+   "path": "Programy/lorem/lorem.html"
+  },
+  {
+   "slug": "markdown",
+   "title": "Edytor Markdown",
+   "description": "Pisz i podglądaj Markdown na żywo",
+   "path": "Programy/markdown/markdown.html"
+  },
+  {
+   "slug": "health",
+   "title": "Kalkulator Zdrowia",
+   "description": "BMI, BMR i kalkulator nawodnienia",
+   "path": "Programy/health/health.html"
+  },
+  {
+   "slug": "noise",
+   "title": "Generator Szumu",
+   "description": "Biały, różowy i brązowy szum do relaksu",
+   "path": "Programy/noise/noise.html"
+  },
+  {
+   "slug": "text-tools",
+   "title": "Narzędzia Tekstowe",
+   "description": "Konwersja wielkości liter, czyszczenie i więcej",
+   "path": "Programy/text-tools/text-tools.html"
+  },
+  {
+   "slug": "dice",
+   "title": "Symulator Rzutów",
+   "description": "Rzucaj kośćmi D4-D20 i monetą",
+   "path": "Programy/dice/dice.html"
+  }
+ ]
+}

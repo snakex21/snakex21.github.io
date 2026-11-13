@@ -1,0 +1,234 @@
+/* =====================================================================
+   Motyw "Windows 8.1" – jak Windows 8, ale z widocznym przyciskiem Start na pasku,
+   czterema rozmiarami kafelków (mały, średni, szeroki, duży), przełącznikiem
+   widoku "Wszystkie aplikacje" i tłem ekranu Start pokazującym rozmytą tapetę pulpitu.
+   Cechy układu: layout { start: "screen", startButton: "button", allApps: true }.
+   ===================================================================== */
+
+:root {
+  --font-ui: "Segoe UI", "Segoe UI Light", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-size: 13px;
+
+  --frame: var(--wall-color, #00a3a3);
+  --frame-inactive: #ebebeb;
+  --ss-bg: #1d3b5a;
+
+  --wallpaper:
+    linear-gradient(155deg, rgba(255, 255, 255, 0) 0 58%, rgba(255, 255, 255, .07) 58% 70%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(25deg, rgba(0, 0, 0, 0) 0 62%, rgba(0, 0, 0, .12) 62% 78%, rgba(0, 0, 0, 0) 78%),
+    linear-gradient(200deg, rgba(255, 255, 255, 0) 0 40%, rgba(255, 255, 255, .05) 40% 46%, rgba(255, 255, 255, 0) 46%),
+    linear-gradient(160deg, color-mix(in srgb, var(--frame) 70%, #0a8a80), color-mix(in srgb, var(--frame) 60%, #062248));
+  --desk-fg: #fff;
+  --desk-shadow: 0 1px 2px rgba(0, 0, 0, .7);
+
+  --taskbar-h: 40px;
+  --taskbar-bg: color-mix(in srgb, var(--frame) 30%, rgba(10, 16, 28, .88));
+  --taskbar-fg: #fff;
+
+  --win-bg: var(--frame);
+  --win-fg: #000;
+  --win-border: 1px solid color-mix(in srgb, var(--frame) 70%, #000);
+  --win-radius: 0;
+  --win-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 6px 22px rgba(0, 0, 0, .35);
+  --title-h: 30px;
+  --title-bg: transparent;
+  --title-fg: #000;
+  --title-bg-inactive: transparent;
+  --title-fg-inactive: #555;
+
+  --line: #dadada;
+  --muted: #555;
+  --field-bg: #fff;
+  --field-fg: #000;
+  --field-border: 2px solid #ababab;
+  --field-radius: 0;
+  --btn-bg: #e5e5e5;
+  --btn-fg: #000;
+  --btn-border: 1px solid #acacac;
+  --btn-radius: 0;
+  --accent: var(--frame);
+  --accent-fg: #fff;
+  --hilite: #cde8ff;
+  --hilite-fg: #000;
+  --hilite-soft: rgba(0, 163, 163, .08);
+  --focus-ring: #000;
+  --link: #0060c0;
+
+  --menu-bg: #f2f2f2;
+  --menu-fg: #000;
+
+  --gadget-bg: rgba(0, 0, 0, .55);
+  --gadget-fg: #fff;
+  --gadget-border: 0;
+  --gadget-radius: 0;
+
+  --tile-radius: 0;
+  --tile-s: 60%;
+  --tile-l: 42%;
+
+  /* Ikony płaskie, bez obrysu */
+  --ic-line: transparent;
+  --ic-lw: 0;
+  --ic-gloss: 0;
+  --ic-r: 0px;
+  --ic-blue: #1f8fd6;
+  --ic-folder: #f4c74b;
+  --ic-folder-back: #dca52a;
+
+  --start-mark-edge: rgba(0, 0, 0, 0);
+  --start-mark: #ffffff;
+  --start-mark2: #ffffff;
+
+  --clock-face: rgba(0, 0, 0, 0);
+  --clock-rim: #fff;
+  --clock-hand: #fff;
+  --clock-tick: #fff;
+  --clock-second: #ffcf3a;
+}
+
+body { -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 1px dotted currentColor; outline-offset: -3px; }
+
+/* ---------- Pulpit ---------- */
+.desk-icons { --icon-cell-w: 82px; --icon-cell-h: 80px; }
+.desk-icon:hover { background: rgba(255, 255, 255, .14); }
+.desk-icon.selected { background: rgba(120, 190, 255, .35); border-color: rgba(160, 210, 255, .6); }
+
+/* ---------- Okna: płaska kolorowa ramka ---------- */
+.win { padding: 0 7px 7px; }
+.win:not(.active) { background: var(--frame-inactive); border-color: #b5b5b5; box-shadow: 0 2px 10px rgba(0, 0, 0, .2); }
+.win-titlebar { padding: 0 0 0 4px; gap: 6px; align-items: flex-start; }
+.win-icon { align-self: center; }
+.win-title { align-self: center; text-align: center; font-weight: 400; font-size: 14px; padding-left: 70px; }
+.win-controls { gap: 0; }
+.win-btn { width: 28px; height: 21px; border: 0; background: transparent; color: #000; }
+.win-btn .glyph { width: 10px; height: 10px; stroke-width: 1.4; }
+.win-btn:hover { background: rgba(255, 255, 255, .35); }
+.win-close { width: 46px; background: #c75050; color: #fff; }
+.win-close:hover { background: #e04343; }
+.win:not(.active) .win-close { background: #bcbcbc; }
+.win-body { background: #fff; border: 1px solid color-mix(in srgb, var(--frame) 70%, #000); }
+.win:not(.active) .win-body { border-color: #c4c4c4; }
+.win.maximized { padding: 0; }
+
+/* ---------- Kontrolki ---------- */
+.btn:hover:not(:disabled) { background: #e5f1fb; border-color: #3c7fb1; }
+.btn:active:not(:disabled) { background: #cce4f7; border-color: #005499; }
+.btn-primary { border: 2px solid var(--frame); }
+.toolbar { background: #f5f6f7; border-bottom: 1px solid #dadada; }
+.statusbar { background: #f0f0f0; border-top: 1px solid #dadada; }
+.folder-scroll, .web-wrap, .notes-side { margin: 0; border-left: 0; border-right: 0; }
+.field:focus { outline: none; border-color: var(--frame); }
+.theme-card:has(input:checked) { border-color: var(--frame); background: #e5f1fb; }
+.file:hover { background: #e5f3ff; }
+.file.selected { background: #cce8ff; }
+.file.selected .file-label { background: none; color: inherit; }
+.tile { text-shadow: none; }
+.seg-item:has(input:checked) { background: var(--frame); color: #fff; }
+
+/* ---------- Pasek zadań: płaski ---------- */
+.taskbar { padding: 0; gap: 0; border-top: 1px solid rgba(255, 255, 255, .12); }
+/* Przycisk Start (płaski znak S) */
+.start-btn {
+  width: 48px; height: 100%; padding: 0; margin: 0;
+  justify-content: center;
+  border: 0; background: transparent;
+}
+.start-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.start-mark { width: 24px; height: 24px; transition: filter .15s; }
+.start-btn:hover .start-mark, .start-btn.pressed .start-mark { filter: drop-shadow(0 0 6px color-mix(in srgb, var(--frame) 60%, #fff)); }
+/* Logo z zestawu ikon: białe na pasku (jak przycisk Start w 8.1), w kolorze po najechaniu */
+:root[data-icons] .start-mark { filter: brightness(0) invert(1); }
+:root[data-icons] .start-btn:hover .start-mark, :root[data-icons] .start-btn.pressed .start-mark { filter: drop-shadow(0 0 4px rgba(255, 255, 255, .7)); }
+.start-btn:hover, .start-btn.pressed { background: rgba(255, 255, 255, .1); }
+.tasklist { gap: 2px; padding: 0 2px; }
+.task-btn {
+  position: relative;
+  flex: 0 0 56px; height: 40px; padding: 0;
+  justify-content: center;
+  border: 0; background: transparent; color: #fff;
+}
+.task-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.task-btn .icon { width: 26px; height: 26px; }
+.task-btn:hover { background: rgba(255, 255, 255, .14); }
+.task-btn.active { background: rgba(255, 255, 255, .24); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25); }
+.task-btn:not(.minimized)::after { content: ""; position: absolute; left: 6px; right: 6px; bottom: 0; height: 2px; background: rgba(255, 255, 255, .5); }
+.tray-clock { color: #fff; font-size: 12px; }
+.tray-date { display: block; }
+.show-desktop { width: 12px; border-left: 1px solid rgba(255, 255, 255, .25); }
+.show-desktop:hover { background: rgba(255, 255, 255, .15); }
+
+/* ---------- Ekran Start ---------- */
+.startmenu {
+  --sm-flyout: 0;
+  background:
+    radial-gradient(120% 60% at 80% 110%, rgba(255, 255, 255, .06), rgba(255, 255, 255, 0) 60%),
+    color-mix(in srgb, var(--ss-bg) 78%, transparent);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  backdrop-filter: blur(18px) saturate(1.2);
+  color: #fff;
+  animation: ss-in .25s cubic-bezier(.1, .9, .2, 1);
+}
+@keyframes ss-in { from { opacity: 0; transform: scale(1.04); } }
+.ss-bar { padding: 30px 0 20px 48px; }
+.ss-title { font-size: 40px; font-weight: 200; letter-spacing: .01em; }
+.ss-back { color: #fff; font-size: 14px; opacity: .85; }
+.ss-back:hover { opacity: 1; background: rgba(255, 255, 255, .12); }
+.sm-head { padding: 30px 12px 20px 0; gap: 12px; font-size: 20px; font-weight: 300; flex-direction: row-reverse; }
+.sm-avatar { display: grid; place-items: center; width: 40px; height: 40px; background: #5a8fd6; }
+.sm-avatar .icon { width: 30px; height: 30px; }
+.sm-search { margin: 30px 16px 20px 0; }
+.sm-search .icon { color: #333; }
+.sm-search-input { border: 0; background: rgba(255, 255, 255, .92); color: #000; padding: 7px 10px 7px 32px; }
+.sm-foot { padding: 30px 40px 20px 0; gap: 2px; }
+.sm-foot-user { display: none; }
+.sm-foot-btn { width: auto; padding: 6px; color: #fff; font-size: 0; }
+.sm-foot-btn .icon, .sm-foot-btn .sm-restart-glyph { width: 20px; height: 20px; font-size: 18px; color: #fff; }
+.sm-foot-btn:hover { background: rgba(255, 255, 255, .15); }
+.sm-heading { display: none; }
+.sm-results { padding: 0 48px; columns: 260px; }
+.sm-results .sm-item { color: #fff; padding: 6px 8px; }
+.sm-results .sm-item:hover, .sm-results .sm-item:focus-visible { background: rgba(255, 255, 255, .15); outline: none; }
+.sm-empty { color: rgba(255, 255, 255, .7); }
+.ss-group-title { font-size: 20px; font-weight: 300; }
+.ss-grid { --cell: 58px; gap: 8px; }
+.ss-tile { outline-offset: -3px; transition: transform .12s; }
+.ss-tile:hover { box-shadow: inset 0 0 0 3px rgba(255, 255, 255, .35); }
+.ss-tile:active { transform: scale(.97); }
+.ss-tile:focus-visible { outline: 3px solid #fff; }
+/* Ikony na kafelkach: jednobarwne (białe), szczegóły w kolorze kafelka */
+.ss-tile-art, .ss-all-item {
+  --ic-line: transparent; --ic-lw: 0; --ic-gloss: 0;
+  --ic-paper: #fff; --ic-blue: rgba(255, 255, 255, .7); --ic-mid: var(--tc, #46505e);
+  --ic-folder: #fff; --ic-folder-back: rgba(255, 255, 255, .7);
+  --ic-green: #fff; --ic-red: #fff; --ic-dark: rgba(255, 255, 255, .85); --ic-gear: #fff;
+  --ic-music: #fff; --ic-film: #fff; --ic-link: #fff; --ic-sea: rgba(255, 255, 255, .8);
+  --ic-pad: #fff; --ic-note: #fff; --ic-tray: rgba(255, 255, 255, .7); --ic-user-bg: rgba(255, 255, 255, .35);
+  --ic-cloud: #fff; --ic-codefg: var(--tc, #46505e);
+}
+.ss-all-item { --tc: var(--ss-bg); }
+.ss-tile-art .tile { font-family: var(--font-ui); font-weight: 300; font-size: 18px; background: transparent; }
+.ss-toggle { opacity: .85; }
+.ss-toggle:hover { opacity: 1; }
+.ss-all-title { font-weight: 300; }
+.ss-all-item:hover, .ss-all-item:focus-visible { background: rgba(255, 255, 255, .14); outline: none; }
+.ss-desktop {
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0) 0 58%, rgba(255, 255, 255, .1) 58% 70%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(160deg, color-mix(in srgb, var(--frame) 70%, #0a8a80), color-mix(in srgb, var(--frame) 60%, #062248));
+}
+
+/* ---------- Gadżety ---------- */
+.gadget-title { font-weight: 300; font-size: 1.15em; }
+.gadget a { color: #9fd3ff; }
+.gadget .btn { color: #000; }
+
+@media (max-width: 640px) {
+  .win { padding: 0; }
+  .win-title { padding-left: 0; }
+  .ss-bar { padding: 14px 0 10px 12px; }
+  .ss-title { font-size: 28px; }
+  .sm-head { padding: 14px 8px 10px 0; font-size: 16px; }
+  .sm-foot { display: none; }
+  .sm-search { margin: 0 12px 10px; }
+}

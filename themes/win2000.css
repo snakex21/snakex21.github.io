@@ -1,0 +1,240 @@
+/* =====================================================================
+   Motyw "Windows 2000" – wypukłe kontrolki jak w 95, ale paski tytułu
+   z gradientem granat→błękit, beżowoszary pasek zadań i łupkowoniebieski pulpit.
+   Wszystko rysowane w CSS (bez obrazków i cudzych zasobów).
+   ===================================================================== */
+
+:root {
+  --font-ui: Tahoma, Verdana, "DejaVu Sans", "Liberation Sans", Arial, sans-serif;
+  --font-size: 12px;
+
+  --c-face: #d4d0c8;
+  --c-light: #e8e6e1;
+  --c-hi: #ffffff;
+  --c-shadow: #808080;
+  --c-dark: #0a0a0a;
+  --c-navy: #0a246a;
+
+  /* Wypukłość i wklęsłość: cztery linie jak w starych kontrolkach */
+  --raised: inset -1px -1px var(--c-dark), inset 1px 1px var(--c-hi), inset -2px -2px var(--c-shadow), inset 2px 2px var(--c-light);
+  --raised-soft: inset -1px -1px var(--c-dark), inset 1px 1px var(--c-light), inset -2px -2px var(--c-shadow), inset 2px 2px var(--c-hi);
+  --sunken: inset -1px -1px var(--c-hi), inset 1px 1px var(--c-shadow), inset -2px -2px var(--c-light), inset 2px 2px var(--c-dark);
+  --pressed: inset -1px -1px var(--c-hi), inset 1px 1px var(--c-dark), inset -2px -2px var(--c-light), inset 2px 2px var(--c-shadow);
+  --thin-sunken: inset -1px -1px var(--c-hi), inset 1px 1px var(--c-shadow);
+  --dither: repeating-conic-gradient(var(--c-hi) 0 25%, var(--c-face) 0 50%) 0 0 / 2px 2px;
+
+  --wallpaper: var(--wall-color, #3a6ea5);
+  --desk-fg: #fff;
+  --desk-shadow: none;
+
+  --taskbar-h: 30px;
+  --taskbar-bg: var(--c-face);
+  --taskbar-fg: #000;
+
+  --win-bg: var(--c-face);
+  --win-fg: #000;
+  --win-border: 0;
+  --win-radius: 0;
+  --win-shadow: var(--raised-soft);
+  --title-h: 20px;
+  --title-bg: linear-gradient(90deg, #0a246a 0%, #3a6ea5 55%, #a6caf0 100%);
+  --title-fg: #fff;
+  --title-bg-inactive: linear-gradient(90deg, #808080 0%, #b5b5b5 70%, #c0c0c0 100%);
+  --title-fg-inactive: #d4d0c8;
+
+  --line: var(--c-shadow);
+  --muted: #3c3c3c;
+  --field-bg: #fff;
+  --field-fg: #000;
+  --field-border: 0;
+  --btn-bg: var(--c-face);
+  --btn-fg: #000;
+  --btn-border: 0;
+  --accent: var(--c-navy);
+  --accent-fg: #fff;
+  --hilite: var(--c-navy);
+  --hilite-fg: #fff;
+  --hilite-soft: rgba(10, 36, 106, .08);
+  --focus-ring: #000;
+  --link: #0000c8;
+
+  --menu-bg: var(--c-face);
+  --menu-fg: #000;
+
+  --gadget-bg: var(--c-face);
+  --gadget-fg: #000;
+  --gadget-border: 0;
+  --gadget-shadow: var(--raised-soft);
+
+  --tile-radius: 0;
+  --tile-s: 75%;
+  --tile-l: 34%;
+
+  /* Ikony: czarny, wyraźny obrys, płaskie kolory */
+  --ic-line: #000;
+  --ic-lw: 1.1;
+  --ic-gloss: 0;
+  --ic-r: 0px;
+  --ic-blue: #1e4f9c;
+  --ic-gloss: .15;
+
+  --start-mark-edge: #000;
+  --start-mark: #e0a800;
+  --start-mark2: #1b8a3a;
+
+  --clock-face: #fff;
+  --clock-rim: #000;
+  --clock-hand: #000;
+  --clock-second: #a00000;
+}
+
+body { -webkit-font-smoothing: auto; }
+:focus-visible { outline: 1px dotted #000; outline-offset: -4px; }
+.desk-icon:focus-visible, .file:focus-visible { outline: none; }
+
+/* ---------- Pulpit ---------- */
+.desk-icons { --icon-cell-w: 76px; --icon-cell-h: 74px; }
+.desk-icon { border: 0; }
+.desk-icon-label { border: 1px dotted transparent; }
+.desk-icon.selected .desk-icon-label { background: var(--c-navy); color: #fff; }
+.desk-icon:focus-visible .desk-icon-label { border-color: #ff0; }
+.desk-icon.selected .desk-icon-img { filter: sepia(1) hue-rotate(185deg) saturate(5) brightness(.55); }
+
+/* ---------- Okna ---------- */
+.win { padding: 3px; }
+.win-titlebar { padding: 0 2px 0 3px; gap: 4px; }
+.win-title { font-weight: 700; letter-spacing: .01em; }
+.win-titlebar { height: 18px; margin-bottom: 1px; }
+.win-btn {
+  width: 16px; height: 14px;
+  background: var(--c-face); color: #000;
+  border: 0; box-shadow: var(--raised-soft);
+}
+.win-btn .glyph { width: 8px; height: 8px; stroke-width: 2; stroke-linecap: square; }
+.win-btn .glyph-close { stroke-width: 1.8; }
+.win-btn:active { box-shadow: var(--pressed); }
+.win-btn:active .glyph { transform: translate(1px, 1px); }
+.win-close { margin-left: 2px; }
+.win-btn:focus-visible { outline: 1px dotted #000; outline-offset: -4px; }
+.win-body { padding-top: 2px; }
+.win-resize {
+  right: 3px; bottom: 3px; width: 12px; height: 12px;
+  background:
+    linear-gradient(135deg, transparent 0 45%, var(--c-hi) 45% 52%, var(--c-shadow) 52% 62%, transparent 62% 68%, var(--c-hi) 68% 75%, var(--c-shadow) 75% 85%, transparent 85%);
+}
+
+/* ---------- Kontrolki ---------- */
+.btn { box-shadow: var(--raised); min-height: 23px; padding: 3px 12px; }
+.btn:active:not(:disabled) { box-shadow: var(--pressed); padding: 4px 11px 2px 13px; }
+.btn-primary { box-shadow: inset 0 0 0 1px #000, var(--raised); }
+.btn:disabled { color: var(--c-shadow); text-shadow: 1px 1px var(--c-hi); opacity: 1; }
+.btn:focus-visible { outline: 1px dotted #000; outline-offset: -5px; }
+.field, .folder-scroll, .notes-side, .web-wrap, .color-input { box-shadow: var(--sunken); }
+.field { padding: 4px 6px; }
+.folder-scroll, .notes-side { padding: 2px; }
+.web-wrap { padding: 2px; }
+.web-frame { inset: 2px; width: calc(100% - 4px); height: calc(100% - 4px); }
+.statusbar { gap: 3px; padding: 3px 2px 2px; }
+.statusbar > * { box-shadow: var(--thin-sunken); padding: 2px 6px; }
+.statusbar > .btn { box-shadow: var(--raised); padding: 3px 12px; }
+.menubar { padding: 2px 4px; gap: 0; }
+.menubar .btn { box-shadow: none; min-height: 20px; padding: 2px 8px; }
+.menubar .btn:hover:not(:disabled) { box-shadow: var(--thin-sunken); box-shadow: inset 1px 1px var(--c-hi), inset -1px -1px var(--c-shadow); }
+.group { border: 0; box-shadow: inset 1px 1px var(--c-shadow), inset -1px -1px var(--c-hi), inset 2px 2px var(--c-hi), inset -2px -2px var(--c-shadow); }
+.badge { border-radius: 0; }
+.notice { border: 0; box-shadow: var(--thin-sunken); background: #fff; }
+.notice-warn { background: #ffffe1; box-shadow: inset 0 0 0 1px #000; }
+.pd-release { background: #fff; border: 0; box-shadow: var(--sunken); }
+.file.selected .tile { filter: sepia(1) hue-rotate(185deg) saturate(4) brightness(.5); }
+.file:focus-visible .file-label { outline: 1px dotted #000; }
+.notes-item.selected { background: var(--c-navy); }
+.seg-item { border: 0; box-shadow: var(--raised); }
+.seg-item:has(input:checked) { box-shadow: var(--pressed); background: var(--dither); color: #000; }
+.theme-card:has(input:checked) { border: 2px solid var(--c-navy); background: var(--hilite-soft); }
+.swatch { border: 0; box-shadow: var(--raised); }
+.tile { border: 1px solid #000; text-shadow: none; font-family: var(--font-ui); }
+
+/* Paski przewijania w stylu epoki */
+* { scrollbar-color: var(--c-face) #e8e8e8; }
+::-webkit-scrollbar { width: 16px; height: 16px; }
+::-webkit-scrollbar-track { background: var(--dither); }
+::-webkit-scrollbar-thumb { background: var(--c-face); box-shadow: var(--raised-soft); }
+::-webkit-scrollbar-button:single-button { display: block; width: 16px; height: 16px; background: var(--c-face); box-shadow: var(--raised-soft); }
+::-webkit-scrollbar-corner { background: var(--c-face); }
+
+/* ---------- Pasek zadań ---------- */
+.taskbar {
+  padding: 2px 2px 0;
+  gap: 3px;
+  box-shadow: inset 0 1px var(--c-light), inset 0 2px var(--c-hi);
+}
+.start-btn {
+  height: 22px; padding: 0 5px 0 3px; gap: 3px;
+  background: var(--c-face); border: 0; box-shadow: var(--raised);
+  font-weight: 700;
+}
+.start-mark { width: 17px; height: 17px; }
+/* Logo z zestawu ikon: natywne 16 px jak na prawdziwym przycisku Start */
+:root[data-icons] .start-mark { width: 16px; height: 16px; background-image: var(--os-logo-16); }
+.start-btn.pressed, .start-btn:active { box-shadow: var(--pressed); padding: 1px 4px 0 4px; }
+.start-btn:focus-visible { outline: 1px dotted #000; outline-offset: -4px; }
+.tasklist { padding: 0 2px; gap: 3px; border-left: 1px solid var(--c-shadow); box-shadow: inset 1px 0 var(--c-hi); padding-left: 5px; }
+.task-btn {
+  height: 22px; flex-basis: 160px;
+  background: var(--c-face); border: 0; box-shadow: var(--raised);
+  padding: 0 6px;
+}
+.task-btn.active { box-shadow: var(--pressed); background: var(--dither); font-weight: 700; }
+.task-btn:focus-visible { outline: 1px dotted #000; outline-offset: -4px; }
+.tray { height: 22px; padding: 0 2px 0 6px; box-shadow: var(--thin-sunken); gap: 4px; }
+.tray-clock { height: 20px; padding: 0 6px; }
+.show-desktop { width: 6px; }
+
+/* ---------- Menu Start: kaskadowe, z pionowym paskiem ---------- */
+.startmenu {
+  --sm-flyout: 1;
+  bottom: calc(var(--taskbar-h) - 3px);
+  left: 2px;
+  padding: 3px;
+  box-shadow: var(--raised-soft);
+  min-width: 210px;
+}
+.sm-banner {
+  width: 24px; flex: none;
+  display: flex; align-items: flex-end; justify-content: center;
+  background: linear-gradient(0deg, #0a246a, #3a6ea5 60%, #a6caf0);
+  color: #c0c0c0;
+  padding-bottom: 6px;
+}
+.sm-banner-text { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 17px; letter-spacing: .02em; white-space: nowrap; }
+.sm-banner-text b { color: #fff; font-weight: 900; }
+.sm-banner-text::after { content: " 2000"; color: #fff; font-weight: 300; }
+.sm-head, .sm-search, .sm-pinned, .sm-heading, .sm-foot-user { display: none; }
+.sm-columns { display: block; }
+.sm-cats > .sm-cat > .sm-item { padding: 0 10px 0 6px; height: 32px; gap: 10px; }
+.sm-cats > .sm-cat > .sm-item .icon { width: 24px; height: 24px; }
+.sm-item:hover, .sm-item:focus-visible, .sm-cat.open > .sm-item,
+.sm-foot-btn:hover, .sm-foot-btn:focus-visible { background: var(--c-navy); color: #fff; outline: none; }
+.sm-sub {
+  position: absolute; left: calc(100% + 0px); top: -3px;
+  min-width: 210px; max-width: 280px; max-height: calc(100vh - var(--taskbar-h) - 6px); overflow-y: auto;
+  padding: 3px;
+  background: var(--c-face); box-shadow: var(--raised-soft);
+}
+.sm-sub .sm-item { padding: 2px 10px 2px 6px; min-height: 22px; }
+.sm-sep { margin: 3px 2px; height: 2px; background: none; border-top: 1px solid var(--c-shadow); border-bottom: 1px solid var(--c-hi); }
+.sm-foot { flex-direction: column; align-items: stretch; gap: 0; border-top: 1px solid var(--c-shadow); box-shadow: inset 0 1px var(--c-hi); margin-top: 3px; padding-top: 3px; }
+.sm-foot-btn { width: 100%; padding: 0 10px 0 10px; height: 30px; gap: 12px; }
+.sm-foot-btn .icon { width: 18px; height: 18px; }
+.sm-results { max-height: 60vh; overflow: auto; }
+
+/* ---------- Gadżety ---------- */
+.gadgets { width: 230px; }
+.gadget { padding: 8px 10px; }
+.gadget-title { color: #fff; background: linear-gradient(90deg, #0a246a, #a6caf0); margin: -4px -6px 6px; padding: 1px 6px; }
+
+/* 2000: przyciski na pasku zadań bez pogrubienia, zegar z sekundowym odstępem */
+.task-btn.active { font-weight: 400; }
+.tray { padding: 0 4px 0 8px; }
+/* Pulpit: delikatna poświata w kolorze łupku */
+.desktop { background: radial-gradient(120% 90% at 50% 40%, color-mix(in srgb, var(--wall-color, #3a6ea5) 85%, #fff), var(--wall-color, #3a6ea5) 60%, color-mix(in srgb, var(--wall-color, #3a6ea5) 80%, #000)); }

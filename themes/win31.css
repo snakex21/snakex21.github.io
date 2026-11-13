@@ -1,0 +1,212 @@
+/* =====================================================================
+   Motyw "Windows 3.1" – Menedżer programów z grupami zamiast ikon pulpitu,
+   bez paska zadań (zminimalizowane okna leżą jako ikony na dole pulpitu).
+   Grube szare ramki, granatowy aktywny pasek tytułu, białe wnętrza,
+   pole menu systemowego po lewej i przyciski ▼ ▲ po prawej.
+   Cechy układu: themes.json -> layout { taskbar: "none", programManager: true }.
+   ===================================================================== */
+
+:root {
+  --font-ui: Arial, Helvetica, "Liberation Sans", "DejaVu Sans", sans-serif;
+  --font-size: 12px;
+
+  --c-face: #c0c0c0;
+  --c-hi: #ffffff;
+  --c-shadow: #808080;
+  --c-dark: #000000;
+  --c-navy: #000080;
+
+  --raised: inset -1px -1px var(--c-shadow), inset 1px 1px var(--c-hi), inset -2px -2px var(--c-shadow), 0 0 0 1px var(--c-dark);
+  --pressed: inset 1px 1px var(--c-shadow), 0 0 0 1px var(--c-dark);
+
+  --wallpaper:
+    repeating-conic-gradient(color-mix(in srgb, var(--wall-color, #a8a8a8) 86%, #fff) 0 25%, var(--wall-color, #a8a8a8) 0 50%) 0 0 / 4px 4px;
+  --desk-fg: #000;
+  --desk-shadow: none;
+
+  --taskbar-h: 0px;
+
+  --win-bg: #fff;
+  --win-fg: #000;
+  --win-border: 0;
+  --win-radius: 0;
+  --win-shadow: none;
+  --title-h: 20px;
+  --title-bg: var(--c-navy);
+  --title-fg: #fff;
+  --title-bg-inactive: #fff;
+  --title-fg-inactive: #000;
+
+  --line: #000;
+  --muted: #404040;
+  --field-bg: #fff;
+  --field-fg: #000;
+  --field-border: 1px solid #000;
+  --btn-bg: var(--c-face);
+  --btn-fg: #000;
+  --btn-border: 0;
+  --btn-radius: 3px;
+  --accent: var(--c-navy);
+  --accent-fg: #fff;
+  --hilite: var(--c-navy);
+  --hilite-fg: #fff;
+  --hilite-soft: rgba(0, 0, 128, .08);
+  --focus-ring: #000;
+  --link: #0000c0;
+
+  --menu-bg: #fff;
+  --menu-fg: #000;
+
+  --gadget-bg: #fff;
+  --gadget-fg: #000;
+  --gadget-border: 1px solid #000;
+  --gadget-shadow: 0 0 0 3px var(--c-face), 0 0 0 4px #000;
+
+  --tile-radius: 0;
+  --tile-s: 100%;
+  --tile-l: 30%;
+
+  --ic-line: #000;
+  --ic-lw: 1.2;
+  --ic-gloss: 0;
+  --ic-r: 0px;
+  --ic-blue: #000080;
+  --ic-folder: #ffff80;
+  --ic-folder-back: #c0c000;
+  --ic-green: #008000;
+  --ic-red: #c00000;
+
+  --start-mark-edge: #000;
+  --start-mark: #c0c000;
+  --start-mark2: #008000;
+
+  --clock-face: #fff;
+  --clock-rim: #000;
+  --clock-hand: #000;
+  --clock-second: #000080;
+}
+
+body { -webkit-font-smoothing: none; }
+:focus-visible { outline: 1px dotted #000; outline-offset: -3px; }
+
+/* ---------- Ikony (minimalizowane okna) ---------- */
+.min-icon { color: #000; }
+.min-icon-label { background: #fff; border: 1px solid transparent; text-shadow: none; }
+.min-icon:focus-visible { outline: none; }
+.min-icon:focus-visible .min-icon-label, .min-icon:hover .min-icon-label { background: var(--c-navy); color: #fff; }
+.desk-icon-label { background: #fff; color: #000; text-shadow: none; }
+.desk-icon.selected .desk-icon-label { background: var(--c-navy); color: #fff; }
+
+/* ---------- Okna: gruba ramka z zaznaczonymi narożnikami ---------- */
+.win {
+  padding: 4px;
+  background: var(--c-face);
+  border: 1px solid #000;
+  /* nacięcia narożników ramki (strefy zmiany rozmiaru) */
+  background-image:
+    linear-gradient(#000, #000), linear-gradient(#000, #000), linear-gradient(#000, #000), linear-gradient(#000, #000),
+    linear-gradient(#000, #000), linear-gradient(#000, #000), linear-gradient(#000, #000), linear-gradient(#000, #000);
+  background-repeat: no-repeat;
+  background-size: 1px 4px, 1px 4px, 1px 4px, 1px 4px, 4px 1px, 4px 1px, 4px 1px, 4px 1px;
+  background-position: 20px 0, calc(100% - 20px) 0, 20px 100%, calc(100% - 20px) 100%, 0 20px, 100% 20px, 0 calc(100% - 20px), 100% calc(100% - 20px);
+}
+.win.active { background-color: #c0c0c0; }
+.win:not(.active) { background-color: #fff; }
+.win-titlebar {
+  padding: 0; gap: 0;
+  border: 1px solid #000; border-bottom: 0;
+}
+.win-icon { display: none; }
+.win-title { text-align: center; font-weight: 700; padding: 0 6px; }
+.win-controls { display: contents; }
+.win-btn {
+  position: relative;
+  width: 19px; height: 18px; flex: none;
+  background: var(--c-face); color: #000; border: 0;
+  border-left: 1px solid #000;
+  box-shadow: inset -1px -1px var(--c-shadow), inset 1px 1px #fff, inset -2px -2px var(--c-shadow);
+}
+.win-btn .glyph { display: none; }
+.win-btn:active { box-shadow: inset 1px 1px var(--c-shadow); }
+/* Pole menu systemowego (tu: zamknij) po lewej stronie paska tytułu */
+.win-close { order: -1; border-left: 0; border-right: 1px solid #000; box-shadow: none; background: var(--c-face); }
+.win-close::before {
+  content: ""; position: absolute; left: 3px; right: 3px; top: 7px; height: 3px;
+  background: #fff; border: 1px solid #000; box-shadow: 1px 1px 0 var(--c-shadow);
+}
+.win-min::before, .win-max::before {
+  content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  border: 5px solid transparent;
+}
+.win-min::before { border-top: 5px solid #000; border-bottom-width: 0; margin-top: 1px; }
+.win-max::before { border-bottom: 5px solid #000; border-top-width: 0; margin-top: -1px; }
+.win.maximized .win-max::before { border-bottom: 4px solid #000; border-top: 4px solid #000; border-left-width: 4px; border-right-width: 4px; height: 0; box-sizing: content-box; }
+.win.maximized .win-max::after { content: ""; position: absolute; left: 50%; top: 50%; width: 1px; height: 1px; }
+.win-body { border: 1px solid #000; background: #fff; }
+.win.maximized { padding: 0; }
+.win-resize { width: 20px; height: 20px; right: 0; bottom: 0; }
+
+/* ---------- Kontrolki: przyciski z zaokrągloną czarną obwódką ---------- */
+.btn { border: 1px solid #000; box-shadow: inset -2px -2px var(--c-shadow), inset 2px 2px #fff; border-radius: 4px; min-height: 24px; padding: 3px 12px; }
+.btn:active:not(:disabled) { box-shadow: inset 1px 1px var(--c-shadow); }
+.btn-primary { border-width: 2px; }
+.toolbar { border-bottom: 1px solid #000; }
+.statusbar { border-top: 1px solid #000; background: #fff; }
+.folder-scroll, .web-wrap, .notes-side { margin: 4px; }
+.group { border: 1px solid #000; border-radius: 0; }
+.seg-item { border: 1px solid #000; border-radius: 0; }
+.theme-card:has(input:checked) { border: 2px solid #000; background: #fff; }
+.theme-card:has(input:checked) .theme-name { background: var(--c-navy); color: #fff; }
+.file.selected .file-label, .notes-item.selected { background: var(--c-navy); color: #fff; }
+.tile { border: 1px solid #000; text-shadow: none; }
+.badge { border-radius: 0; }
+.notice { border: 1px solid #000; background: #fff; }
+
+* { scrollbar-color: var(--c-face) #fff; }
+::-webkit-scrollbar { width: 17px; height: 17px; }
+::-webkit-scrollbar-track { background: #e0e0e0; border-left: 1px solid #000; }
+::-webkit-scrollbar-thumb { background: var(--c-face); border: 1px solid #000; box-shadow: inset -1px -1px var(--c-shadow), inset 1px 1px #fff; }
+
+/* ---------- Pasek menu (Menedżer programów) ---------- */
+.mb { background: #fff; border-bottom: 1px solid #000; }
+.mb-top { padding: 1px 8px; }
+.mb-drop { border: 1px solid #000; box-shadow: 2px 2px 0 #000; padding: 0; }
+.mb-item { padding: 2px 16px 2px 8px; }
+.mb-sep { background: #000; margin: 2px 0; }
+
+/* ---------- Menedżer programów ---------- */
+.progman .pm-area { background: #fff; }
+.pm-tray { border-top: 1px solid #c0c0c0; }
+.pm-group {
+  padding: 3px;
+  background: #c0c0c0;
+  border: 1px solid #000;
+}
+.pm-group:not(.active) { background: #fff; }
+.pm-group-title { border: 1px solid #000; border-bottom: 0; padding: 0; gap: 0; min-height: 18px; background: #fff; color: #000; }
+.pm-group.active .pm-group-title { background: var(--c-navy); color: #fff; }
+.pm-group-title h3 { font-weight: 700; }
+.pm-sys { position: relative; width: 18px; height: 18px; flex: none; background: var(--c-face); border-right: 1px solid #000; }
+.pm-sys::before { content: ""; position: absolute; left: 3px; right: 3px; top: 7px; height: 2px; background: #fff; border: 1px solid #000; }
+.pm-btn { position: relative; background: var(--c-face); border: 0; border-left: 1px solid #000; box-shadow: inset -1px -1px var(--c-shadow), inset 1px 1px #fff; }
+.pm-btn::before { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 4px solid transparent; }
+.pm-min::before { border-top: 4px solid #000; border-bottom-width: 0; }
+.pm-max::before { border-bottom: 4px solid #000; border-top-width: 0; }
+.pm-icons { border: 1px solid #000; background: #fff; }
+.pm-icon { border: 0; }
+.pm-icon .file-label { padding: 0 2px; }
+.pm-icon:focus-visible { outline: none; }
+.pm-icon:focus-visible .file-label { outline: 1px dotted #000; }
+.pm-group-glyph { border: 1px solid #000; background: #fff; }
+.pm-group-glyph i { background: var(--c-navy); }
+.pm-group-icon:focus-visible .pm-group-label, .pm-group-icon:hover .pm-group-label { background: var(--c-navy); color: #fff; outline: none; }
+
+/* ---------- Gadżety: proste okienka ---------- */
+.gadget { padding: 0 0 8px; }
+.gadget > *:not(.gadget-title) { margin-left: 8px; margin-right: 8px; }
+.gadget-clock, .gadget-weather { padding: 8px 8px 0; }
+.gadget-clock > *, .gadget-weather > * { margin: 0; }
+.gadget-title { margin: 0 0 6px; padding: 1px 6px; text-align: center; color: #fff; background: var(--c-navy); }
+
+/* Menu Start nieużywane (brak paska), ale zostaje czytelne, gdyby ktoś je wywołał */
+.startmenu { --sm-flyout: 0; border: 1px solid #000; }

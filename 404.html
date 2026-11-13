@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 – nie znaleziono · snakex21</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
+<style>
+  :root { color-scheme: light; }
+  html, body { margin: 0; height: 100%; }
+  body { background: #008080; font: 13px/1.4 Tahoma, "MS Sans Serif", Arial, sans-serif; color: #000;
+         display: grid; place-items: center; padding: 16px; box-sizing: border-box; }
+  .win { width: min(420px, 100%); background: #c0c0c0; box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px #808080, inset 2px 2px #dfdfdf; padding: 3px; }
+  .title { background: linear-gradient(90deg, #000080, #1084d0); color: #fff; font-weight: bold; padding: 3px 6px; }
+  .body { display: flex; gap: 14px; padding: 16px 14px 10px; align-items: flex-start; }
+  .ico { flex: none; width: 32px; height: 32px; border-radius: 50%; background: #d00; color: #fff; font: bold 22px/32px Arial, sans-serif; text-align: center; }
+  .body p { margin: 0 0 8px; }
+  code { font-family: "Courier New", monospace; word-break: break-all; }
+  .actions { display: flex; justify-content: center; gap: 8px; padding: 6px 0 12px; }
+  .btn { display: inline-block; min-width: 88px; padding: 4px 10px; text-align: center; color: #000; text-decoration: none; background: #c0c0c0;
+         box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px #808080, inset 2px 2px #dfdfdf; }
+  .btn:focus-visible { outline: 1px dotted #000; outline-offset: -4px; }
+  .btn:active { box-shadow: inset 1px 1px #0a0a0a, inset -1px -1px #fff, inset 2px 2px #808080, inset -2px -2px #dfdfdf; }
+</style>
+</head>
+<body>
+<div class="win" role="alertdialog" aria-labelledby="t" aria-describedby="d">
+  <div class="title" id="t">Błąd – nie znaleziono pliku</div>
+  <div class="body">
+    <div class="ico" aria-hidden="true">✕</div>
+    <div id="d">
+      <p>Nie można odnaleźć strony <code id="path"></code>.</p>
+      <p>Sprawdź adres albo wróć na pulpit.</p>
+    </div>
+  </div>
+  <div class="actions">
+    <a class="btn" href="/">OK – pulpit</a>
+    <a class="btn" href="https://snakex21.github.io/snakex21/">Stara strona</a>
+  </div>
+</div>
+<script>document.getElementById('path').textContent = location.pathname;</script>
+</body>
+</html>

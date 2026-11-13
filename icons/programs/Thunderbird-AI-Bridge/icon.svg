@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+ <title>Thunderbird AI Bridge</title>
+ <defs>
+  <linearGradient id="e" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe7f2"/></linearGradient>
+  <linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2fa4ff"/><stop offset="1" stop-color="#1650c8"/></linearGradient>
+ </defs>
+ <rect x="4" y="12" width="40" height="28" rx="3" fill="url(#e)" stroke="#1650c8" stroke-width="2.2"/>
+ <path d="M5 14l19 15 19-15" fill="none" stroke="#1650c8" stroke-width="2.2" stroke-linejoin="round"/>
+ <path d="M24 46c0 6 4 10 10 10h6" fill="none" stroke="#444c56" stroke-width="3.2" stroke-linecap="round"/>
+ <path d="M24 40v6" stroke="#444c56" stroke-width="3.2" stroke-linecap="round"/>
+ <rect x="40" y="47" width="12" height="16" rx="3" fill="url(#b)" stroke="#0e3a8f" stroke-width="1.6" transform="rotate(-90 46 55)"/>
+ <path d="M52 51h8M52 59h8" stroke="#7c8794" stroke-width="3" stroke-linecap="round"/>
+ <g transform="translate(50 14)">
+  <path d="M0-10l2.6 7.4L10 0l-7.4 2.6L0 10l-2.6-7.4L-10 0l7.4-2.6z" fill="#ffb81c" stroke="#c97d00" stroke-width="1"/>
+ </g>
+ <circle cx="58" cy="26" r="2.4" fill="#ffb81c"/>
+</svg>

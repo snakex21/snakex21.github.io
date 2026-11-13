@@ -1,0 +1,174 @@
+/* =====================================================================
+   Motyw "Windows 1.0" – okna ułożone obok siebie (bez nakładania), grube
+   czarne ramki, toporne paski tytułu, czcionka o stałej szerokości i paleta
+   kilku kolorów. Zamiast menu Start: launcher u góry ekranu z paskiem menu
+   i listą programów jak nazwy plików; zminimalizowane okna to ikony na dole.
+   Cechy układu: layout { taskbar: "none", launcher: "executive", tiling: true }.
+   ===================================================================== */
+
+:root {
+  --font-ui: ui-monospace, "Cascadia Mono", Consolas, "DejaVu Sans Mono", "Courier New", monospace;
+  --font-mono: var(--font-ui);
+  --font-size: 13px;
+
+  --k: #000;
+  --w: #fff;
+  --b: #0000aa;      /* niebieski EGA */
+  --c: #55ffff;      /* jasny cyjan */
+  --g: #aaaaaa;
+
+  --wallpaper:
+    radial-gradient(circle, var(--k) .7px, transparent 1.2px) 0 0 / 4px 4px,
+    var(--wall-color, #0000aa);
+  --desk-fg: #fff;
+  --desk-shadow: none;
+
+  --taskbar-h: 0px;
+  --launcher-bg: var(--w);
+  --launcher-fg: var(--k);
+
+  --win-bg: var(--w);
+  --win-fg: var(--k);
+  --win-border: 3px solid var(--k);
+  --win-radius: 0;
+  --win-shadow: none;
+  --title-h: 26px;
+  --title-bg: var(--k);
+  --title-fg: var(--w);
+  --title-bg-inactive: var(--w);
+  --title-fg-inactive: var(--k);
+
+  --line: var(--k);
+  --muted: #333;
+  --field-bg: var(--w);
+  --field-fg: var(--k);
+  --field-border: 2px solid var(--k);
+  --btn-bg: var(--w);
+  --btn-fg: var(--k);
+  --btn-border: 2px solid var(--k);
+  --btn-radius: 0;
+  --accent: var(--k);
+  --accent-fg: var(--w);
+  --hilite: var(--k);
+  --hilite-fg: var(--w);
+  --hilite-soft: rgba(0, 0, 0, .06);
+  --focus-ring: var(--b);
+  --link: var(--b);
+
+  --menu-bg: var(--w);
+  --menu-fg: var(--k);
+
+  --gadget-bg: var(--w);
+  --gadget-fg: var(--k);
+  --gadget-border: 3px solid var(--k);
+
+  --tile-radius: 0;
+  --tile-s: 100%;
+  --tile-l: 33%;
+
+  /* Ikony: dwa kolory i gruby czarny obrys */
+  --ic-line: #000;
+  --ic-lw: 1.6;
+  --ic-gloss: 0;
+  --ic-r: 0px;
+  --ic-blue: #0000aa;
+  --ic-folder: #ffffff;
+  --ic-folder-back: #aaaaaa;
+  --ic-green: #00aa00;
+  --ic-red: #aa0000;
+  --ic-music: #aa00aa;
+  --ic-film: #aa5500;
+  --ic-mid: #000;
+
+  --start-mark-edge: #000;
+  --start-mark: #fff;
+  --start-mark2: #0000aa;
+
+  --clock-face: #fff;
+  --clock-rim: #000;
+  --clock-hand: #000;
+  --clock-tick: #000;
+  --clock-second: #0000aa;
+}
+
+body { -webkit-font-smoothing: none; }
+:focus-visible { outline: 2px solid var(--b); outline-offset: -2px; }
+
+/* Okna leżą w kafelkach; obszar ikon na dole zostaje wolny */
+.windows { bottom: 72px; }
+.desk-icons { display: none; }
+.gadgets { display: none; }
+
+/* ---------- Launcher (u góry, w stylu menedżera plików) ---------- */
+.launcher { border-bottom: 3px solid var(--k); }
+.ln-title {
+  height: 26px;
+  background: var(--k); color: var(--w);
+  font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+}
+.ln-path { font-weight: 400; opacity: .8; }
+.ln-row { border-bottom: 2px solid var(--k); }
+.mb-top { padding: 3px 12px; font-weight: 700; }
+.mb-menu.open > .mb-top, .mb-top:hover { background: var(--k); color: var(--w); }
+.ln-clock { font-weight: 700; border-left: 2px solid var(--k); align-self: stretch; display: grid; place-items: center; }
+.ln-apps { padding: 4px 6px; gap: 2px 18px; }
+.ln-app { padding: 2px 6px; font-weight: 700; color: var(--k); }
+.ln-app .icon { display: none; }
+.ln-app:hover, .ln-app:focus-visible { background: var(--k); color: var(--w); outline: none; }
+.mb-drop { border: 3px solid var(--k); box-shadow: 4px 4px 0 var(--k); padding: 0; }
+.mb-item { padding: 3px 18px 3px 10px; }
+.mb-item .icon, .mb-item .tile { display: none; }
+.mb-sep { height: 2px; background: var(--k); }
+
+/* ---------- Okna: grube ramki, wyśrodkowane tytuły ---------- */
+.win-titlebar { padding: 0; gap: 0; border-bottom: 3px solid var(--k); }
+.win-icon { display: none; }
+.win-title { text-align: center; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.win-controls { gap: 0; align-self: stretch; }
+.win-btn {
+  width: 26px; height: 100%;
+  background: var(--w); color: var(--k);
+  border: 0; border-left: 3px solid var(--k);
+}
+.win-btn .glyph { width: 11px; height: 11px; stroke-width: 2.6; stroke-linecap: square; }
+.win:not(.active) .win-btn { background: var(--w); }
+.win.active .win-btn { background: var(--g); }
+.win-btn:active { background: var(--k) !important; color: var(--w); }
+.win-body { background: var(--w); }
+.win.opening { animation: none; }
+
+/* ---------- Kontrolki ---------- */
+.btn { font-weight: 700; }
+.btn:hover:not(:disabled) { background: var(--k); color: var(--w); }
+.btn-primary { border-width: 3px; }
+.toolbar { border-bottom: 2px solid var(--k); }
+.statusbar { border-top: 2px solid var(--k); }
+.folder-scroll, .web-wrap, .notes-side { margin: 4px; }
+.group { border: 2px solid var(--k); }
+.theme-card { border: 2px solid transparent; }
+.theme-card:has(input:checked) { border-color: var(--k); background: var(--w); }
+.theme-card:has(input:checked) .theme-name { background: var(--k); color: var(--w); }
+.seg-item { border: 2px solid var(--k); }
+.tile { border: 2px solid var(--k); text-shadow: none; }
+.file.selected .file-label, .notes-item.selected { background: var(--k); color: var(--w); }
+.badge { border-radius: 0; background: var(--k); }
+.notice { border: 2px solid var(--k); background: var(--w); }
+
+* { scrollbar-color: var(--k) var(--w); }
+::-webkit-scrollbar { width: 14px; height: 14px; }
+::-webkit-scrollbar-track { background: var(--w); border-left: 2px solid var(--k); }
+::-webkit-scrollbar-thumb { background: var(--k); border: 3px solid var(--w); }
+
+/* ---------- Ikony zminimalizowanych okien ---------- */
+.min-icon { color: var(--w); }
+.min-icon-img { background: var(--w); border: 3px solid var(--k); padding: 4px; }
+.min-icon-label { background: var(--k); color: var(--w); font-weight: 700; }
+.min-icon:hover .min-icon-img, .min-icon:focus-visible .min-icon-img { background: var(--c); }
+.min-icon:focus-visible { outline: none; }
+
+/* ---------- Menu Start (nieużywane) ---------- */
+.startmenu { --sm-flyout: 0; border: 3px solid var(--k); }
+
+@media (max-width: 640px) {
+  .windows { bottom: 74px; }
+}

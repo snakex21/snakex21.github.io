@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<!--
+  Własne ikony pulpitu (rysowane ręcznie, 32x32).
+  Kolory i obrys sterują zmienne CSS ustawiane przez motyw:
+  --ic-line (kolor obrysu), --ic-lw (grubość), --ic-gloss (połysk 0..1), --ic-r (zaokrąglenie)
+  oraz kolory części: --ic-folder, --ic-blue, --ic-green, --ic-red, --ic-paper, --ic-dark ...
+-->
+<symbol id="i-folder" viewBox="0 0 32 32">
+  <g style="stroke:var(--ic-line,#3b2c00);stroke-width:var(--ic-lw,1);stroke-linejoin:round">
+    <path d="M3 7.5h9.5l2.5 3H29v16H3z" style="fill:var(--ic-folder-back,#d39b17)"/>
+    <path d="M3 12.5h26l-1.2 14H4.2z" style="fill:var(--ic-folder,#f7cd55)"/>
+  </g>
+  <path d="M4.6 14h22.8l-.25 3H4.85z" style="fill:#fff;opacity:var(--ic-gloss,0)"/>
+</symbol>
+
+<symbol id="i-app" viewBox="0 0 32 32">
+  <g style="stroke:var(--ic-line,#13213f);stroke-width:var(--ic-lw,1);stroke-linejoin:round">
+    <rect x="3" y="5" width="26" height="22" style="fill:var(--ic-paper,#fff);rx:var(--ic-r,0px)"/>
+    <path d="M3.5 5.5h25v5.5h-25z" style="fill:var(--ic-blue,#2457c9);stroke:none"/>
+    <path d="M7 15h12M7 19h18M7 23h9" style="fill:none;stroke:var(--ic-mid,#8a94a8);stroke-width:2"/>
+  </g>
+  <circle cx="25.5" cy="8.2" r="1.3" style="fill:#fff"/>
+  <path d="M4 6h24v2H4z" style="fill:#fff;opacity:var(--ic-gloss,0)"/>
+</symbol>
+
+<symbol id="i-game" viewBox="0 0 32 32">
+  <g style="stroke:var(--ic-line,#121212);stroke-width:var(--ic-lw,1);stroke-linejoin:round">
+    <path d="M9.5 9.5h13c4 0 6.2 3 6.8 7.7.6 4.6-.9 7.8-3.6 7.8-2.1 0-3.2-1.6-4.6-3.6h-10.2C9.5 23.4 8.4 25 6.3 25 3.6 25 2.1 21.8 2.7 17.2 3.3 12.5 5.5 9.5 9.5 9.5z" style="fill:var(--ic-pad,#4d5260)"/>
+  </g>
+  <path d="M8 13.6h2.2v2.6h2.6v2.2h-2.6V21H8v-2.6H5.4v-2.2H8z" style="fill:var(--ic-paper,#fff)"/>
+  <circle cx="21.7" cy="15.6" r="1.6" style="fill:var(--ic-red,#e2483d)"/>
+  <circle cx="25" cy="18.8" r="1.6" style="fill:var(--ic-green,#3ab14b)"/>
+  <path d="M10 10.6h12c2 0 3.4.8 4.3 2H5.7c1-1.3 2.4-2 4.3-2z" style="fill:#fff;opacity:var(--ic-gloss,0)"/>
+</symbol>
+
+<symbol id="i-music" viewBox="0 0 32 32">
+  <g style="stroke:var(--ic-line,#1d0b29);stroke-width:var(--ic-lw,1);stroke-linejoin:round">
+    <path d="M11 9.5 27 5v4.5l-14 4V24h-2z" style="fill:var(--ic-music,#8a3fc7)"/>
+    <path d="M25 9.6h2V20h-2z" style="fill:var(--ic-music,#8a3fc7)"/>
+    <ellipse cx="8.6" cy="24.2" rx="4.2" ry="3.1" style="fill:var(--ic-music,#8a3fc7)"/>
+    <ellipse cx="22.6" cy="20.4" rx="4.2" ry="3.1" style="fill:var(--ic-music,#8a3fc7)"/>
+  </g>
+  <path d="M12 10.3 26 6.4v1.3l-14 4z" style="fill:#fff;opacity:var(--ic-gloss,0)"/>
+</symbol>
+
+<symbol id="i-film" viewBox="0 0 32 32">
+  <g style="stroke:var(--ic-line,#111);stroke-width:var(--ic-lw,1);stroke-linejoin:round">
+    <rect x="4" y="13" width="24" height="15" style="fill:var(--ic-dark,#2b2f38);rx:var(--ic-r,0px)"/>
+    <path d="M3.4 7.6 26.6 3.4l1 4.8L4.4 12.4z" style="fill:var(--ic-paper,#f4f4f4)"/>
+  </g>
+  <path d="M7.4 7 11 11.7l3.5-.6-3.6-4.7zM14.6 5.7l3.6 4.7 3.5-.6-3.6-4.7zM21.8 4.4l3.6 4.7 1.8-.4-1-4.8z" style="fill:var(--ic-dark,#2b2f38)"/>
+  <path d="M8 18h16M8 22h10" style="stroke:var(--ic-film,#f2b632);stroke-width:2"/>
+</symbol>
+
+<symbol id="i-link" viewBox="0 0 32 32">
+  <g style="fill:none;stroke-linecap:round">
+    <rect x="3.5" y="12" width="15" height="9" transform="rotate(-45 11 16.5)" style="stroke:var(--ic-line-strong,#0d2a55);stroke-width:5.5;rx:4.5px"/>
+    <rect x="13.5" y="11" width="15" height="9" transform="rotate(-45 21 15.5)" style="stroke:var(--ic-line-strong,#0d2a55);stroke-width:5.5;rx:4.5px"/>
+    <rect x="3.5" y="12" width="15" height="9" transform="rotate(-45 11 16.5)" style="stroke:var(--ic-link,#3a86e8);stroke-width:3.4;rx:4.5px"/>
+    <rect x="13.5" y="11" width="15" height="9" transform="rotate(-45 21 15.5)" style="stroke:var(--ic-link2,#7cb6ff);stroke-width:3.4;rx:4.5px"/>
+  </g>
+</symbol>
+
+<symbol id="i-notes" viewBox="0 0 32 32">
+  <g style="stroke:var(--ic-line,#29303b);stroke-width:var(--ic-lw,1);stroke-linejoin:round">
+    <rect x="6" y="5" width="20" height="24" style="fill:var(--ic-note,#fffbe0);rx:var(--ic-r,0px)"/>
+    <path d="M6 5h20v4H6z" style="fill:var(--ic-blue,#2457c9)"/>
+  </g>
+  <path d="M9.5 14h13M9.5 18h13M9.5 22h9" style="stroke:var(--ic-mid,#8aa0c8);stroke-width:1.6"/>
+  <path d="M10 3.5v4M16 3.5v4M22 3.5v4" style="stroke:var(--ic-line,#29303b);stroke-width:1.6;stroke-linecap:round"/>
+</symbol>
+
+<symbol id="i-settings" viewBox="0 0 32 32">
+  <circle cx="16" cy="16" r="11.6" style="fill:none;stroke:var(--ic-gear,#7d8796);stroke-width:5;stroke-dasharray:4.6 4.51"/>
+  <g style="stroke:var(--ic-line,#232a33);stroke-width:var(--ic-lw,1)">
+    <circle cx="16" cy="16" r="9.6" style="fill:var(--ic-gear,#7d8796)"/>
+    <circle cx="16" cy="16" r="4" style="fill:var(--ic-paper,#fff)"/>
+  </g>
+  <path d="M9.5 12.5a7.6 7.6 0 0 1 10-4.6" style="fill:none;stroke:#fff;stroke-width:1.6;opacity:var(--ic-gloss,0)"/>
+</symbol>
+
+<symbol id="i-download" viewBox="0 0 32 32">
+  <g style="stroke:var(--ic-line,#0d2b12);stroke-width:var(--ic-lw,1);stroke-linejoin:round">
+    <path d="M3.5 20.5h6l2.5 3h8l2.5-3h6v7h-25z" style="fill:var(--ic-tray,#9aa3b2)"/>
+    <path d="M13 3.5h6v9.5h5l-8 8.5-8-8.5h5z" style="fill:var(--ic-green,#2f9e48)"/>
+  </g>
+  <path d="M14 4.5h4v3h-4z" style="fill:#fff;opacity:var(--ic-gloss,0)"/>
+</symbol>
+
+<symbol id="i-tools" viewBox="0 0 32 32">
+  <g style="stroke:var(--ic-line,#2a0d0a);stroke-width:var(--ic-lw,1);stroke-linejoin:round">
+    <path d="M11.5 11V7.5h9V11" style="fill:none;stroke:var(--ic-line,#2a0d0a);stroke-width:2.4"/>
+    <rect x="3" y="11" width="26" height="16" style="fill:var(--ic-red,#d8473a);rx:var(--ic-r,0px)"/>
+    <path d="M3 16.5h26" style="fill:none"/>
+    <rect x="13.5" y="14.5" width="5" height="4" style="fill:var(--ic-film,#f2b632)"/>
+  </g>
+  <path d="M4 12h24v3H4z" style="fill:#fff;opacity:var(--ic-gloss,0)"/>
+</symbol>
+
+<symbol id="i-web" viewBox="0 0 32 32">
+  <g style="stroke:var(--ic-line,#0b2a4a);stroke-width:var(--ic-lw,1)">
+    <circle cx="16" cy="16" r="12.5" style="fill:var(--ic-sea,#3a8ee6)"/>
+  </g>
+  <path d="M9 9.5c2.5-1 4 .5 5.5 0s1.5 2.5 0 3.5-3 .5-3.5 2.5 1.5 3.5 0 5S8 19 7.5 16.5 6.5 10.5 9 9.5zM19 18c1.5-1 4-.5 5 1s-1 5-3 5.5-3-1.5-3-3 0-2.5 1-3.5zM18.5 6.5c2 0 4 1 5 2.5s-1.5 1.5-3 1-3.5-3.5-2-3.5z" style="fill:var(--ic-green,#3ab14b)"/>
+  <path d="M8 10a11 11 0 0 1 12-4.5" style="fill:none;stroke:#fff;stroke-width:1.6;opacity:var(--ic-gloss,0)"/>
+</symbol>
+
+<symbol id="i-code" viewBox="0 0 32 32">
+  <g style="stroke:var(--ic-line,#111);stroke-width:var(--ic-lw,1);stroke-linejoin:round">
+    <rect x="3" y="5" width="26" height="22" style="fill:var(--ic-dark,#2b2f38);rx:var(--ic-r,0px)"/>
+  </g>
+  <path d="M12 11l-5 5 5 5M20 11l5 5-5 5M17.5 9.5l-3 13" style="fill:none;stroke:var(--ic-codefg,#7ee08a);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"/>
+</symbol>
+
+<symbol id="i-gadget" viewBox="0 0 32 32">
+  <g style="stroke:var(--ic-line,#1c2430);stroke-width:var(--ic-lw,1)">
+    <circle cx="16" cy="16" r="12.5" style="fill:var(--ic-paper,#fff)"/>
+  </g>
+  <circle cx="16" cy="16" r="10.5" style="fill:none;stroke:var(--ic-blue,#2457c9);stroke-width:1.6"/>
+  <path d="M16 8.5V16l5 3" style="fill:none;stroke:var(--ic-line,#1c2430);stroke-width:2;stroke-linecap:round"/>
+  <circle cx="16" cy="16" r="1.4" style="fill:var(--ic-red,#e2483d)"/>
+</symbol>
+
+<symbol id="i-user" viewBox="0 0 32 32">
+  <rect x="1" y="1" width="30" height="30" style="fill:var(--ic-user-bg,#5b8fd6);rx:var(--ic-r,0px)"/>
+  <circle cx="16" cy="12.5" r="5.5" style="fill:var(--ic-paper,#fff)"/>
+  <path d="M6 28c1-6 5-9 10-9s9 3 10 9z" style="fill:var(--ic-paper,#fff)"/>
+  <path d="M19 9.5c2-1.5 4-1 4.5.5" style="fill:none;stroke:var(--ic-green,#3ab14b);stroke-width:2;stroke-linecap:round"/>
+</symbol>
+
+<symbol id="i-weather" viewBox="0 0 32 32">
+  <circle cx="12" cy="12" r="6" style="fill:var(--ic-film,#f2b632)"/>
+  <path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" style="stroke:var(--ic-film,#f2b632);stroke-width:1.8;stroke-linecap:round"/>
+  <g style="stroke:var(--ic-line,#4a5568);stroke-width:var(--ic-lw,1)">
+    <path d="M10 27.5h15a4.5 4.5 0 0 0 0-9 6.5 6.5 0 0 0-12.4 1.6A3.8 3.8 0 0 0 10 27.5z" style="fill:var(--ic-cloud,#eef2f7)"/>
+  </g>
+</symbol>
+
+<symbol id="i-power" viewBox="0 0 32 32">
+  <path d="M10.5 9.5a9 9 0 1 0 11 0" style="fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round"/>
+  <path d="M16 5v10" style="stroke:currentColor;stroke-width:2.6;stroke-linecap:round"/>
+</symbol>
+
+<symbol id="i-search" viewBox="0 0 32 32">
+  <circle cx="13.5" cy="13.5" r="7.5" style="fill:none;stroke:currentColor;stroke-width:2.4"/>
+  <path d="M19 19l8 8" style="stroke:currentColor;stroke-width:2.8;stroke-linecap:round"/>
+</symbol>
+
+<!-- Własny znak przycisku Start: stylizowany wąż w kształcie litery S -->
+<symbol id="i-start" viewBox="0 0 32 32">
+  <path d="M24.5 7.5c-3-2.6-9.3-3.1-12.4 0-3.6 3.6 0 7.1 4.1 8.6s7.7 5.1 4.1 8.7c-3.1 3.1-9.4 2.6-12.4 0" style="fill:none;stroke:var(--start-mark-edge,#1b1b1b);stroke-width:7;stroke-linecap:round"/>
+  <path d="M24.5 7.5c-3-2.6-9.3-3.1-12.4 0-3.6 3.6 0 7.1 4.1 8.6s7.7 5.1 4.1 8.7c-3.1 3.1-9.4 2.6-12.4 0" style="fill:none;stroke:var(--start-mark,#e8b400);stroke-width:4.4;stroke-linecap:round"/>
+  <path d="M24.5 7.5c-3-2.6-9.3-3.1-12.4 0" style="fill:none;stroke:var(--start-mark2,#3ab14b);stroke-width:4.4;stroke-linecap:round"/>
+  <circle cx="22.6" cy="6.4" r="1.1" style="fill:var(--start-mark-edge,#1b1b1b)"/>
+</symbol>
+</svg>

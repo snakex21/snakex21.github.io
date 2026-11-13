@@ -1,0 +1,282 @@
+{
+ "base": "https://snakex21.github.io/snakex21/",
+ "items": [
+  {
+   "slug": "wojna-er",
+   "title": "Wojna Er",
+   "description": "Poprowadź swoją cywilizację od epoki kamienia aż po futurystyczne mechy. Zniszcz bazę wroga w tej strategicznej grze typu 'Age of War'.",
+   "path": "gry/wojna_er/index.html",
+   "genres": [
+    "Strategia",
+    "Obrona"
+   ]
+  },
+  {
+   "slug": "memory",
+   "title": "Gra na zapamiętywanie",
+   "description": "Zapamiętuj coraz dłuższe sekwencje symboli i testuj swoją pamięć w tempie, które możesz stopniować jednym kliknięciem.",
+   "path": "gry/gra zapamietywanie/gra zapamietywanie.html",
+   "genres": [
+    "Logiczna",
+    "Pamięć"
+   ]
+  },
+  {
+   "slug": "2048",
+   "title": "2048",
+   "description": "Przesuwaj kafelki i łącz liczby, aby osiągnąć magiczną wartość 2048. Prosta mechanika, ale wciąga na dłużej niż myślisz!",
+   "path": "gry/2048/2048.html",
+   "genres": [
+    "Logiczna",
+    "Puzzle"
+   ]
+  },
+  {
+   "slug": "chess",
+   "title": "Szachy",
+   "description": "Rozegraj partię z komputerem i doszlifuj strategię openings, końcówek oraz taktyki. Każdy ruch ma znaczenie.",
+   "path": "gry/chess/chess.html",
+   "genres": [
+    "Strategia",
+    "Klasyk"
+   ]
+  },
+  {
+   "slug": "hangman",
+   "title": "Wisielec",
+   "description": "Odgadnij ukryte słowo, zanim bohater trafi na szubienicę. Szybkie rundy w klimacie rodzinnej zgadywanki.",
+   "path": "gry/wisielec/wisielec.html",
+   "genres": [
+    "Słowne",
+    "Rodzinne"
+   ]
+  },
+  {
+   "slug": "tetris",
+   "title": "Tetris",
+   "description": "Układaj spadające klocki i czyszcz linie, zanim plansza zapełni się po brzegi. Absolutny klasyk retro w najlepszym wydaniu.",
+   "path": "gry/tetris/tetris.html",
+   "genres": [
+    "Retro",
+    "Puzzle"
+   ]
+  },
+  {
+   "slug": "space-invaders",
+   "title": "Space Invaders",
+   "description": "Broń Ziemię przed falami kosmicznych najeźdźców. Zbieraj punkty i utrzymuj statek w jednym kawałku jak najdłużej.",
+   "path": "gry/spaceinvaders/spaceinvaders.html",
+   "genres": [
+    "Retro",
+    "Arcade"
+   ]
+  },
+  {
+   "slug": "pong",
+   "title": "Pong",
+   "description": "Kultowa gra arcade w dwóch trybach: zagraj solo przeciwko AI lub we dwóch przeciwko sobie. Odbijaj piłkę i zdobywaj punkty!",
+   "path": "gry/pong/pong.html",
+   "genres": [
+    "Arcade",
+    "Retro"
+   ]
+  },
+  {
+   "slug": "tic-tac-toe",
+   "title": "Kółko i krzyżyk",
+   "description": "Wybierz tryb: zagraj przeciwko AI lub ze znajomym przy jednym ekranie. Rywalizuj w klasycznym pojedynku X kontra O!",
+   "path": "gry/kolkokrzyrzykc/kolkokrzyzykc.html",
+   "genres": [
+    "Logiczna",
+    "Klasyk"
+   ]
+  },
+  {
+   "slug": "wheel",
+   "title": "Koło fortuny",
+   "description": "Dodaj imiona lub propozycje i zakręć kołem, aby wylosować jedną pozycję. Proste losowanie na wspólne spotkania.",
+   "path": "gry/kolo_fortuny/kolo_fortuny.html",
+   "genres": [
+    "Losowanie",
+    "Rodzinne"
+   ]
+  },
+  {
+   "slug": "hardware-quiz",
+   "title": "Quiz o podzespołach",
+   "description": "Sprawdź swoją wiedzę o sprzęcie komputerowym. Losowe pytania i szybkie odpowiedzi pokazują, gdzie masz braki.",
+   "path": "gry/quiz/quiz.html",
+   "genres": [
+    "Quiz",
+    "Edukacyjne"
+   ]
+  },
+  {
+   "slug": "typing-test",
+   "title": "Tester Szybkości Pisania",
+   "description": "Sprawdź jak szybko piszesz na klawiaturze. 60-sekundowy test na czas z polskimi słowami. Trenuj celność i prędkość (WPM).",
+   "path": "gry/typing/typing.html",
+   "genres": [
+    "Edukacyjne",
+    "Zręcznościowe"
+   ]
+  },
+  {
+   "slug": "minesweeper",
+   "title": "Saper",
+   "description": "Absolutny klasyk biurowy w nowoczesnym, neonowym wydaniu. Odkrywaj pola, oznaczaj miny flagami i nie daj się wysadzić.",
+   "path": "gry/saper/saper.html",
+   "genres": [
+    "Logiczna",
+    "Klasyk"
+   ]
+  },
+  {
+   "slug": "arkanoid",
+   "title": "Arkanoid",
+   "description": "Dynamiczna gra zręcznościowa. Odbijaj piłeczkę, niszcz kolorowe cegły i łap wypadające bonusy.",
+   "path": "gry/arkanoid/arkanoid.html",
+   "genres": [
+    "Arcade",
+    "Retro"
+   ]
+  },
+  {
+   "slug": "flappy-bird",
+   "title": "Flappy Bird",
+   "description": "Proste zasady, nieskończona irytacja. Klikaj, aby utrzymać ptaka w powietrzu i omijać przeszkody.",
+   "path": "gry/flappy/flappy.html",
+   "genres": [
+    "Zręcznościowa",
+    "Indie"
+   ]
+  },
+  {
+   "slug": "snake",
+   "title": "Snake",
+   "description": "Nieśmiertelny Wąż powraca. Zbieraj punkty, rośnij w siłę i unikaj zderzenia z własnym ogonem lub ścianą.",
+   "path": "gry/snakex21/snake.html",
+   "genres": [
+    "Retro",
+    "Zręcznościowa"
+   ]
+  },
+  {
+   "slug": "hacker-tycoon",
+   "title": "Hacker Tycoon",
+   "description": "Zostań hakerem w tej grze typu Idle Clicker. Klikaj, aby zarabiać bity, kupuj serwery i automatyzuj swój dochód.",
+   "path": "gry/clicker/clicker.html",
+   "genres": [
+    "Symulacja",
+    "Idle"
+   ]
+  },
+  {
+   "slug": "sudoku",
+   "title": "Sudoku",
+   "description": "Japońska łamigłówka liczbowa. Wypełnij planszę 9x9 tak, aby cyfry nie powtarzały się w wierszach, kolumnach i kwadratach.",
+   "path": "gry/sudoku/sudoku.html",
+   "genres": [
+    "Logiczna",
+    "Puzzle"
+   ]
+  },
+  {
+   "slug": "solitaire",
+   "title": "Pasjans (Solitaire)",
+   "description": "Absolutny klasyk. Układaj karty w odpowiedniej kolejności i kolorach. Idealny czasoumilacz w nowoczesnym wydaniu.",
+   "path": "gry/pasjans/pasjans.html",
+   "genres": [
+    "Karciana",
+    "Logiczna"
+   ]
+  },
+  {
+   "slug": "wordle",
+   "title": "Wordle (Słowotok)",
+   "description": "Masz 6 prób, aby zgadnąć 5-literowe słowo. Zielony kolor oznacza trafienie, żółty - złą pozycję.",
+   "path": "gry/wordle/wordle.html",
+   "genres": [
+    "Słowna",
+    "Logiczna"
+   ]
+  },
+  {
+   "slug": "connect4",
+   "title": "Czwórki (Connect 4)",
+   "description": "Strategiczna gra dla dwóch osób przy jednym ekranie. Wrzucajcie żetony na zmianę i ułóżcie cztery w jednej linii.",
+   "path": "gry/connect4/connect4.html",
+   "genres": [
+    "Strategia",
+    "Logiczna"
+   ]
+  },
+  {
+   "slug": "dino-run",
+   "title": "Dino Run",
+   "description": "Klon słynnej gry z brakiem internetu. Skacz T-Rexem nad kaktusami i biegnij w nieskończoność.",
+   "path": "gry/dino/dino.html",
+   "genres": [
+    "Arcade",
+    "Runner"
+   ]
+  },
+  {
+   "slug": "tower-stack",
+   "title": "Tower Stack",
+   "description": "Buduj najwyższą wieżę z klocków. Klikaj precyzyjnie, bo każdy błąd zmniejsza podstawę wieży.",
+   "path": "gry/tower/tower.html",
+   "genres": [
+    "Arcade",
+    "Zręcznościowa"
+   ]
+  },
+  {
+   "slug": "simon-says",
+   "title": "Simon Says",
+   "description": "Trenuj pamięć. Powtarzaj coraz dłuższe sekwencje kolorów i dźwięków, które dyktuje komputer.",
+   "path": "gry/simon/simon.html",
+   "genres": [
+    "Pamięć",
+    "Muzyczna"
+   ]
+  },
+  {
+   "slug": "z-type",
+   "title": "Z-Type (Spadające Słowa)",
+   "description": "Kosmiczna strzelanka sterowana klawiaturą. Wpisuj spadające słowa, aby je zniszczyć, zanim dotrą do Ciebie.",
+   "path": "gry/ztype/ztype.html",
+   "genres": [
+    "Pisanie",
+    "Arcade"
+   ]
+  },
+  {
+   "slug": "pingpong",
+   "title": "Ping Pong",
+   "description": "Klasyczny ping-pong na jednym ekranie.",
+   "path": "gry/pingpong/Ping-pong.html",
+   "genres": [
+    "Arcade"
+   ]
+  },
+  {
+   "slug": "pongcoop",
+   "title": "Pong Co-op",
+   "description": "Pong dla dwóch graczy przy jednej klawiaturze.",
+   "path": "gry/pongcoop/pongcoop.html",
+   "genres": [
+    "Arcade"
+   ]
+  },
+  {
+   "slug": "kolkos",
+   "title": "Kółko i krzyżyk (vs AI)",
+   "description": "Kółko i krzyżyk przeciwko komputerowi.",
+   "path": "gry/kolkos/kolkos.html",
+   "genres": [
+    "Logiczna"
+   ]
+  }
+ ]
+}

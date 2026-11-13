@@ -1,0 +1,275 @@
+/* =====================================================================
+   Motyw "Windows XP" – zaokrąglone niebieskie paski tytułu, zielony Start,
+   dwukolumnowe menu Start i tapeta z pagórkami narysowana gradientami CSS.
+   ===================================================================== */
+
+:root {
+  --font-ui: Tahoma, Verdana, "Segoe UI", "DejaVu Sans", Arial, sans-serif;
+  --font-size: 12px;
+
+  --xp-blue: #0a4fd8;
+  --xp-frame: #0b3fc8;
+  --xp-beige: #ece9d8;
+  --xp-select: #316ac5;
+
+  --sky: var(--wall-color, #3f86d8);
+  --wallpaper:
+    /* chmury */
+    radial-gradient(16% 8% at 20% 21%, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0) 72%),
+    radial-gradient(11% 7% at 27% 16%, rgba(255, 255, 255, .85), rgba(255, 255, 255, 0) 72%),
+    radial-gradient(26% 9% at 30% 23%, rgba(255, 255, 255, .45), rgba(255, 255, 255, 0) 72%),
+    radial-gradient(22% 7% at 74% 31%, rgba(255, 255, 255, .7), rgba(255, 255, 255, 0) 72%),
+    radial-gradient(12% 6% at 68% 27%, rgba(255, 255, 255, .75), rgba(255, 255, 255, 0) 72%),
+    radial-gradient(30% 8% at 80% 34%, rgba(255, 255, 255, .35), rgba(255, 255, 255, 0) 72%),
+    /* przedni pagórek z jasnym grzbietem */
+    radial-gradient(95% 48% at 30% 108%, #7cc94a 0 52%, #5fb236 60%, #4b9d28 72%, rgba(75, 157, 40, 0) 72.4%),
+    /* pagórek z prawej */
+    radial-gradient(80% 42% at 92% 112%, #4f9f2c 0 62%, #3f8a20 70.5%, rgba(63, 138, 32, 0) 71%),
+    /* dalekie wzgórza */
+    radial-gradient(140% 50% at 55% 124%, #8ccf5a 0 58%, #6bb33f 66%, rgba(107, 179, 63, 0) 66.4%),
+    /* niebo */
+    linear-gradient(180deg, color-mix(in srgb, var(--sky) 88%, #001a66) 0%, var(--sky) 38%, color-mix(in srgb, var(--sky) 45%, #ffffff) 74%);
+  --desk-fg: #fff;
+  --desk-shadow: 1px 1px 1px rgba(0, 0, 0, .9), 0 0 3px rgba(0, 0, 0, .5);
+
+  --taskbar-h: 32px;
+  --taskbar-bg: linear-gradient(180deg, #3b77e5 0%, #5a9af0 6%, #3a7be6 12%, #245fd8 50%, #2558d0 88%, #1b44b0 100%);
+  --taskbar-fg: #fff;
+
+  --win-bg: var(--xp-beige);
+  --win-fg: #000;
+  --win-border: 0;
+  --win-radius: 8px 8px 0 0;
+  --win-shadow: 2px 3px 10px rgba(0, 0, 0, .45);
+  --title-h: 30px;
+  --title-bg: linear-gradient(180deg, #3d8bff 0%, #0f5ef0 9%, #0757e8 30%, #0a5ff2 60%, #0f6cff 86%, #0a56e6 92%, #0040c8 100%);
+  --title-fg: #fff;
+  --title-bg-inactive: linear-gradient(180deg, #a6bff2 0%, #7c9de6 12%, #7a9ae2 60%, #87a6ea 90%, #7290d8 100%);
+  --title-fg-inactive: #e6ecfa;
+
+  --line: #c3c0b0;
+  --muted: #4a4a40;
+  --field-bg: #fff;
+  --field-fg: #000;
+  --field-border: 1px solid #7f9db9;
+  --field-radius: 0;
+  --btn-bg: linear-gradient(180deg, #ffffff 0%, #f4f3ee 45%, #e3e1d4 90%, #d6d3c4 100%);
+  --btn-fg: #000;
+  --btn-border: 1px solid #003c74;
+  --btn-radius: 3px;
+  --accent: var(--xp-select);
+  --accent-fg: #fff;
+  --hilite: var(--xp-select);
+  --hilite-fg: #fff;
+  --hilite-soft: rgba(49, 106, 197, .1);
+  --focus-ring: #1f55c9;
+  --link: #0b48c4;
+
+  --menu-bg: #fff;
+  --menu-fg: #000;
+
+  --gadget-bg: linear-gradient(180deg, #ffffff, #e9eefb);
+  --gadget-fg: #10204a;
+  --gadget-border: 1px solid #fff;
+  --gadget-radius: 6px;
+  --gadget-shadow: 0 2px 8px rgba(0, 20, 80, .35);
+
+  --tile-radius: 7px;
+  --tile-s: 68%;
+  --tile-l: 46%;
+
+  /* Ikony: miękki obrys i połysk */
+  --ic-line: rgba(10, 20, 60, .55);
+  --ic-lw: .9;
+  --ic-gloss: .45;
+  --ic-r: 2px;
+  --ic-blue: #1f5fe0;
+  --ic-folder: #ffd863;
+  --ic-folder-back: #e9b23a;
+
+  --start-mark-edge: #1f5a12;
+  --start-mark: #ffd65a;
+  --start-mark2: #ffffff;
+
+  --clock-face: #fdfdfb;
+  --clock-rim: #1f4fb8;
+  --clock-hand: #10204a;
+  --clock-second: #e2481d;
+}
+
+body { -webkit-font-smoothing: antialiased; }
+
+/* ---------- Pulpit ---------- */
+.desk-icons { --icon-cell-w: 82px; --icon-cell-h: 78px; }
+.desk-icon .icon-lg { width: 34px; height: 34px; filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, .35)); }
+.desk-icon.selected .desk-icon-img { filter: brightness(.75) sepia(.3) hue-rotate(190deg) saturate(1.6); }
+.desk-icon.selected .desk-icon-label { background: var(--xp-select); text-shadow: none; }
+.desk-icon:focus-visible { outline: none; }
+.desk-icon:focus-visible .desk-icon-label { outline: 1px dotted #fff; }
+
+/* ---------- Okna ---------- */
+.win {
+  border: 3px solid var(--xp-frame);
+  border-top: 0;
+  border-radius: 8px 8px 0 0;
+  background: var(--xp-beige);
+}
+.win:not(.active) { border-color: #7d98dc; }
+.win-titlebar {
+  margin: 0 -3px;
+  padding: 0 5px 0 7px;
+  border-radius: 7px 7px 0 0;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .45), inset 1px 0 rgba(255, 255, 255, .25);
+}
+.win-title { font-size: 13px; font-weight: 700; text-shadow: 1px 1px 0 rgba(0, 0, 30, .55); letter-spacing: .01em; }
+.win.active .win-title { color: #fff; }
+.win-icon .icon { filter: drop-shadow(0 0 1px rgba(255, 255, 255, .6)); }
+.win-btn {
+  width: 22px; height: 22px;
+  color: #fff;
+  border: 1px solid #fff; border-radius: 3px;
+  background: radial-gradient(circle at 30% 25%, #6aa1ff 0%, #2a6ef2 45%, #1a52d6 100%);
+  box-shadow: inset -1px -1px 2px rgba(0, 0, 60, .35), inset 1px 1px 2px rgba(255, 255, 255, .45);
+}
+.win-btn .glyph { width: 11px; height: 11px; stroke-width: 2.2; }
+.win-btn:hover { filter: brightness(1.15); }
+.win-btn:active { filter: brightness(.85); }
+.win-close { background: radial-gradient(circle at 30% 25%, #f5a37a 0%, #e2541f 50%, #c63a12 100%); margin-left: 2px; }
+.win-close .glyph { stroke-width: 2.4; }
+.win:not(.active) .win-btn { opacity: .75; }
+.win-body { background: var(--xp-beige); }
+.win-resize { background: radial-gradient(circle, #a7a495 1px, transparent 1.5px) 0 0 / 4px 4px; width: 12px; height: 12px; right: 1px; bottom: 1px; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+
+/* ---------- Kontrolki ---------- */
+.btn { min-height: 23px; padding: 3px 14px; }
+.btn:hover:not(:disabled) { box-shadow: inset 0 -2px #f8b33f, inset 0 2px #fde5a6, inset 2px 0 #fbcf6f, inset -2px 0 #fbcf6f; }
+.btn:active:not(:disabled) { background: linear-gradient(180deg, #d9d6c8, #eceadf); box-shadow: none; }
+.btn-primary { box-shadow: inset 0 0 0 1px #8fb0ef, inset 0 0 0 2px #c6d7f8; }
+.btn:focus-visible { outline: 1px dotted #000; outline-offset: -4px; }
+.field:focus { outline: none; border-color: #3d6ec9; }
+.toolbar { background: linear-gradient(180deg, #faf9f4, #ebe8d8); border-bottom: 1px solid #d5d2c2; }
+.statusbar { background: #ece9d8; border-top: 1px solid #d5d2c2; }
+.folder-scroll, .web-wrap, .notes-side { margin-top: 4px; }
+.group { border: 1px solid #d0d0bf; border-radius: 4px; }
+.group legend { color: #0046d5; }
+.theme-card { border-radius: 4px; }
+.notes-item.selected { background: var(--xp-select); }
+.pd-release { background: #f6f8fd; border-color: #b8c8ea; border-radius: 4px; }
+.tile {
+  background: linear-gradient(180deg, hsl(var(--tile-h) 80% 66%) 0%, hsl(var(--tile-h) var(--tile-s) var(--tile-l)) 55%, hsl(var(--tile-h) 70% 36%) 100%);
+  border: 1px solid hsl(var(--tile-h) 60% 28%);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .55), 1px 2px 3px rgba(0, 0, 0, .25);
+}
+.file:hover { background: rgba(49, 106, 197, .06); border-color: rgba(49, 106, 197, .2); border-radius: 3px; }
+.file.selected { background: rgba(49, 106, 197, .14); border-color: rgba(49, 106, 197, .45); }
+.seg-item { border-radius: 3px; border-color: #7f9db9; background: #fff; }
+
+* { scrollbar-color: #c1d3fb #f3f1ea; }
+::-webkit-scrollbar { width: 16px; height: 16px; }
+::-webkit-scrollbar-track { background: #f3f1ea; }
+::-webkit-scrollbar-thumb { background: linear-gradient(90deg, #c8d8fb, #b4c9f6); border: 1px solid #fff; border-radius: 3px; box-shadow: inset 0 0 0 1px #9eb6ea; }
+
+/* ---------- Pasek zadań ---------- */
+.taskbar { padding: 0; gap: 0; box-shadow: inset 0 1px #1a3ea8; }
+.start-btn {
+  height: 100%; padding: 0 22px 0 10px; margin-right: 8px; gap: 6px;
+  border: 0; border-radius: 0 14px 14px 0;
+  background: radial-gradient(120% 120% at 30% 0%, #6fcf5c 0%, #3c9e2a 45%, #2d8a1f 80%, #24741a 100%);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .55), inset -2px 0 4px rgba(0, 40, 0, .45), 2px 0 3px rgba(0, 0, 0, .35);
+  color: #fff;
+  font-size: 18px; font-style: italic; font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 30, 0, .7);
+  text-transform: lowercase;
+}
+.start-label::first-letter { text-transform: uppercase; }
+.start-mark { width: 22px; height: 22px; filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .5)); }
+.start-btn:hover { filter: brightness(1.1); }
+.start-btn.pressed { background: radial-gradient(120% 120% at 30% 0%, #4daa3c 0%, #2a7f1c 60%, #1d5e14 100%); }
+.start-btn:focus-visible { outline: 1px dotted #fff; outline-offset: -5px; }
+.tasklist { gap: 3px; }
+.task-btn {
+  height: 25px; flex-basis: 165px;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 60, .35); border-radius: 3px;
+  background: linear-gradient(180deg, #5d9cf8, #3c81f3 40%, #3477ea);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .35);
+  text-shadow: 0 1px rgba(0, 0, 0, .35);
+}
+.task-btn:hover { filter: brightness(1.12); }
+.task-btn.active { background: linear-gradient(180deg, #1e4fb9, #1d50c4 50%, #2257cc); box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .5); }
+.task-btn:focus-visible { outline: 1px dotted #fff; outline-offset: -4px; }
+.tray {
+  height: 100%; padding: 0 4px 0 10px; margin-left: 6px;
+  background: linear-gradient(180deg, #1590ec, #12a4f2 10%, #0f8ae6 50%, #0f78d8 90%, #0c64c0);
+  border-left: 1px solid #0e3d9e;
+  box-shadow: inset 1px 0 rgba(255, 255, 255, .35);
+}
+.tray-clock { color: #fff; text-shadow: 0 1px rgba(0, 0, 0, .35); }
+.show-desktop { width: 6px; }
+
+/* ---------- Menu Start: dwie kolumny ---------- */
+.startmenu {
+  --sm-flyout: 1;
+  width: 400px;
+  bottom: var(--taskbar-h);
+  left: 0;
+  flex-direction: column;
+  border: 2px solid #1e5ad6; border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  background: #fff;
+  box-shadow: 3px -2px 12px rgba(0, 0, 0, .5);
+}
+.sm-banner, .sm-search, .sm-heading, .sm-foot-user { display: none; }
+.sm-head {
+  padding: 8px 10px; gap: 10px;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(180deg, #2a6be9 0%, #1d5ad8 20%, #1a52cc 80%, #0f3fae 100%);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .45), inset 0 -2px #e8952c;
+  color: #fff; font-size: 15px; font-weight: 700; text-shadow: 1px 1px 2px rgba(0, 0, 0, .55);
+}
+.sm-avatar { display: grid; place-items: center; padding: 2px; border: 2px solid #fff; border-radius: 4px; background: #d8e4f8; box-shadow: 0 1px 3px rgba(0, 0, 0, .5); }
+.sm-avatar .icon { width: 40px; height: 40px; }
+.sm-columns { display: grid; grid-template-columns: 1fr 1fr; }
+.sm-pinned { padding: 6px 4px; background: #fff; }
+.sm-pinned-list .sm-item { padding: 5px 6px; gap: 8px; font-weight: 700; color: #000; }
+.sm-pinned-list .sm-item .icon { width: 28px; height: 28px; }
+.sm-all { padding: 6px 4px; background: #d3e5fa; border-left: 1px solid #95bdee; color: #00136b; }
+.sm-cats > .sm-cat > .sm-item { padding: 4px 6px; gap: 8px; }
+.sm-cats > .sm-cat > .sm-item .icon { width: 22px; height: 22px; }
+.sm-item:hover, .sm-item:focus-visible, .sm-cat.open > .sm-item { background: var(--xp-select); color: #fff; outline: none; }
+.sm-arrow::after { content: "▶"; font-size: .7em; color: #2d8a1f; }
+.sm-item:hover .sm-arrow::after, .sm-cat.open > .sm-item .sm-arrow::after { color: #fff; }
+.sm-sub {
+  position: absolute; left: 100%; top: -4px;
+  min-width: 220px; max-width: 300px; max-height: calc(100vh - var(--taskbar-h) - 6px); overflow-y: auto;
+  padding: 2px;
+  background: #fff; color: #000;
+  border: 1px solid #7f9db9;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, .4);
+}
+.sm-sub .sm-item { padding: 3px 8px; }
+.sm-sep { background: linear-gradient(90deg, transparent, #b5c8e9 20%, #b5c8e9 80%, transparent); }
+.sm-results { max-height: 50vh; overflow: auto; }
+.sm-foot {
+  justify-content: flex-end; gap: 4px;
+  padding: 6px 8px;
+  background: linear-gradient(180deg, #2a6be9, #1d55d0 50%, #1a4cc0);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .35);
+}
+.sm-foot-btn { color: #fff; padding: 4px 8px; border-radius: 3px; gap: 6px; }
+.sm-foot-btn .icon { width: 22px; height: 22px; padding: 3px; border-radius: 4px; background: linear-gradient(180deg, #f39a5f, #d9461a); color: #fff; }
+.sm-restart-glyph { width: 22px; height: 22px; display: grid; place-items: center; border-radius: 4px; background: linear-gradient(180deg, #8fd474, #3c9e2a); }
+.sm-foot-btn:hover, .sm-foot-btn:focus-visible { background: rgba(255, 255, 255, .18); outline: none; }
+
+/* ---------- Gadżety (w stylu paneli zadań) ---------- */
+.gadget { padding: 0 0 10px; overflow: hidden; }
+.gadget > *:not(.gadget-title) { margin-left: 12px; margin-right: 12px; }
+.gadget-clock, .gadget-weather { padding-top: 10px; }
+.gadget-clock > *, .gadget-weather > * { margin: 0; }
+.gadget-clock, .gadget-weather { padding-left: 12px; padding-right: 12px; }
+.gadget-title {
+  margin: 0 0 8px; padding: 5px 12px;
+  color: #fff;
+  background: linear-gradient(90deg, #0a53d6, #3c84f2);
+}
+.gadget-quote figure { margin: 0 12px; }
