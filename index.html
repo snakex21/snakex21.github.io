@@ -7,38 +7,38 @@
 <meta name="description" content="Osobisty pulpit snakex21: moje programy do pobrania, gry i narzędzia w przeglądarce.">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/base.css?v=20">
-<link rel="stylesheet" href="css/filmy.css?v=20">
-<link rel="stylesheet" href="css/contextmenu.css?v=20">
-<link rel="stylesheet" href="themes/win95.css?v=20" id="theme-css">
+<link rel="stylesheet" href="css/base.css?v=21">
+<link rel="stylesheet" href="css/filmy.css?v=21">
+<link rel="stylesheet" href="css/contextmenu.css?v=21">
+<link rel="stylesheet" href="themes/win95.css?v=21" id="theme-css">
 <!-- Wersja plików (?v=…) omija stare kopie w pamięci podręcznej przeglądarki po aktualizacji strony.
      Mapa importów dokleja ją do każdego modułu JS; przy zmianach podbij numer tutaj (VERSION niżej i w mapie). -->
 <script type="importmap">
 {
  "imports": {
-  "./js/apps/catalog.js": "./js/apps/catalog.js?v=20",
-  "./js/apps/control.js": "./js/apps/control.js?v=20",
-  "./js/apps/filmy.js": "./js/apps/filmy.js?v=20",
-  "./js/apps/gadgets.js": "./js/apps/gadgets.js?v=20",
-  "./js/apps/linkhub.js": "./js/apps/linkhub.js?v=20",
-  "./js/apps/music.js": "./js/apps/music.js?v=20",
-  "./js/apps/notepad.js": "./js/apps/notepad.js?v=20",
-  "./js/apps/progman.js": "./js/apps/progman.js?v=20",
-  "./js/apps/programs.js": "./js/apps/programs.js?v=20",
-  "./js/apps/registry.js": "./js/apps/registry.js?v=20",
-  "./js/apps/webview.js": "./js/apps/webview.js?v=20",
-  "./js/contextmenu.js": "./js/contextmenu.js?v=20",
-  "./js/desktop.js": "./js/desktop.js?v=20",
-  "./js/launcher.js": "./js/launcher.js?v=20",
-  "./js/main.js": "./js/main.js?v=20",
-  "./js/menubar.js": "./js/menubar.js?v=20",
-  "./js/menus.js": "./js/menus.js?v=20",
-  "./js/startmenu.js": "./js/startmenu.js?v=20",
-  "./js/store.js": "./js/store.js?v=20",
-  "./js/taskbar.js": "./js/taskbar.js?v=20",
-  "./js/themes.js": "./js/themes.js?v=20",
-  "./js/util.js": "./js/util.js?v=20",
-  "./js/wm.js": "./js/wm.js?v=20"
+  "./js/apps/catalog.js": "./js/apps/catalog.js?v=21",
+  "./js/apps/control.js": "./js/apps/control.js?v=21",
+  "./js/apps/filmy.js": "./js/apps/filmy.js?v=21",
+  "./js/apps/gadgets.js": "./js/apps/gadgets.js?v=21",
+  "./js/apps/linkhub.js": "./js/apps/linkhub.js?v=21",
+  "./js/apps/music.js": "./js/apps/music.js?v=21",
+  "./js/apps/notepad.js": "./js/apps/notepad.js?v=21",
+  "./js/apps/progman.js": "./js/apps/progman.js?v=21",
+  "./js/apps/programs.js": "./js/apps/programs.js?v=21",
+  "./js/apps/registry.js": "./js/apps/registry.js?v=21",
+  "./js/apps/webview.js": "./js/apps/webview.js?v=21",
+  "./js/contextmenu.js": "./js/contextmenu.js?v=21",
+  "./js/desktop.js": "./js/desktop.js?v=21",
+  "./js/launcher.js": "./js/launcher.js?v=21",
+  "./js/main.js": "./js/main.js?v=21",
+  "./js/menubar.js": "./js/menubar.js?v=21",
+  "./js/menus.js": "./js/menus.js?v=21",
+  "./js/startmenu.js": "./js/startmenu.js?v=21",
+  "./js/store.js": "./js/store.js?v=21",
+  "./js/taskbar.js": "./js/taskbar.js?v=21",
+  "./js/themes.js": "./js/themes.js?v=21",
+  "./js/util.js": "./js/util.js?v=21",
+  "./js/wm.js": "./js/wm.js?v=21"
  }
 }
 </script>
@@ -52,7 +52,7 @@
       var c = JSON.parse(localStorage.getItem('pulpit:wallColor') || 'null');
       if (typeof t === 'string' && /^[a-z0-9-]+$/.test(t)) {
         r.setAttribute('data-theme', t);
-        document.getElementById('theme-css').setAttribute('href', 'themes/' + t + '.css?v=20');
+        document.getElementById('theme-css').setAttribute('href', 'themes/' + t + '.css?v=21');
       }
       if (typeof v === 'string' && /^[a-z]+$/.test(v)) r.setAttribute('data-variant', v);
       if (typeof c === 'string' && /^#[0-9a-f]{6}$/i.test(c)) r.style.setProperty('--wall-color', c);
@@ -67,7 +67,7 @@
       if (ic && typeof ic.id === 'string' && /^[a-z0-9-]+$/.test(ic.id)) {
         /* Adres bezwzględny: względny url() w zmiennej CSS liczyłby się od arkusza, który jej używa (css/). */
         [16, 32, 48].forEach(function (px) {
-          var href = new URL('icons/' + ic.id + '/logo-' + px + '.png?v=20', document.baseURI).href;
+          var href = new URL('icons/' + ic.id + '/logo-' + px + '.png?v=21', document.baseURI).href;
           r.style.setProperty('--os-logo-' + px, 'url("' + href + '")');
         });
         r.style.setProperty('--os-logo-lg', 'var(--os-logo-' + (ic.large === 48 ? 48 : 32) + ')');
@@ -123,6 +123,6 @@
 <div id="sprite" class="sprite-host" aria-hidden="true"></div>
 <div id="live" class="sr-only" aria-live="polite"></div>
 
-<script type="module" src="./js/main.js?v=20"></script>
+<script type="module" src="./js/main.js?v=21"></script>
 </body>
 </html>

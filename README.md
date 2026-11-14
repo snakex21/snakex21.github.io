@@ -198,8 +198,8 @@ Ikona = `icons/games/<slug>.svg` albo `icons/tools/<slug>.svg` (własny rysunek 
 `#1f2430` i jasne wypełnienia, żeby był czytelny na jasnym i ciemnym tle, także w 16 px). Pokazuje się w oknach Gry /
 Narzędzia (widoki „Duże ikony” / „Szczegóły”), w menu Start, na ekranie Start (8 / 8.1), w Menedżerze programów (3.1),
 w launcherze (2.0), w pasku tytułu i na pasku zadań okna gry. Bez sluga albo pliku widać kafelek z inicjałami
-(`tile()` w `js/util.js`). Po połączeniu gier (np. trzy wersje Ponga w jedną) nowy wpis może dostać slug istniejącej
-ikony: `pingpong` (rakietka i piłka) albo `tic-tac-toe` (plansza X / O).
+(`tile()` w `js/util.js`). Trzy wersje Ponga są połączone w grę „Ping-pong” (slug `pong`, ikona z rakietką i piłką),
+a dwa kółka i krzyżyki w `tic-tac-toe`; dawne adresy na starej stronie przekierowują do połączonych gier.
 
 ## LinkHub
 

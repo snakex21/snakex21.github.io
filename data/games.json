@@ -73,8 +73,8 @@
   },
   {
    "slug": "pong",
-   "title": "Pong",
-   "description": "Kultowa gra arcade w dwóch trybach: zagraj solo przeciwko AI lub we dwóch przeciwko sobie. Odbijaj piłkę i zdobywaj punkty!",
+   "title": "Ping-pong",
+   "description": "Stół, dwie paletki i piłka w trzech trybach: mecz z komputerem (trzy poziomy), pojedynek we dwóch na jednej klawiaturze albo współpraca – razem utrzymajcie jak najdłuższą wymianę.",
    "path": "gry/pong/pong.html",
    "genres": [
     "Arcade",
@@ -84,7 +84,7 @@
   {
    "slug": "tic-tac-toe",
    "title": "Kółko i krzyżyk",
-   "description": "Wybierz tryb: zagraj przeciwko AI lub ze znajomym przy jednym ekranie. Rywalizuj w klasycznym pojedynku X kontra O!",
+   "description": "Zagraj z komputerem (trzy poziomy trudności) albo ze znajomym przy jednym ekranie. Klasyczny pojedynek X kontra O z licznikiem wygranych.",
    "path": "gry/kolkokrzyrzykc/kolkokrzyzykc.html",
    "genres": [
     "Logiczna",
@@ -154,7 +154,7 @@
   {
    "slug": "snake",
    "title": "Snake",
-   "description": "Nieśmiertelny Wąż powraca. Zbieraj punkty, rośnij w siłę i unikaj zderzenia z własnym ogonem lub ścianą.",
+   "description": "Nieśmiertelny Wąż powraca. Zbieraj owoce i złote gwiazdki, rośnij w siłę i unikaj zderzenia z własnym ogonem lub ścianą.",
    "path": "gry/snakex21/snake.html",
    "genres": [
     "Retro",
@@ -249,33 +249,6 @@
    "genres": [
     "Pisanie",
     "Arcade"
-   ]
-  },
-  {
-   "slug": "pingpong",
-   "title": "Ping Pong",
-   "description": "Klasyczny ping-pong na jednym ekranie.",
-   "path": "gry/pingpong/Ping-pong.html",
-   "genres": [
-    "Arcade"
-   ]
-  },
-  {
-   "slug": "pongcoop",
-   "title": "Pong Co-op",
-   "description": "Pong dla dwóch graczy przy jednej klawiaturze.",
-   "path": "gry/pongcoop/pongcoop.html",
-   "genres": [
-    "Arcade"
-   ]
-  },
-  {
-   "slug": "kolkos",
-   "title": "Kółko i krzyżyk (vs AI)",
-   "description": "Kółko i krzyżyk przeciwko komputerowi.",
-   "path": "gry/kolkos/kolkos.html",
-   "genres": [
-    "Logiczna"
    ]
   }
  ]
